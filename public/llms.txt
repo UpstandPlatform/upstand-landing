@@ -1,0 +1,57 @@
+# Upstand
+
+> The container-first self-hostable control plane (PaaS) designed to orchestrate Docker Swarm nodes, deploy applications & databases, configure dynamic Caddy routing, and run AI-assisted operations from a unified web interface.
+
+Upstand enables developers and platform operators to manage infrastructure across bare-metal and cloud servers with operational clarity, durable task queues, and zero downtime.
+
+## Key Capabilities
+
+- **Docker Swarm Multi-Node Clustering**: Seamlessly connects manager and worker nodes over encrypted overlay networks. Supports join token rotation, worker node draining, and Raft consensus with zero split-brain risk.
+- **Application Deployments**: Builds and deploys from Git repositories or local folders using Dockerfile (with BuildKit secrets), Railpack, Nixpacks, Heroku Buildpacks, Paketo Buildpacks, or Static SPA serving.
+- **Persistent Database Engines**: One-click provisioning of PostgreSQL 18, MySQL, MariaDB, MongoDB, Redis, and libSQL (sqld) with persistent named volumes, auto-derived authentication credentials, and automated S3 backups via rclone.
+- **Dynamic Caddy Edge Proxy**: Atomic Caddyfile compilation. Configurations undergo an in-process container dry-run test prior to reload. Reversible fallback prevents routing outages; automated Let's Encrypt TLS; forward and basic authentication.
+- **UpGal AI Operations Assistant**: An autonomous 12-step bounded ToolLoopAgent running under Model Context Protocol (MCP) with mandatory human-in-the-loop approvals for mutating operations (service deletion, volume removal, database rollbacks).
+- **Remote Server Provisioning**: Agentless remote Linux host setup over SSH. Installs Docker Engine, initiates Swarm, provisions edge proxy, and runs independent task queues (`deployments-queue-<nodeId>`).
+- **Enterprise Security**: Corporate SSO (OIDC & SAML 2.0 with DNS TXT ownership challenges), SCIM 2.0 user provisioning (`/api/scim/v2.0/<orgId>`), TOTP 2FA, scoped API tokens (`upk_...`), and Global Owner-restricted Web SSH terminal.
+
+## Architecture
+
+```
+User / MCP Agent ---> Next.js Console (App Router)
+                           |
+                           v
+                 Hono / tRPC API Server
+                  /        |        \
+                 v         v         v
+             Better Auth  Drizzle   Redis / BullMQ
+                           (PG18)     Worker Queues
+                                         |
+                                         v
+                         Docker Swarm Engine / Target Nodes
+                                         |
+                                         v
+                              Caddy Dynamic Edge Proxy
+```
+
+## Quick Installation
+
+```bash
+curl -fsSL https://upstand.dev/install.sh | sudo bash
+```
+
+For guided interactive setup:
+```bash
+curl -fsSL https://upstand.dev/install.sh | sudo bash -s -- --interactive
+```
+
+## Hardware Requirements
+
+- **Production Minimum**: 2 vCPU cores, 4 GB RAM, 30 GB free Docker disk storage.
+- **Evaluation / Dev**: 1 vCPU, 2 GB RAM (with `UPSTAND_ALLOW_UNDERSIZED_HOST=true`).
+
+## Links
+
+- Website: https://upstand.dev
+- Documentation: https://upstand.dev/docs
+- GitHub: https://github.com/UpstandPlatform/upstand
+- Full LLM Reference: https://upstand.dev/llms-full.txt
