@@ -2,33 +2,35 @@ import { Dictionary } from "../types";
 
 export const es: Dictionary = {
   seo: {
-    title: "Upstand | Panel de Control PaaS Autoalojado para Docker Swarm",
+    title: "Upstand | Estudio de Productos y PaaS Docker Swarm — Creamos cosas que vale la pena usar.",
     description:
-      "Orqueste nodos Docker Swarm, despliegue aplicaciones y bases de datos con recargas atómicas de Caddy sin caídas y asistencia de IA con UpGal.",
+      "Estudio de productos independiente y panel de control PaaS para Docker Swarm. Despliegue aplicaciones y bases de datos, configure Caddy sin caídas y conozca nuestro ecosistema open source.",
     keywords: [
+      "Upstand estudio productos",
       "Docker Swarm PaaS",
-      "PaaS autoalojado",
-      "panel de control contenedores",
-      "Upstand",
-      "proxy inverso Caddy",
+      "herramientas open source",
+      "OpenRive editor animación",
+      "AdsParty red publicidad",
+      "dgrunner runners GitHub",
+      "Tongo plataforma",
+      "lettersbox notas privadas",
       "asistente IA UpGal",
-      "gestión PostgreSQL",
-      "hosting libSQL",
-      "clustering Docker Swarm",
-      "alternativa Coolify Portainer",
     ],
-    ogTitle: "Upstand — Panel de Control Moderno para Contenedores",
+    ogTitle: "Upstand — Creamos cosas que realmente vale la pena usar.",
     ogDescription:
-      "Despliegue aplicaciones, bases de datos y clusters Docker Swarm con colas de construcción duraderas y un asistente de IA autónomo.",
+      "Un estudio de productos independiente que crea software útil, herramientas abiertas e infraestructura Docker Swarm fiable.",
   },
   nav: {
     features: "Características",
     architecture: "Arquitectura",
     databases: "Bases de datos",
     upgal: "IA UpGal",
+    ecosystem: "Nuestras Obras",
+    partners: "Aliados",
     compare: "Comparativa",
     calculator: "Calculadora TCO",
     faq: "Preguntas Frecuentes",
+    contact: "Contacto",
     docs: "Documentación",
     github: "GitHub",
     getStarted: "Instalar Upstand",
@@ -54,6 +56,128 @@ export const es: Dictionary = {
     tabUpGal: "Agente IA UpGal",
     statusHealthy: "Los 12 nodos Swarm están operativos",
     statusReady: "Listo para despliegue sin caída de tráfico",
+  },
+  manifesto: {
+    badge: "01 — El sentido de lo que hacemos",
+    title: "Creemos que internet todavía puede sentirse humano.",
+    description:
+      "Upstand es un estudio de productos independiente y holding para productos curiosos, infraestructura útil e ideas que merecen mayor atención.",
+    subDescription:
+      "Construimos las herramientas que deseábamos que existieran: software de código abierto para desarrolladores, diseñadores y la comunidad creadora, además de plataformas especializadas. Nuestro trabajo habita entre el código, la cultura y lo posible.",
+    point1: {
+      title: "Software con convicción",
+      desc: "Sin capas innecesarias ni patrones oscuros. Primitivas limpias y duraderas construidas para perdurar.",
+    },
+    point2: {
+      title: "Cultura artesanal",
+      desc: "Diseñado para quienes aprecian la ergonomía, la tipografía, los atajos de teclado y el rendimiento puro.",
+    },
+    point3: {
+      title: "Soberanía sin concesiones",
+      desc: "Herramientas independientes que devuelven a los desarrolladores el control total sobre sus datos y servidores.",
+    },
+  },
+  ecosystem: {
+    badge: "02 — Lo que estamos creando",
+    title: "Una cuidada colección de utilidades. El punto de vista de Upstand.",
+    description:
+      "Herramientas de código abierto, plataformas creativas e infraestructura creadas con esmero.",
+    visitSite: "Visitar Proyecto",
+    projects: [
+      {
+        id: "upstand-paas",
+        number: "01",
+        name: "Upstand PaaS",
+        tagline: "Insignia · Panel de control de contenedores",
+        description:
+          "El PaaS autoalojado para Docker Swarm con enrutamiento dinámico atómico con Caddy y operaciones asistidas por IA.",
+        category: "Control Plane",
+        url: "https://upstand.dev",
+        status: "v0.14 Activo",
+        isFlagship: true,
+      },
+      {
+        id: "openrive",
+        number: "02",
+        name: "OpenRive",
+        tagline: "Open source · Herramienta creativa",
+        description:
+          "Un editor web de animaciones Rive local-first y sin necesidad de registro. Pruebe máquinas de estados directamente en el navegador.",
+        category: "Herramienta Creativa",
+        url: "https://openrive.upstand.dev",
+        status: "En vivo y Gratis",
+      },
+      {
+        id: "adsparty",
+        number: "03",
+        name: "AdsParty",
+        tagline: "Plataforma · Red publicitaria",
+        description:
+          "Publicidad de alto impacto en canales de Telegram y la web abierta con segmentación inteligente y métricas transparentes.",
+        category: "Publicidad",
+        url: "https://ads.upstand.dev",
+        status: "En Producción",
+      },
+      {
+        id: "tongo",
+        number: "04",
+        name: "Tongo",
+        tagline: "Producto · Plataforma de nueva generación",
+        description:
+          "Una creación del estudio Upstand enfocada en utilidades web modernas y descentralizadas sin fricción.",
+        category: "Plataforma",
+        url: "https://tongo.run",
+        status: "Online",
+      },
+      {
+        id: "dgrunner",
+        number: "05",
+        name: "dgrunner",
+        tagline: "Open source · Herramientas DevOps",
+        description:
+          "Configure, gestione y escale ejecutores privados de GitHub Actions con limpieza automática y aislamiento efímero.",
+        category: "DevOps",
+        url: "https://github.com/UpstandPlatform/dgrunner",
+        status: "Código Abierto",
+      },
+      {
+        id: "lettersbox",
+        number: "06",
+        name: "lettersbox",
+        tagline: "Producto · Comunicación privada",
+        description:
+          "Un espacio sereno para notas, cartas, audios y conversaciones íntimas lejos del ruido algorítmico.",
+        category: "Privacidad",
+        url: "https://lettersbox.ir",
+        status: "Disponible",
+      },
+    ],
+  },
+  partners: {
+    badge: "03 — En buena compañía",
+    title: "Construido junto a personas admirables.",
+    description:
+      "Trabajamos con equipos que se preocupan por los detalles, los usuarios reales y la evolución del producto tras el lanzamiento.",
+    quote: "No nos interesa fabricar más en cantidad; nos interesa construir lo que viene después.",
+    visitPartner: "Visitar Estudio",
+    items: [
+      {
+        number: "01",
+        name: "Apex Team",
+        role: "Estudio de Software e Inteligencia Artificial",
+        description:
+          "Ingenieros y creadores que transforman ideas audaces en productos tangibles, software robusto y empresas prósperas.",
+        url: "https://apexteam.net",
+      },
+      {
+        number: "02",
+        name: "Mansora",
+        role: "Consultoría Tecnológica",
+        description:
+          "Ingeniería de plataformas, sistemas de inteligencia artificial, nube segura y arquitectura de software para equipos en expansión.",
+        url: "https://mansora.dev",
+      },
+    ],
   },
   stats: {
     uptimeValue: "99.99%",
@@ -258,6 +382,12 @@ export const es: Dictionary = {
         category: "General",
       },
       {
+        question: "¿Qué otros proyectos desarrolla el estudio Upstand?",
+        answer:
+          "Además de nuestro PaaS principal para Docker Swarm, el estudio Upstand crea OpenRive (editor de animaciones Rive), AdsParty (plataforma publicitaria en Telegram y web), Tongo, dgrunner (gestión de runners privados de GitHub Actions) y lettersbox (espacio sereno para comunicación privada).",
+        category: "Estudio y Ecosistema",
+      },
+      {
         question: "¿Cuáles son los requisitos mínimos de sistema?",
         answer:
           "Para entornos de producción se recomiendan como mínimo 2 núcleos vCPU, 4 GB de RAM y 30 GB de almacenamiento en disco. Para pruebas y evaluación es posible ejecutarlo con 1 vCPU y 2 GB de RAM activando UPSTAND_ALLOW_UNDERSIZED_HOST=true.",
@@ -289,6 +419,18 @@ export const es: Dictionary = {
       },
     ],
   },
+  contact: {
+    badge: "04 — Háblenos de su idea",
+    title: "¿Tiene una idea genial? Comencemos a conversar.",
+    description:
+      "Cuéntenos aquello en lo que no puede dejar de pensar. Un borrador básico es más que suficiente; nosotros nos encargamos del resto.",
+    emailLabel: "Correo Directo",
+    namePlaceholder: "Su nombre",
+    emailPlaceholder: "Su correo electrónico",
+    ideaPlaceholder: "Describa su idea o desafío tecnológico...",
+    submitButton: "Enviar propuesta",
+    successMessage: "¡Muchas gracias! Hemos recibido su mensaje y nos pondremos en contacto pronto.",
+  },
   cta: {
     badge: "Listo en 2 minutos",
     title: "Tome el control total de su infraestructura de contenedores",
@@ -299,13 +441,13 @@ export const es: Dictionary = {
     prerequisites: "Requisitos: Ubuntu 22.04+ o Debian 12+ con privilegios de root.",
   },
   footer: {
-    tagline: "El Panel de Control Moderno para Contenedores",
+    tagline: "Creamos cosas que realmente vale la pena usar.",
     description:
-      "PaaS autoalojado para Docker Swarm, clustering multinodo automatizado, enrutamiento dinámico Caddy y operaciones impulsadas por IA.",
+      "Estudio de productos independiente y panel de control PaaS para Docker Swarm, utilidades abiertas y plataformas sólidas.",
     headings: {
-      product: "Producto",
+      product: "Obras y Productos",
       resources: "Recursos",
-      community: "Comunidad",
+      community: "Aliados y Comunidad",
       compliance: "Empresa",
     },
     links: {
@@ -318,7 +460,7 @@ export const es: Dictionary = {
       securityPolicy: "Seguridad y 2FA",
       architecture: "Arquitectura del Sistema",
     },
-    rights: "Todos los derechos reservados. Upstand Platform.",
+    rights: "© 2026 Upstand, Inc. Creado para los curiosos. Todos los derechos reservados.",
     openSourceNotice: "Software de código abierto bajo licencia Apache 2.0.",
   },
 };

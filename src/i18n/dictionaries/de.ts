@@ -2,33 +2,35 @@ import { Dictionary } from "../types";
 
 export const de: Dictionary = {
   seo: {
-    title: "Upstand | Die moderne container-zentrierte Self-Hosted PaaS-Steuerungskonsole",
+    title: "Upstand | Produktstudio & Docker Swarm PaaS — Wir bauen Dinge, die es wert sind.",
     description:
-      "Orchestrieren Sie Docker Swarm-Knoten, stellen Sie Apps & Datenbanken bereit und verwalten Sie Caddy unterbrechungsfrei mit dem KI-Copiloten UpGal.",
+      "Unabhängiges Produktstudio und container-zentrierte PaaS-Steuerungskonsole für Docker Swarm. Entdecken Sie unsere Open-Source-Tools, Caddy-Routing und Produkte.",
     keywords: [
+      "Upstand Produktstudio",
       "Docker Swarm PaaS",
-      "Self-Hosted PaaS",
-      "Container Control Plane",
-      "Upstand",
-      "Caddy Reverse Proxy",
+      "Open Source Entwicklertools",
+      "OpenRive Animationseditor",
+      "AdsParty Werbenetzwerk",
+      "dgrunner Runner",
+      "Tongo Plattform",
+      "lettersbox Notizen",
       "UpGal KI Assistent",
-      "PostgreSQL Verwaltung",
-      "libSQL Hosting",
-      "Docker Swarm Cluster",
-      "Coolify Portainer Alternative",
     ],
-    ogTitle: "Upstand — Moderne Open-Source Container-Steuerungskonsole",
+    ogTitle: "Upstand — Wir bauen Dinge, die es wert sind, genutzt zu werden.",
     ogDescription:
-      "Verwalten Sie Anwendungen, Datenbanken und Swarm-Cluster mit atomaren Caddy-Reloads ohne Ausfallzeit.",
+      "Ein unabhängiges Produktstudio, das nützliche Software, Open-Source-Werkzeuge und robuste Swarm-Infrastruktur entwickelt.",
   },
   nav: {
     features: "Funktionen",
     architecture: "Architektur",
     databases: "Datenbanken",
     upgal: "UpGal KI",
+    ecosystem: "Unsere Werke",
+    partners: "Partner",
     compare: "Vergleich",
     calculator: "TCO-Rechner",
     faq: "FAQ",
+    contact: "Kontakt",
     docs: "Dokumentation",
     github: "GitHub",
     getStarted: "Upstand installieren",
@@ -54,6 +56,128 @@ export const de: Dictionary = {
     tabUpGal: "UpGal KI-Agent",
     statusHealthy: "Alle 12 Swarm-Knoten fehlerfrei",
     statusReady: "Bereit für unterbrechungsfreies Deployment",
+  },
+  manifesto: {
+    badge: "01 — Unser Anliegen",
+    title: "Wir glauben, dass das Internet sich menschlich anfühlen kann.",
+    description:
+      "Upstand ist ein unabhängiges Produktstudio für neugierige Software, nützliche Infrastruktur und Ideen, die mehr Aufmerksamkeit verdienen.",
+    subDescription:
+      "Wir entwickeln Werkzeuge, von denen wir uns wünschten, dass es sie gäbe: Open-Source-Tools für Entwickler, Designer und Macher sowie fokussierte Plattformen für das Web. Unsere Arbeit verbindet Software, Kultur und Möglichkeiten.",
+    point1: {
+      title: "Software mit Überzeugung",
+      desc: "Keine unnötigen Schichten oder manipulative Dark Patterns. Durchdachte Primitiven, gebaut für Langlebigkeit.",
+    },
+    point2: {
+      title: "Kultur des Handwerks",
+      desc: "Entwickelt für Menschen, die Ergonomie, Typografie, Tastatur-Shortcuts und pure Leistung schätzen.",
+    },
+    point3: {
+      title: "Kompromisslose Souveränität",
+      desc: "Autonome Werkzeuge, die Entwicklern die echte Hoheit über ihre Daten und Server zurückgeben.",
+    },
+  },
+  ecosystem: {
+    badge: "02 — Was wir bauen",
+    title: "Eine feine Auswahl nützlicher Dinge. Die Upstand-Perspektive.",
+    description:
+      "Open-Source-Werkzeuge, kreative Plattformen und Entwicklerinfrastruktur – mit Sorgfalt geschaffen.",
+    visitSite: "Projekt ansehen",
+    projects: [
+      {
+        id: "upstand-paas",
+        number: "01",
+        name: "Upstand PaaS",
+        tagline: "Flaggschiff · Container Control Plane",
+        description:
+          "Das container-zentrierte PaaS für Docker Swarm mit atomarem Caddy-Routing und integrierter KI-Steuerung.",
+        category: "Control Plane",
+        url: "https://upstand.dev",
+        status: "v0.14 Aktiv",
+        isFlagship: true,
+      },
+      {
+        id: "openrive",
+        number: "02",
+        name: "OpenRive",
+        tagline: "Open Source · Kreatives Animationswerkzeug",
+        description:
+          "Ein lokaler, login-freier Web-Editor für Rive-Animationen. Testen und inspizieren Sie State Machines im Browser.",
+        category: "Kreativ-Tool",
+        url: "https://openrive.upstand.dev",
+        status: "Live & Kostenlos",
+      },
+      {
+        id: "adsparty",
+        number: "03",
+        name: "AdsParty",
+        tagline: "Plattform · Werbenetzwerk",
+        description:
+          "Modernes Werbenetzwerk über Telegram-Kanäle und das offene Web mit präzisem Targeting und transparenten Daten.",
+        category: "Advertising",
+        url: "https://ads.upstand.dev",
+        status: "In Produktion",
+      },
+      {
+        id: "tongo",
+        number: "04",
+        name: "Tongo",
+        tagline: "Produkt · Moderne Web-Plattform",
+        description:
+          "Ein Produkt des Upstand Studios zur Erforschung reibungsloser dezentraler Tools und neuartiger Web-Dienste.",
+        category: "Plattform",
+        url: "https://tongo.run",
+        status: "Online",
+      },
+      {
+        id: "dgrunner",
+        number: "05",
+        name: "dgrunner",
+        tagline: "Open Source · DevOps-Werkzeug",
+        description:
+          "Eigene GitHub Actions Runner mühelos einrichten, skalieren und mit automatischer Aufgabenbereinigung verwalten.",
+        category: "DevOps",
+        url: "https://github.com/UpstandPlatform/dgrunner",
+        status: "Open Source",
+      },
+      {
+        id: "lettersbox",
+        number: "06",
+        name: "lettersbox",
+        tagline: "Produkt · Private Kommunikation",
+        description:
+          "Ein ruhiger Ort für Notizen, Briefe, Sprachmemos und vertrauliche Gespräche ohne algorithmische Ablenkung.",
+        category: "Privatsphäre",
+        url: "https://lettersbox.ir",
+        status: "Verfügbar",
+      },
+    ],
+  },
+  partners: {
+    badge: "03 — In bester Gesellschaft",
+    title: "Gemeinsam mit großartigen Partnern gebaut.",
+    description:
+      "Wir arbeiten mit Teams, denen Details, echte Nutzer und die langfristige Zukunft ihrer Produkte am Herzen liegen.",
+    quote: "Wir wollen nicht einfach mehr bauen. Wir bauen das, was als Nächstes zählt.",
+    visitPartner: "Studio besuchen",
+    items: [
+      {
+        number: "01",
+        name: "Apex Team",
+        role: "Software- & KI-Studio",
+        description:
+          "Kreative Ingenieure und Designer, die anspruchsvolle Ideen in reale Produkte und erfolgreiche Unternehmen verwandeln.",
+        url: "https://apexteam.net",
+      },
+      {
+        number: "02",
+        name: "Mansora",
+        role: "Technologieberatung",
+        description:
+          "Hochgradig skalierbare Softwaresysteme, KI-Lösungen, Cloud-Infrastruktur und Plattform-Engineering.",
+        url: "https://mansora.dev",
+      },
+    ],
   },
   stats: {
     uptimeValue: "99.99%",
@@ -258,6 +382,12 @@ export const de: Dictionary = {
         category: "Überblick",
       },
       {
+        question: "Welche weiteren Projekte entwickelt das Upstand Studio?",
+        answer:
+          "Neben unserem Docker Swarm PaaS baut das Upstand Studio OpenRive (Rive Animations-Editor), AdsParty (Werbeplattform), Tongo, dgrunner (GitHub Actions Runner-Management) und lettersbox (abschirmender Kommunikationsraum).",
+        category: "Studio & Ökosystem",
+      },
+      {
         question: "Was sind die Mindestsystemanforderungen für Upstand?",
         answer:
           "Für den Produktivbetrieb werden mindestens 2 vCPU-Kerne, 4 GB RAM und 30 GB freier Festplattenspeicher empfohlen. Für Testzwecke genügt 1 vCPU und 2 GB RAM bei Aktivierung von UPSTAND_ALLOW_UNDERSIZED_HOST=true.",
@@ -289,6 +419,18 @@ export const de: Dictionary = {
       },
     ],
   },
+  contact: {
+    badge: "04 — Bringen Sie eine Idee ein",
+    title: "Haben Sie eine Idee? Beginnen wir das Gespräch.",
+    description:
+      "Erzählen Sie uns von dem Gedanken, der Sie beschäftigt. Eine grobe Skizze reicht völlig aus; wir setzen gemeinsam daran an.",
+    emailLabel: "Direkte E-Mail",
+    namePlaceholder: "Ihr Name",
+    emailPlaceholder: "Ihre E-Mail-Adresse",
+    ideaPlaceholder: "Beschreiben Sie Ihre Idee oder technische Herausforderung...",
+    submitButton: "Idee einsenden",
+    successMessage: "Vielen Dank! Wir haben Ihre Nachricht erhalten und melden uns in Kürze.",
+  },
   cta: {
     badge: "In 2 Minuten einsatzbereit",
     title: "Übernehmen Sie heute die volle Kontrolle über Ihre Container-Cloud",
@@ -299,13 +441,13 @@ export const de: Dictionary = {
     prerequisites: "Voraussetzungen: Ubuntu 22.04+ oder Debian 12+ mit Root-Zugriff.",
   },
   footer: {
-    tagline: "Die moderne container-zentrierte Steuerungskonsole",
+    tagline: "Wir bauen Dinge, die es wert sind, genutzt zu werden.",
     description:
-      "Self-Hosted PaaS für Docker Swarm, automatisiertes Multi-Node Clustering, dynamisches Caddy-Routing und KI-gestützte Steuerung.",
+      "Unabhängiges Produktstudio und container-zentrierte PaaS-Steuerung für Docker Swarm, Open-Source-Tools und fokussierte Plattformen.",
     headings: {
-      product: "Produkt",
+      product: "Werke & Produkte",
       resources: "Ressourcen",
-      community: "Community",
+      community: "Partner & Community",
       compliance: "Enterprise",
     },
     links: {
@@ -318,7 +460,7 @@ export const de: Dictionary = {
       securityPolicy: "Sicherheit & 2FA",
       architecture: "Systemarchitektur",
     },
-    rights: "Alle Rechte vorbehalten. Upstand Platform.",
+    rights: "© 2026 Upstand, Inc. Für Neugierige gemacht. Alle Rechte vorbehalten.",
     openSourceNotice: "Open-Source-Software lizenziert unter Apache 2.0.",
   },
 };

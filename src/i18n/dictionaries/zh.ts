@@ -2,33 +2,35 @@ import { Dictionary } from "../types";
 
 export const zh: Dictionary = {
   seo: {
-    title: "Upstand | 现代化容器优先、自托管 Docker Swarm PaaS 控制面板",
+    title: "Upstand | 现代化容器 PaaS 控制面板与独立产品工作室 — 我们创造值得使用的产品",
     description:
-      "使用 Upstand 编排 Docker Swarm 节点、部署 Git 应用与持久化数据库、配置零宕机原子 Caddy 反向代理，并体验 UpGal 智能运维助手。",
+      "独立产品工作室与 Docker Swarm 控制面板。编排集群、部署应用与数据库、配置零宕机 Caddy 路由，并探索我们的开源工具生态。",
     keywords: [
-      "Docker Swarm 控制面板",
-      "自托管 PaaS",
-      "容器编排平台",
-      "Upstand",
-      "Caddy 动态反向代理",
+      "Upstand 产品工作室",
+      "Docker Swarm PaaS",
+      "开源开发者工具",
+      "OpenRive 动画编辑器",
+      "AdsParty 广告网络",
+      "dgrunner 自托管运行器",
+      "Tongo 平台",
+      "lettersbox 私密沟通",
       "UpGal AI 运维助手",
-      "PostgreSQL 数据库管理",
-      "libSQL 托管",
-      "Docker Swarm 多节点集群",
-      "替代 Coolify Portainer",
     ],
-    ogTitle: "Upstand — 现代化开源容器编排与自托管控制面板",
+    ogTitle: "Upstand — 我们创造真正值得使用的产品",
     ogDescription:
-      "通过原子级 Caddy 重载、持久化构建队列以及拥有审批控制的自主 AI 智能体，在裸金属与云端部署容器服务。",
+      "独立产品工作室，打造有温度的实用软件、开源工具与高可用 Docker Swarm 容器控制平台。",
   },
   nav: {
     features: "核心功能",
     architecture: "系统架构",
     databases: "原生数据库",
-    upgal: "UpGal 智能助手",
+    upgal: "UpGal 助手",
+    ecosystem: "旗下作品",
+    partners: "生态伙伴",
     compare: "产品对比",
     calculator: "TCO 成本计算器",
     faq: "常见问题",
+    contact: "联系合作",
     docs: "技术文档",
     github: "GitHub",
     getStarted: "安装 Upstand",
@@ -54,6 +56,128 @@ export const zh: Dictionary = {
     tabUpGal: "UpGal AI 智能助手",
     statusHealthy: "全部 12 个 Swarm 节点健康运行",
     statusReady: "已就绪：支持零停机滚动更新",
+  },
+  manifesto: {
+    badge: "01 — 我们的初衷",
+    title: "我们相信，互联网依然可以充满人性的温度。",
+    description:
+      "Upstand 是一家独立的产品控股工作室，致力于打造充满好奇心的产品、实用的基础设施，以及值得更多关注的灵感。",
+    subDescription:
+      "我们创造那些渴望存在的东西：面向开发者、设计师与编程社区的开源工具，以及服务更广阔网络的专注平台。我们的作品立足于软件、文化与未来的无限可能之间。",
+    point1: {
+      title: "秉持信念的软件",
+      desc: "拒绝冗余的层级与诱导性暗黑模式。以纯粹、坚固的底层原语打造经得起时间检验的系统。",
+    },
+    point2: {
+      title: "追求极致的匠人文化",
+      desc: "专为注重人机工效、排版美学、键盘快捷操作与极致性能的人群而设计。",
+    },
+    point3: {
+      title: "毫不妥协的真正主权",
+      desc: "独立自主的工具，帮助开发者与企业真正拿回对数据和服务器的完全控制权。",
+    },
+  },
+  ecosystem: {
+    badge: "02 — 旗下作品与生态",
+    title: "一系列精心打磨的实用工具。源自 Upstand 的独立视角。",
+    description:
+      "用心雕琢的开源工具、创意平台与开发者基础设施。",
+    visitSite: "访问项目",
+    projects: [
+      {
+        id: "upstand-paas",
+        number: "01",
+        name: "Upstand PaaS",
+        tagline: "旗舰产品 · 容器控制面板",
+        description:
+          "面向 Docker Swarm 的容器优先自托管 PaaS，内置动态 Caddy 路由与 AI 自动化运维系统。",
+        category: "控制平面",
+        url: "https://upstand.dev",
+        status: "v0.14 活跃",
+        isFlagship: true,
+      },
+      {
+        id: "openrive",
+        number: "02",
+        name: "OpenRive",
+        tagline: "开源项目 · 创意动画工具",
+        description:
+          "免登录、本地优先的 Rive 动画 Web 编辑器。直接在浏览器中调试状态机与实时运行效果。",
+        category: "创意工具",
+        url: "https://openrive.upstand.dev",
+        status: "已上线 免费",
+      },
+      {
+        id: "adsparty",
+        number: "03",
+        name: "AdsParty",
+        tagline: "商业平台 · 智能广告网络",
+        description:
+          "覆盖 Telegram 与开放网络的高效广告平台，提供精准定位与透明实时的投放分析。",
+        category: "广告网络",
+        url: "https://ads.upstand.dev",
+        status: "生产运营中",
+      },
+      {
+        id: "tongo",
+        number: "04",
+        name: "Tongo",
+        tagline: "创新产品 · 新一代 Web 平台",
+        description:
+          "探索无摩擦去中心化工具与未来网络交互形态的实验性产品。",
+        category: "平台工具",
+        url: "https://tongo.run",
+        status: "在线可用",
+      },
+      {
+        id: "dgrunner",
+        number: "05",
+        name: "dgrunner",
+        tagline: "开源项目 · 开发者运维工具",
+        description:
+          "轻松搭建、管理并自动扩展私有 GitHub Actions 执行器（Runner），支持无缝清理与临时隔离。",
+        category: "DevOps",
+        url: "https://github.com/UpstandPlatform/dgrunner",
+        status: "开源发布",
+      },
+      {
+        id: "lettersbox",
+        number: "06",
+        name: "lettersbox",
+        tagline: "私密空间 · 沉浸私信交流",
+        description:
+          "一个宁静、无算法干扰的专属空间，用于记录笔记、书信、语音留言和私密对话。",
+        category: "隐私通讯",
+        url: "https://lettersbox.ir",
+        status: "已发布",
+      },
+    ],
+  },
+  partners: {
+    badge: "03 — 携手同行",
+    title: "与卓越的伙伴共同成长。",
+    description:
+      "我们与深究细节、关注真实用户，并在产品上线后始终全情投入的团队紧密合作。",
+    quote: "我们无意盲目生产更多；我们只专注创造未来所需之物。",
+    visitPartner: "访问工作室",
+    items: [
+      {
+        number: "01",
+        name: "Apex Team",
+        role: "软件与人工智能工作室",
+        description:
+          "一群富有创造力的工程师，将宏大构想转化为现实世界中的成熟产品与商业业务。",
+        url: "https://apexteam.net",
+      },
+      {
+        number: "02",
+        name: "Mansora",
+        role: "高阶技术咨询机构",
+        description:
+          "为高成长团队提供软件架构、AI 系统、云原生设施、安全审计与平台工程咨询服务。",
+        url: "https://mansora.dev",
+      },
+    ],
   },
   stats: {
     uptimeValue: "99.99%",
@@ -258,6 +382,12 @@ export const zh: Dictionary = {
         category: "概述",
       },
       {
+        question: "Upstand 工作室旗下还有哪些主要产品？",
+        answer:
+          "除旗舰 Docker Swarm PaaS 控制平台外，Upstand 工作室还打造了 OpenRive（本地优先 Rive 动画编辑器）、AdsParty（Telegram 及开放网络智能广告系统）、Tongo（下一代 Web 创新产品）、dgrunner（自托管 GitHub Actions 调度工具）与 lettersbox（沉浸私密通讯平台）。",
+        category: "工作室与生态",
+      },
+      {
         question: "安装 Upstand 的最低硬件与系统要求是什么？",
         answer:
           "生产环境推荐最低配置为 2 核 CPU、4 GB 内存以及 30 GB 可用磁盘空间。用于评估和测试时，可在 1 核 CPU、2 GB 内存的主机上使用 UPSTAND_ALLOW_UNDERSIZED_HOST=true 环境变量完成部署。",
@@ -289,6 +419,18 @@ export const zh: Dictionary = {
       },
     ],
   },
+  contact: {
+    badge: "04 — 带来您的灵感",
+    title: "有一个好点子？开启一场深入的对话。",
+    description:
+      "告诉我们您脑海中挥之不去的想法。即使只是粗略的草图也已足够，其余交给我们来实现。",
+    emailLabel: "直达邮箱",
+    namePlaceholder: "您的姓名",
+    emailPlaceholder: "电子邮箱",
+    ideaPlaceholder: "描述您的产品构想或技术挑战...",
+    submitButton: "将想法发送给我们",
+    successMessage: "非常感谢！我们已收到您的构思，会尽快与您取得联系。",
+  },
   cta: {
     badge: "两分钟极速就绪",
     title: "立即掌控专属于您的私有容器云平台",
@@ -299,13 +441,13 @@ export const zh: Dictionary = {
     prerequisites: "系统前置要求：Ubuntu 22.04+ 或 Debian 12+，具备 root 权限。",
   },
   footer: {
-    tagline: "现代化的容器优先自托管控制面板",
+    tagline: "我们创造真正值得使用的产品。",
     description:
-      "面向 Docker Swarm 的自托管 PaaS 平台、自动化多节点集群、动态 Caddy 边缘网关及 AI 驱动的运维系统。",
+      "独立产品工作室与 Docker Swarm PaaS 控制平台，专注打造富有温度的开源工具与韧性基础设施。",
     headings: {
-      product: "产品矩阵",
+      product: "作品与生态",
       resources: "开发者资源",
-      community: "社区与生态",
+      community: "伙伴与社区",
       compliance: "企业合规",
     },
     links: {
@@ -318,7 +460,7 @@ export const zh: Dictionary = {
       securityPolicy: "安全策略与双重认证",
       architecture: "系统架构白皮书",
     },
-    rights: "版权所有 © Upstand Platform 保留所有权利。",
+    rights: "© 2026 upstand, inc. 为好奇心而生。保留所有权利。",
     openSourceNotice: "基于 Apache 2.0 许可证的开源软件。",
   },
 };

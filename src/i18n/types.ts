@@ -11,9 +11,12 @@ export interface Dictionary {
     architecture: string;
     databases: string;
     upgal: string;
+    ecosystem: string;
+    partners: string;
     compare: string;
     calculator: string;
     faq: string;
+    contact: string;
     docs: string;
     github: string;
     getStarted: string;
@@ -38,6 +41,46 @@ export interface Dictionary {
     tabUpGal: string;
     statusHealthy: string;
     statusReady: string;
+  };
+  manifesto: {
+    badge: string;
+    title: string;
+    description: string;
+    subDescription: string;
+    point1: { title: string; desc: string };
+    point2: { title: string; desc: string };
+    point3: { title: string; desc: string };
+  };
+  ecosystem: {
+    badge: string;
+    title: string;
+    description: string;
+    visitSite: string;
+    projects: Array<{
+      id: string;
+      number: string;
+      name: string;
+      tagline: string;
+      description: string;
+      category: string;
+      url: string;
+      status: string;
+      isFlagship?: boolean;
+    }>;
+  };
+  partners: {
+    badge: string;
+    title: string;
+    description: string;
+    quote: string;
+    visitPartner: string;
+    items: Array<{
+      number: string;
+      name: string;
+      role: string;
+      description: string;
+      url: string;
+    }>;
   };
   stats: {
     uptimeValue: string;
@@ -165,6 +208,17 @@ export interface Dictionary {
       answer: string;
       category: string;
     }>;
+  };
+  contact: {
+    badge: string;
+    title: string;
+    description: string;
+    emailLabel: string;
+    namePlaceholder: string;
+    emailPlaceholder: string;
+    ideaPlaceholder: string;
+    submitButton: string;
+    successMessage: string;
   };
   cta: {
     badge: string;

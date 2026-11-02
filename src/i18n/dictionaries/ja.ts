@@ -2,33 +2,35 @@ import { Dictionary } from "../types";
 
 export const ja: Dictionary = {
   seo: {
-    title: "Upstand | コンテナファースト・セルフホスト型 Docker Swarm PaaS 統合管理プレーン",
+    title: "Upstand | プロダクトスタジオ & Docker Swarm PaaS — 使う価値のあるものを創る。",
     description:
-      "Docker Swarm ノードのオーケストレーション、Git からのアプリ＆永続DBデプロイ、ダウンタイムゼロの Caddy アトミックリロード、自律型 AI アシスタント UpGal を単一画面で提供。",
+      "独立系プロダクトスタジオおよび Docker Swarm PaaS 統合管理プレーン。コンテナのオーケストレーション、永続DB、瞬断ゼロの Caddy リロード、オープンソースエコシステムを提供。",
     keywords: [
+      "Upstand プロダクトスタジオ",
       "Docker Swarm PaaS",
-      "セルフホスト PaaS",
-      "コンテナ統合管理",
-      "Upstand",
-      "Caddy リバースプロキシ",
+      "オープンソース開発ツール",
+      "OpenRive アニメーション",
+      "AdsParty 広告ネットワーク",
+      "dgrunner ランナー管理",
+      "Tongo プラットフォーム",
+      "lettersbox プライベートメモ",
       "UpGal AI アシスタント",
-      "PostgreSQL 運用",
-      "libSQL ホスティング",
-      "Docker Swarm クラスタリング",
-      "Coolify Portainer 代替",
     ],
-    ogTitle: "Upstand — 現代的なコンテナ＆クラスタ統合管理コントロールプレーン",
+    ogTitle: "Upstand — 私たちは、真に使う価値のあるものを創ります。",
     ogDescription:
-      "ベアメタルおよびクラウドサーバー上で、アトミックな Caddy リロードと承認フロー付き自律 AI エージェントを備えた Swarm クラスタを構築。",
+      "オープンソースツール、有益なソフトウェア、堅牢な Docker Swarm インフラを構築する独立系プロダクトスタジオ。",
   },
   nav: {
     features: "主な機能",
     architecture: "アーキテクチャ",
     databases: "永続データベース",
     upgal: "UpGal AI",
+    ecosystem: "制作プロダクト",
+    partners: "パートナー",
     compare: "他社比較",
     calculator: "コスト試算",
     faq: "よくある質問",
+    contact: "お問い合わせ",
     docs: "ドキュメント",
     github: "GitHub",
     getStarted: "Upstand を導入",
@@ -54,6 +56,128 @@ export const ja: Dictionary = {
     tabUpGal: "UpGal AI エージェント",
     statusHealthy: "全 12 台の Swarm ノードが正常稼働中",
     statusReady: "ダウンタイムゼロのローリングデプロイ待機完了",
+  },
+  manifesto: {
+    badge: "01 — 私たちの信念",
+    title: "インターネットは今でも、人間味にあふれた場所になれると信じています。",
+    description:
+      "Upstand は、好奇心を刺激するプロダクト、有益なインフラストラクチャ、そしてもっと注目されるべきアイデアを育む独立系プロダクトスタジオです。",
+    subDescription:
+      "私たちは、自分たちが存在してほしかったものを創り出します。開発者やデザイナー、プログラミングコミュニティのためのオープンソースツールと、Web 全体に向けた焦点を絞ったプラットフォーム。私たちの活動は、ソフトウェア、文化、そして可能性の交差点にあります。",
+    point1: {
+      title: "信念あるソフトウェア",
+      desc: "無駄な階層や欺瞞的なダークパターンを排除。長く使い続けられる堅牢で純粋なプリミティブ。",
+    },
+    point2: {
+      title: "クラフトマンシップの文化",
+      desc: "人間工学、タイポグラフィ、キーボードショートカット、卓越したスピードを大切にする人のために設計。",
+    },
+    point3: {
+      title: "妥協なき真の主権",
+      desc: "開発者自身がデータとサーバーの完全な主権を取り戻せる、自律的で信頼できる独立ツール。",
+    },
+  },
+  ecosystem: {
+    badge: "02 — 私たちが創っているもの",
+    title: "厳選された有益なツールのコレクション。Upstand 独自の視点。",
+    description:
+      "丁寧なこだわりをもって構築されたオープンソースツール、創作プラットフォーム、開発基盤。",
+    visitSite: "プロジェクトを見る",
+    projects: [
+      {
+        id: "upstand-paas",
+        number: "01",
+        name: "Upstand PaaS",
+        tagline: "旗艦プロダクト · コンテナ管理プレーン",
+        description:
+          "Docker Swarm のためのコンテナファースト型セルフホスト PaaS。Caddy アトミックルーティングと AI オペレーション。",
+        category: "コントロールプレーン",
+        url: "https://upstand.dev",
+        status: "v0.14 稼働中",
+        isFlagship: true,
+      },
+      {
+        id: "openrive",
+        number: "02",
+        name: "OpenRive",
+        tagline: "オープンソース · クリエイティブツール",
+        description:
+          "Rive アニメーションのためのローカルファースト・ログイン不要な Web エディタ。ブラウザ内で直接ステートマシンを検証。",
+        category: "クリエイティブツール",
+        url: "https://openrive.upstand.dev",
+        status: "公開中・無料",
+      },
+      {
+        id: "adsparty",
+        number: "03",
+        name: "AdsParty",
+        tagline: "プラットフォーム · 広告ネットワーク",
+        description:
+          "Telegram チャンネルとオープン Web を横断する効果的な広告プラットフォーム。高度なターゲティングと透明な分析。",
+        category: "広告",
+        url: "https://ads.upstand.dev",
+        status: "本番運用中",
+      },
+      {
+        id: "tongo",
+        number: "04",
+        name: "Tongo",
+        tagline: "プロダクト · 次世代 Web プラットフォーム",
+        description:
+          "Upstand スタジオ発の摩擦のない分散型ツールと次世代 Web ユーティリティを探求するプロダクト。",
+        category: "プラットフォーム",
+        url: "https://tongo.run",
+        status: "稼働中",
+      },
+      {
+        id: "dgrunner",
+        number: "05",
+        name: "dgrunner",
+        tagline: "オープンソース · DevOps ツール",
+        description:
+          "セルフホスト型 GitHub Actions ランナーのセットアップ、自動スケール、クリーンアップを極小オーバーヘッドで管理。",
+        category: "DevOps",
+        url: "https://github.com/UpstandPlatform/dgrunner",
+        status: "オープンソース",
+      },
+      {
+        id: "lettersbox",
+        number: "06",
+        name: "lettersbox",
+        tagline: "プロダクト · 静穏なプライベート通信",
+        description:
+          "アルゴリズムの騒音から離れ、メモや手紙、音声録音、親密な会話を落ち着いて交わせる静かな空間。",
+        category: "プライバシー",
+        url: "https://lettersbox.ir",
+        status: "利用可能",
+      },
+    ],
+  },
+  partners: {
+    badge: "03 — 素晴らしい仲間と共に",
+    title: "志を共にするチームとの協業。",
+    description:
+      "細部にこだわり、実際の利用者に寄り添い、リリース後のプロダクトの行方を深く見つめるチームとパートナーシップを結んでいます。",
+    quote: "私たちは単に量を増やすことには興味がありません。次に何が必要とされるのか、それを形にします。",
+    visitPartner: "スタジオを訪問",
+    items: [
+      {
+        number: "01",
+        name: "Apex Team",
+        role: "ソフトウェア & AI スタジオ",
+        description:
+          "野心的なアイデアを実用的なプロダクト、堅牢なソフトウェア、繁栄するビジネスへと具現化するエンジニア集団。",
+        url: "https://apexteam.net",
+      },
+      {
+        number: "02",
+        name: "Mansora",
+        role: "テクノロジーコンサルティング",
+        description:
+          "急成長企業のための高度なソフトウェア開発、AI システム構築、セキュアなクラウド基盤、プラットフォームエンジニアリング。",
+        url: "https://mansora.dev",
+      },
+    ],
   },
   stats: {
     uptimeValue: "99.99%",
@@ -258,6 +382,12 @@ export const ja: Dictionary = {
         category: "概要",
       },
       {
+        question: "Upstand スタジオが制作する他のプロダクトには何がありますか？",
+        answer:
+          "旗艦の Docker Swarm PaaS に加え、Upstand スタジオは OpenRive (Rive アニメーションエディタ)、AdsParty (Telegram & Web 広告ネットワーク)、Tongo (次世代 Web プラットフォーム)、dgrunner (GitHub Actions ランナー管理)、lettersbox (静かなプライベート通信空間) を開発・運営しています。",
+        category: "スタジオ & エコシステム",
+      },
+      {
         question: "Upstand をインストールするための最小スペックは？",
         answer:
           "本番環境では 2 vCPU コア、4 GB RAM、30 GB の空きストレージを推奨します。テストや検証目的であれば、環境変数 UPSTAND_ALLOW_UNDERSIZED_HOST=true を指定することで 1 vCPU、2 GB RAM の軽量サーバーでも起動可能です。",
@@ -289,6 +419,18 @@ export const ja: Dictionary = {
       },
     ],
   },
+  contact: {
+    badge: "04 — アイデアをお聞かせください",
+    title: "素晴らしいアイデアをお持ちですか？ 会話を始めましょう。",
+    description:
+      "頭から離れないアイデアや課題を教えてください。ラフなスケッチで十分です。そこから先は私たちにお任せください。",
+    emailLabel: "ダイレクトメール",
+    namePlaceholder: "お名前",
+    emailPlaceholder: "メールアドレス",
+    ideaPlaceholder: "アイデアや技術的な挑戦についてお書きください...",
+    submitButton: "アイデアを送信する",
+    successMessage: "ありがとうございます！ メッセージを受領しました。近日中にご連絡いたします。",
+  },
   cta: {
     badge: "わずか 2 分で導入完了",
     title: "自社専用のコンテナクラウド環境を今すぐ手に入れましょう",
@@ -299,13 +441,13 @@ export const ja: Dictionary = {
     prerequisites: "前提条件: Ubuntu 22.04+ または Debian 12+ (root 権限必須)",
   },
   footer: {
-    tagline: "現代的なコンテナファースト統合コントロールプレーン",
+    tagline: "私たちは、使う価値のあるものを創ります。",
     description:
-      "Docker Swarm 向けセルフホスト PaaS、マルチノード自動クラスタリング、Caddy 動的ルーティング、AI 支援オペレーション基盤。",
+      "独立系プロダクトスタジオおよび Docker Swarm PaaS 統合管理プレーン。オープンソースツールと人間味ある Web の創造。",
     headings: {
-      product: "プロダクト",
+      product: "プロダクト & 制作物",
       resources: "リソース",
-      community: "コミュニティ",
+      community: "パートナー & コミュニティ",
       compliance: "企業情報",
     },
     links: {
@@ -318,7 +460,7 @@ export const ja: Dictionary = {
       securityPolicy: "セキュリティ & 2FA",
       architecture: "システム構成白書",
     },
-    rights: "All rights reserved. Upstand Platform.",
+    rights: "© 2026 Upstand, Inc. 好奇心旺盛な人々のために。無断転載を禁じます。",
     openSourceNotice: "Apache 2.0 ライセンスに基づくオープンソースソフトウェアです。",
   },
 };

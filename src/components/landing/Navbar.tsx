@@ -43,7 +43,7 @@ export function Navbar({ dict, currentLocale }: NavbarProps) {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden items-center gap-7 text-sm font-medium text-slate-300 md:flex">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex">
           <a
             href="#features"
             className="transition-colors hover:text-[#38bdf8]"
@@ -51,16 +51,22 @@ export function Navbar({ dict, currentLocale }: NavbarProps) {
             {dict.nav.features}
           </a>
           <a
+            href="#ecosystem"
+            className="transition-colors hover:text-[#38bdf8]"
+          >
+            {dict.nav.ecosystem}
+          </a>
+          <a
+            href="#partners"
+            className="transition-colors hover:text-[#38bdf8]"
+          >
+            {dict.nav.partners}
+          </a>
+          <a
             href="#architecture"
             className="transition-colors hover:text-[#38bdf8]"
           >
             {dict.nav.architecture}
-          </a>
-          <a
-            href="#translator"
-            className="transition-colors hover:text-[#38bdf8]"
-          >
-            {dict.composeTranslator.badge}
           </a>
           <a
             href="#compare"
@@ -75,10 +81,10 @@ export function Navbar({ dict, currentLocale }: NavbarProps) {
             {dict.nav.calculator}
           </a>
           <a
-            href="#faq"
+            href="#contact"
             className="transition-colors hover:text-[#38bdf8]"
           >
-            {dict.nav.faq}
+            {dict.nav.contact}
           </a>
         </nav>
 
@@ -189,18 +195,25 @@ export function Navbar({ dict, currentLocale }: NavbarProps) {
               {dict.nav.features}
             </a>
             <a
+              href="#ecosystem"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-1 transition-colors hover:text-[#38bdf8]"
+            >
+              {dict.nav.ecosystem}
+            </a>
+            <a
+              href="#partners"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-1 transition-colors hover:text-[#38bdf8]"
+            >
+              {dict.nav.partners}
+            </a>
+            <a
               href="#architecture"
               onClick={() => setMobileMenuOpen(false)}
               className="py-1 transition-colors hover:text-[#38bdf8]"
             >
               {dict.nav.architecture}
-            </a>
-            <a
-              href="#translator"
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-1 transition-colors hover:text-[#38bdf8]"
-            >
-              {dict.composeTranslator.badge}
             </a>
             <a
               href="#compare"
@@ -217,11 +230,11 @@ export function Navbar({ dict, currentLocale }: NavbarProps) {
               {dict.nav.calculator}
             </a>
             <a
-              href="#faq"
+              href="#contact"
               onClick={() => setMobileMenuOpen(false)}
               className="py-1 transition-colors hover:text-[#38bdf8]"
             >
-              {dict.nav.faq}
+              {dict.nav.contact}
             </a>
             <a
               href="https://github.com/UpstandPlatform/upstand"
