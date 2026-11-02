@@ -2,16 +2,14 @@ import { defaultLocale, Locale, isValidLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { Navbar } from "@/components/landing/Navbar";
 import { Hero } from "@/components/landing/Hero";
-import { StatsSection } from "@/components/landing/StatsSection";
+import { DeploymentModels } from "@/components/landing/DeploymentModels";
 import { StudioManifesto } from "@/components/landing/StudioManifesto";
 import { EcosystemProjects } from "@/components/landing/EcosystemProjects";
-import { FeaturesGrid } from "@/components/landing/FeaturesGrid";
+import { CapabilitiesGrid } from "@/components/landing/CapabilitiesGrid";
 import { ArchitectureVisualizer } from "@/components/landing/ArchitectureVisualizer";
 import { ComposeTranslator } from "@/components/landing/ComposeTranslator";
 import { PartnersSection } from "@/components/landing/PartnersSection";
 import { ComparisonTable } from "@/components/landing/ComparisonTable";
-import { TcoCalculator } from "@/components/landing/TcoCalculator";
-import { Testimonials } from "@/components/landing/Testimonials";
 import { FaqAccordion } from "@/components/landing/FaqAccordion";
 import { IdeaContactForm } from "@/components/landing/IdeaContactForm";
 import { CtaBanner } from "@/components/landing/CtaBanner";
@@ -27,20 +25,18 @@ export default async function LocalizedLandingPage({
   const dict = getDictionary(currentLocale);
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#070a12] text-slate-100">
+    <div className="flex min-h-screen flex-col bg-[#090a0f] text-zinc-100 selection:bg-blue-600 selection:text-white">
       <Navbar dict={dict} currentLocale={currentLocale} />
       <main className="flex-1">
         <Hero dict={dict} />
-        <StatsSection dict={dict} />
+        <DeploymentModels dict={dict} />
         <StudioManifesto dict={dict} />
         <EcosystemProjects dict={dict} />
-        <FeaturesGrid dict={dict} />
+        <CapabilitiesGrid dict={dict} />
         <ArchitectureVisualizer dict={dict} />
         <ComposeTranslator dict={dict} />
         <PartnersSection dict={dict} />
         <ComparisonTable dict={dict} />
-        <TcoCalculator dict={dict} />
-        <Testimonials dict={dict} />
         <FaqAccordion dict={dict} />
         <IdeaContactForm dict={dict} />
         <CtaBanner dict={dict} />

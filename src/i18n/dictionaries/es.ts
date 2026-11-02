@@ -1,466 +1,531 @@
 import { Dictionary } from "../types";
 
 export const es: Dictionary = {
-  seo: {
-    title: "Upstand | Estudio de Productos y PaaS Docker Swarm — Creamos cosas que vale la pena usar.",
-    description:
-      "Estudio de productos independiente y panel de control PaaS para Docker Swarm. Despliegue aplicaciones y bases de datos, configure Caddy sin caídas y conozca nuestro ecosistema open source.",
-    keywords: [
-      "Upstand estudio productos",
+  "seo": {
+    "title": "Upstand — Plataforma de contenedores Open Source y Estudio Independiente",
+    "description": "Orquestación autoalojada en Docker Swarm y Caddy con TLS automático y clustering multiserver sin dependencia de proveedores. 100% código abierto bajo Apache 2.0.",
+    "keywords": [
       "Docker Swarm PaaS",
-      "herramientas open source",
-      "OpenRive editor animación",
-      "AdsParty red publicidad",
-      "dgrunner runners GitHub",
-      "Tongo plataforma",
-      "lettersbox notas privadas",
-      "asistente IA UpGal",
+      "PaaS autoalojado",
+      "Open Source PaaS",
+      "proxy Caddy",
+      "estudio Upstand",
+      "Apache 2.0"
     ],
-    ogTitle: "Upstand — Creamos cosas que realmente vale la pena usar.",
-    ogDescription:
-      "Un estudio de productos independiente que crea software útil, herramientas abiertas e infraestructura Docker Swarm fiable.",
+    "ogTitle": "Upstand — Despliega lo que sea. Sé dueño de todo.",
+    "ogDescription": "Plataforma de orquestación de contenedores autoalojada y estudio independiente. Ejecuta en tus propios servidores sin bloqueos."
   },
-  nav: {
-    features: "Características",
-    architecture: "Arquitectura",
-    databases: "Bases de datos",
-    upgal: "IA UpGal",
-    ecosystem: "Nuestras Obras",
-    partners: "Aliados",
-    compare: "Comparativa",
-    calculator: "Calculadora TCO",
-    faq: "Preguntas Frecuentes",
-    contact: "Contacto",
-    docs: "Documentación",
-    github: "GitHub",
-    getStarted: "Instalar Upstand",
-    language: "Idioma",
-    theme: "Tema",
+  "nav": {
+    "models": "Despliegue",
+    "manifesto": "Manifiesto",
+    "ecosystem": "Proyectos",
+    "capabilities": "Capacidades",
+    "architecture": "Arquitectura",
+    "compose": "Traductor Compose",
+    "compare": "Comparativa",
+    "partners": "Socios",
+    "faq": "Preguntas",
+    "contact": "Contacto",
+    "docs": "Documentación",
+    "github": "GitHub",
+    "getStarted": "Empezar",
+    "language": "Idioma"
   },
-  hero: {
-    badge: "Panel de Control PaaS Open Source v0.14",
-    titleStart: "Despliegue y orqueste sus",
-    titleHighlight: "cargas de trabajo Docker Swarm",
-    titleEnd: "con total claridad operativa",
-    description:
-      "Una plataforma de control moderna y autoalojada que transforma sus servidores dedicados o en la nube en clusters Docker Swarm altamente resilientes. Despliegues desde Git, bases de datos persistentes, recargas atómicas de Caddy sin interrupción y el copiloto de IA UpGal.",
-    quickInstall: "Instalación Rápida",
-    copied: "¡Comando copiado al portapapeles!",
-    copyCommand: "Copiar comando",
-    exploreDocs: "Explorar Documentación",
-    viewGithub: "Ver en GitHub",
-    starsBadge: "2.4k+ Estrellas",
-    tabInstall: "Instalación Rápida (Bash)",
-    tabCompose: "docker-compose.yml",
-    tabSwarm: "Servicio Swarm",
-    tabUpGal: "Agente IA UpGal",
-    statusHealthy: "Los 12 nodos Swarm están operativos",
-    statusReady: "Listo para despliegue sin caída de tráfico",
+  "hero": {
+    "tag": "PaaS de Código Abierto y Estudio Independiente",
+    "title": "Despliega cualquier servicio en tu propia infraestructura.",
+    "subtitle": "Plataforma autoalojada basada en Docker Swarm y Caddy. Clustering multinodo, certificados TLS automáticos y bases de datos persistentes sin la complejidad de Kubernetes. 100% código abierto con licencia Apache 2.0.",
+    "quickInstall": "Copiar comando",
+    "copied": "Copiado al portapapeles",
+    "exploreDocs": "Documentación",
+    "viewGithub": "Ver en GitHub",
+    "installCommand": "curl -fsSL https://upstand.dev/install.sh | bash",
+    "clusterPreview": {
+      "title": "upstand-cluster-01",
+      "status": "Quórum Raft 3/3",
+      "managers": "3 Managers Activos",
+      "workers": "6 Workers Conectados",
+      "services": "24 Réplicas en Ejecución",
+      "routes": "Caddy Auto-TLS (Let's Encrypt)"
+    }
   },
-  manifesto: {
-    badge: "01 — El sentido de lo que hacemos",
-    title: "Creemos que internet todavía puede sentirse humano.",
-    description:
-      "Upstand es un estudio de productos independiente y holding para productos curiosos, infraestructura útil e ideas que merecen mayor atención.",
-    subDescription:
-      "Construimos las herramientas que deseábamos que existieran: software de código abierto para desarrolladores, diseñadores y la comunidad creadora, además de plataformas especializadas. Nuestro trabajo habita entre el código, la cultura y lo posible.",
-    point1: {
-      title: "Software con convicción",
-      desc: "Sin capas innecesarias ni patrones oscuros. Primitivas limpias y duraderas construidas para perdurar.",
-    },
-    point2: {
-      title: "Cultura artesanal",
-      desc: "Diseñado para quienes aprecian la ergonomía, la tipografía, los atajos de teclado y el rendimiento puro.",
-    },
-    point3: {
-      title: "Soberanía sin concesiones",
-      desc: "Herramientas independientes que devuelven a los desarrolladores el control total sobre sus datos y servidores.",
-    },
-  },
-  ecosystem: {
-    badge: "02 — Lo que estamos creando",
-    title: "Una cuidada colección de utilidades. El punto de vista de Upstand.",
-    description:
-      "Herramientas de código abierto, plataformas creativas e infraestructura creadas con esmero.",
-    visitSite: "Visitar Proyecto",
-    projects: [
+  "deploymentModels": {
+    "tag": "01 — Tres formas de despliegue",
+    "title": "Cloud, autoalojado o híbrido.",
+    "description": "Una misma plataforma, tres modelos de ejecución — cambia cuando quieras.",
+    "models": [
       {
-        id: "upstand-paas",
-        number: "01",
-        name: "Upstand PaaS",
-        tagline: "Insignia · Panel de control de contenedores",
-        description:
-          "El PaaS autoalojado para Docker Swarm con enrutamiento dinámico atómico con Caddy y operaciones asistidas por IA.",
-        category: "Control Plane",
-        url: "https://upstand.dev",
-        status: "v0.14 Activo",
-        isFlagship: true,
+        "id": "cloud",
+        "number": "01",
+        "tag": "Gestionado",
+        "title": "Upstand Cloud",
+        "lead": "Despliega aplicaciones web y contenedores desde tu repositorio. Panel de control administrado, copias automáticas y logs unificados.",
+        "points": [
+          "Compilaciones y entornos de ejecución gestionados",
+          "Dominios HTTPS automáticos sin configuración",
+          "Registro de auditoría y permisos de equipo centralizados",
+          "Copias de seguridad programadas a almacenamiento S3"
+        ],
+        "price": "Plan Cloud",
+        "pricenote": "Cero mantenimiento de servidores"
       },
       {
-        id: "openrive",
-        number: "02",
-        name: "OpenRive",
-        tagline: "Open source · Herramienta creativa",
-        description:
-          "Un editor web de animaciones Rive local-first y sin necesidad de registro. Pruebe máquinas de estados directamente en el navegador.",
-        category: "Herramienta Creativa",
-        url: "https://openrive.upstand.dev",
-        status: "En vivo y Gratis",
+        "id": "self-hosted",
+        "number": "02",
+        "tag": "Autoalojado",
+        "title": "Tus Servidores",
+        "lead": "Ejecuta toda la plataforma en máquinas de tu propiedad. Cualquier VPS Linux (Hetzner, OVH, DigitalOcean, AWS) o servidores dedicados.",
+        "points": [
+          "Conexión de servidores por SSH sin necesidad de agentes",
+          "Clustering multinodo nativo con Docker Swarm",
+          "Sin demonios propietarios en tus máquinas",
+          "Soberanía total de datos y capacidad offline"
+        ],
+        "price": "Gratuito y Open Source",
+        "pricenote": "Apache-2.0 — sin límite de núcleos ni servidores",
+        "isFeatured": true
       },
       {
-        id: "adsparty",
-        number: "03",
-        name: "AdsParty",
-        tagline: "Plataforma · Red publicitaria",
-        description:
-          "Publicidad de alto impacto en canales de Telegram y la web abierta con segmentación inteligente y métricas transparentes.",
-        category: "Publicidad",
-        url: "https://ads.upstand.dev",
-        status: "En Producción",
-      },
-      {
-        id: "tongo",
-        number: "04",
-        name: "Tongo",
-        tagline: "Producto · Plataforma de nueva generación",
-        description:
-          "Una creación del estudio Upstand enfocada en utilidades web modernas y descentralizadas sin fricción.",
-        category: "Plataforma",
-        url: "https://tongo.run",
-        status: "Online",
-      },
-      {
-        id: "dgrunner",
-        number: "05",
-        name: "dgrunner",
-        tagline: "Open source · Herramientas DevOps",
-        description:
-          "Configure, gestione y escale ejecutores privados de GitHub Actions con limpieza automática y aislamiento efímero.",
-        category: "DevOps",
-        url: "https://github.com/UpstandPlatform/dgrunner",
-        status: "Código Abierto",
-      },
-      {
-        id: "lettersbox",
-        number: "06",
-        name: "lettersbox",
-        tagline: "Producto · Comunicación privada",
-        description:
-          "Un espacio sereno para notas, cartas, audios y conversaciones íntimas lejos del ruido algorítmico.",
-        category: "Privacidad",
-        url: "https://lettersbox.ir",
-        status: "Disponible",
-      },
+        "id": "hybrid",
+        "number": "03",
+        "tag": "Híbrido",
+        "title": "Combinación flexible",
+        "lead": "Panel de control en la nube conectado a tus servidores privados mediante una red cifrada WireGuard.",
+        "points": [
+          "Bases de datos en servidores propios, vistas previas en la nube",
+          "Mueve cargas de trabajo sin reescribir configuraciones",
+          "Un único panel de control y CLI para todos tus entornos",
+          "Permisos de equipo e historial de despliegues compartidos"
+        ],
+        "price": "Cloud + tus servidores",
+        "pricenote": "Una suscripción, servidores propios ilimitados"
+      }
     ],
+    "migrateTag": "Migración sencilla en cualquier momento",
+    "migrateTitle": "Cloud ⇄ Autoalojado. Un clic, cuando quieras.",
+    "migrateBody": "Tus aplicaciones son contenedores OCI estándares y tus servicios imágenes Docker estándar. Mueve cargas entre la nube y tus servidores físicos sin costes de salida."
   },
-  partners: {
-    badge: "03 — En buena compañía",
-    title: "Construido junto a personas admirables.",
-    description:
-      "Trabajamos con equipos que se preocupan por los detalles, los usuarios reales y la evolución del producto tras el lanzamiento.",
-    quote: "No nos interesa fabricar más en cantidad; nos interesa construir lo que viene después.",
-    visitPartner: "Visitar Estudio",
-    items: [
-      {
-        number: "01",
-        name: "Apex Team",
-        role: "Estudio de Software e Inteligencia Artificial",
-        description:
-          "Ingenieros y creadores que transforman ideas audaces en productos tangibles, software robusto y empresas prósperas.",
-        url: "https://apexteam.net",
-      },
-      {
-        number: "02",
-        name: "Mansora",
-        role: "Consultoría Tecnológica",
-        description:
-          "Ingeniería de plataformas, sistemas de inteligencia artificial, nube segura y arquitectura de software para equipos en expansión.",
-        url: "https://mansora.dev",
-      },
-    ],
-  },
-  stats: {
-    uptimeValue: "99.99%",
-    uptimeLabel: "Disponibilidad de orquestación Swarm",
-    speedValue: "10x",
-    speedLabel: "Más rápido que despliegues manuales por SSH",
-    caddyValue: "0 ms",
-    caddyLabel: "Interrupción en recargas atómicas de Caddy",
-    sovereigntyValue: "100%",
-    sovereigntyLabel: "Soberanía de datos y autoalojamiento",
-  },
-  features: {
-    badge: "Capacidades Clave",
-    title: "Todo lo que su equipo necesita para operar contenedores en producción",
-    description:
-      "Deje atrás scripts frágiles y configuraciones manuales de proxy. Upstand reúne orquestación multinodo, motores de bases de datos y operaciones inteligentes en una consola moderna y unificada.",
-    items: {
-      swarm: {
-        title: "Clustering multinodo Docker Swarm",
-        desc: "Conecte nodos manager y worker a través de redes overlay cifradas. Rotación segura de tokens, drenado de nodos sin riesgo de corte y consenso Raft garantizado.",
-        tag: "Gestión de Cluster",
-      },
-      databases: {
-        title: "Motores de bases de datos persistentes",
-        desc: "Aprovisionamiento en 1 clic de PostgreSQL 18, MySQL, MariaDB, MongoDB, Redis y libSQL (sqld) con volúmenes persistentes, credenciales seguras y copias a S3 con rclone.",
-        tag: "Almacenamiento Persistente",
-      },
-      caddy: {
-        title: "Proxy inverso Caddy atómico y TLS auto",
-        desc: "Cada cambio de enrutamiento se valida en un contenedor de prueba antes de aplicarse. Certificados Let's Encrypt automáticos, autenticación y cero desconexiones de sockets activos.",
-        tag: "Enrutamiento Edge",
-      },
-      upgal: {
-        title: "Copiloto autónomo de IA UpGal",
-        desc: "Agente con límite estricto de 12 pasos y confirmación humana requerida para acciones críticas. Diagnóstico de clusters, escalado de servicios y protocolo MCP.",
-        tag: "Operaciones con IA",
-      },
-      remoteServers: {
-        title: "Aprovisionamiento remoto sin agentes por SSH",
-        desc: "Vincule cualquier servidor Linux remoto mediante claves SSH. Upstand instala Docker, inicializa Swarm y opera colas de construcción en túneles seguros.",
-        tag: "Infraestructura",
-      },
-      security: {
-        title: "SSO Corporativo, SCIM 2.0 y Terminal Seguro",
-        desc: "Compatibilidad con SAML 2.0, OIDC, aprovisionamiento de usuarios por SCIM 2.0, validación de dominio DNS TXT y terminal Web SSH reservado al propietario.",
-        tag: "Seguridad Empresarial",
-      },
+  "manifesto": {
+    "badge": "02 — Nuestro propósito",
+    "title": "Creemos que internet todavía puede sentirse humano.",
+    "description": "Upstand es un estudio de productos independiente para crear herramientas sólidas, infraestructura útil e ideas con propósito.",
+    "subDescription": "Construimos lo que nos gustaría usar: herramientas de código abierto para desarrolladores y plataformas enfocadas para la web. Nuestro trabajo une software, artesanía técnica y soberanía.",
+    "point1": {
+      "title": "Artesanía antes que comodidad superficial",
+      "desc": "Componentes limpios y duraderos. Sin patrones oscuros, sin telemetría invasiva y sin dependencia cautiva."
     },
-  },
-  architecture: {
-    badge: "Arquitectura del Sistema",
-    title: "Diseñado para durabilidad, seguridad y aislamiento estricto",
-    description:
-      "El plano de control está aislado de las cargas de trabajo de los clientes. El panel se comunica con el servidor Hono/tRPC, las construcciones corren en colas BullMQ aisladas y Caddy redirige tráfico sin cortes.",
-    clientLayer: "Navegador de Usuario y Agentes IA (MCP)",
-    controlPlaneLayer: "Plano de Control Upstand (Hono, tRPC, PostgreSQL, Redis)",
-    workerNodesLayer: "Cluster Docker Swarm y colas de tareas por nodo",
-    caddyEdgeLayer: "Proxy Caddy dinámico con reversión automática",
-    details: {
-      step1Title: "1. Declaración de especificación",
-      step1Desc: "Los desarrolladores envían código Git o archivos Compose desde la web, CLI o UpGal.",
-      step2Title: "2. Serialización en cola y BuildKit",
-      step2Desc: "La cola del nodo genera la imagen de forma aislada mediante Dockerfile, Railpack o Nixpacks.",
-      step3Title: "3. Despliegue progresivo en Swarm",
-      step3Desc: "Docker Swarm reemplaza contenedores verificando la salud del servicio y aplicando reversión si falla.",
-      step4Title: "4. Recarga atómica de Caddy",
-      step4Desc: "Caddy valida la sintaxis en memoria y reasigna rutas sin cerrar conexiones TCP abiertas.",
+    "point2": {
+      "title": "Soberanía antes que ataduras",
+      "desc": "Debes ser el dueño de tu infraestructura, tus datos y tus herramientas. Fieles a estándares abiertos y contenedores."
     },
+    "point3": {
+      "title": "Claridad antes que complejidad artificial",
+      "desc": "Ingeniería pragmática. Docker Swarm en lugar del laberinto de Kubernetes. Configuraciones legibles en cinco minutos."
+    }
   },
-  composeTranslator: {
-    badge: "Traductor Inteligente",
-    title: "De Docker Compose convencional a Swarm Stacks de Alta Disponibilidad",
-    description:
-      "Pegue cualquier archivo docker-compose.yml habitual. Upstand convierte automáticamente puertos, políticas de reinicio y redes en especificaciones distribuidas de Swarm con réplicas y redes overlay.",
-    composeTab: "docker-compose.yml habitual",
-    swarmTab: "Swarm Stack traducido por Upstand",
-    featuresList: [
-      "Prevención automática de colisiones con prefijos seguros en volúmenes y redes",
-      "Transforma restart: always en deploy.restart_policy con espera exponencial",
-      "Configura paralelismo en actualizaciones progresivas y tolerancia a fallos",
-      "Inyección segura y cifrada de variables de entorno y secretos",
-    ],
+  "ecosystem": {
+    "badge": "03 — What we're making",
+    "title": "A collection of focused things. One Upstand point of view.",
+    "description": "Open source tools, creative platforms, and developer infrastructure built with care.",
+    "visitSite": "Visit Project",
+    "projects": [
+      {
+        "id": "upstand-paas",
+        "number": "01",
+        "name": "Upstand PaaS",
+        "tagline": "Self-hostable container platform on Docker Swarm & Caddy",
+        "description": "Multi-node clustering, dynamic reverse proxying, persistent databases, and AI-assisted cluster operations with zero vendor lock-in.",
+        "category": "Infrastructure",
+        "url": "https://upstand.dev",
+        "status": "Active Production",
+        "isFlagship": true
+      },
+      {
+        "id": "openrive",
+        "number": "02",
+        "name": "OpenRive",
+        "tagline": "Open runtime and toolchain for interactive vector animations",
+        "description": "High-performance vector animation engine and format converter. Run dynamic interactive motion across web and native targets.",
+        "category": "Creative Tools",
+        "url": "https://openrive.com",
+        "status": "Public Beta"
+      },
+      {
+        "id": "adsparty",
+        "number": "03",
+        "name": "AdsParty",
+        "tagline": "Privacy-preserving advertising and sponsorship exchange",
+        "description": "Direct, contextual advertising exchange without behavioral tracking, third-party cookies, or invasive user profiling.",
+        "category": "Web Protocol",
+        "url": "https://adsparty.com",
+        "status": "Active"
+      },
+      {
+        "id": "tongo",
+        "number": "04",
+        "name": "Tongo",
+        "tagline": "Real-time collaborative canvas for product teams",
+        "description": "Infinite multiplayer canvas for visual planning, system diagrams, and architectural brainstorming with local-first sync.",
+        "category": "Productivity",
+        "url": "https://tongo.app",
+        "status": "Early Access"
+      },
+      {
+        "id": "dgrunner",
+        "number": "05",
+        "name": "dgrunner",
+        "tagline": "Lightweight ephemeral CI runner for microVMs",
+        "description": "Secure, self-hosted build runners that spin up isolated microVM sandboxes in under 200ms and tear down cleanly.",
+        "category": "Developer Tooling",
+        "url": "https://dgrunner.dev",
+        "status": "Open Source"
+      },
+      {
+        "id": "lettersbox",
+        "number": "06",
+        "name": "lettersbox",
+        "tagline": "Zero-tracking newsletter and reader infrastructure",
+        "description": "Publishing and subscriber platform with cryptographic proof of delivery, plain markdown authoring, and no spy pixels.",
+        "category": "Publishing",
+        "url": "https://lettersbox.io",
+        "status": "Active"
+      }
+    ]
   },
-  comparison: {
-    badge: "Comparativa Honesta",
-    title: "Cómo se compara Upstand frente a otras alternativas PaaS",
-    description:
-      "Upstand fue diseñado para equipos que necesitan la resiliencia multinodo de Swarm sin la agobiante complejidad de Kubernetes.",
-    colFeature: "Capacidad",
-    colUpstand: "Upstand",
-    colCoolify: "Coolify",
-    colPortainer: "Portainer",
-    colDokploy: "Dokploy",
-    colKubernetes: "Kubernetes (K8s)",
-    rows: [
+  "capabilities": {
+    "badge": "04 — Platform capabilities",
+    "title": "Everything needed to ship and run containerized workloads.",
+    "description": "Engineered on battle-tested Linux foundations: Docker Swarm, Caddy, WireGuard, and PostgreSQL.",
+    "categories": [
       {
-        feature: "Clustering Swarm multinodo",
-        upstand: "Multinodo nativo + Raft",
-        coolify: "Servidor único / Control SSH",
-        portainer: "Soportado (Interfaz compleja)",
-        dokploy: "Swarm en servidor único",
-        kubernetes: "Nativo (Consumo masivo)",
-        highlight: true,
+        "id": "deploy",
+        "title": "Deploy & Release",
+        "items": [
+          {
+            "name": "Compose & Multi-service",
+            "desc": "Deploy multi-container stacks directly from standard Docker Compose files."
+          },
+          {
+            "name": "Git Push to Deploy",
+            "desc": "Trigger builds on git commits with automated webhook notifications."
+          },
+          {
+            "name": "Instant Rollbacks",
+            "desc": "Roll back to any previous deployment state with zero downtime."
+          },
+          {
+            "name": "Build Packs & Dockerfile",
+            "desc": "Build using standard Dockerfile with BuildKit secrets or automatic Nixpacks detection."
+          }
+        ]
       },
       {
-        feature: "Proxy inverso dinámico",
-        upstand: "Caddy atómico (con test previo)",
-        coolify: "Traefik",
-        portainer: "Manual / Nginx",
-        dokploy: "Traefik",
-        kubernetes: "Ingress Controller",
+        "id": "orchestrate",
+        "title": "Cluster & Orchestration",
+        "items": [
+          {
+            "name": "Docker Swarm Clustering",
+            "desc": "Native Raft consensus clustering built right into the Docker engine without etcd overhead."
+          },
+          {
+            "name": "Multi-Server Fan-Out",
+            "desc": "Schedule application replicas across multiple manager and worker servers in different regions."
+          },
+          {
+            "name": "Zero-Downtime Rolling Updates",
+            "desc": "Gradually roll out new image versions with configurable parallelism and failure rollbacks."
+          },
+          {
+            "name": "Health Checks & Auto-Healing",
+            "desc": "Restart failed tasks and reassign workloads automatically when a node goes offline."
+          }
+        ]
       },
       {
-        feature: "Copiloto IA con aprobación",
-        upstand: "UpGal con tarjetas de confirmación y MCP",
-        coolify: "Sin IA nativa",
-        portainer: "Sin IA nativa",
-        dokploy: "Sin IA nativa",
-        kubernetes: "Plugins externos",
-        highlight: true,
+        "id": "route",
+        "title": "Dynamic Edge & Routing",
+        "items": [
+          {
+            "name": "Atomic Caddy Reverse Proxy",
+            "desc": "Zero-downtime routing reloads verified in-process before applying changes."
+          },
+          {
+            "name": "Automated Let's Encrypt TLS",
+            "desc": "Free wildcard and sub-domain SSL certificates issued and renewed automatically."
+          },
+          {
+            "name": "Encrypted Overlay Mesh",
+            "desc": "Internal inter-service networking isolated with VXLAN and optional IPsec encryption."
+          },
+          {
+            "name": "Path & Subdomain Routing",
+            "desc": "Route multiple applications and microservices behind single domain endpoints."
+          }
+        ]
       },
       {
-        feature: "Bases de datos modernas y libSQL",
-        upstand: "Postgres 18, MySQL, Mongo, libSQL",
-        coolify: "Bases convencionales",
-        portainer: "Plantillas manuales",
-        dokploy: "Bases convencionales",
-        kubernetes: "Requiere operadores complejos",
+        "id": "storage",
+        "title": "Persistent Storage",
+        "items": [
+          {
+            "name": "One-Click Databases",
+            "desc": "Dedicated PostgreSQL 18, MySQL, Redis, MongoDB, and ClickHouse templates."
+          },
+          {
+            "name": "Persistent Docker Volumes",
+            "desc": "Mount host and distributed volume drivers with persistent data guarantees."
+          },
+          {
+            "name": "Automated S3 Backups",
+            "desc": "Scheduled database dumps directly to AWS S3, Cloudflare R2, MinIO, or Backblaze."
+          },
+          {
+            "name": "Safe Migration Tools",
+            "desc": "Import and restore database dumps with transactional integrity checks."
+          }
+        ]
       },
       {
-        feature: "SSO Empresarial y SCIM 2.0",
-        upstand: "OIDC, SAML 2.0 y SCIM de serie",
-        coolify: "Solo en versión Cloud de pago",
-        portainer: "Solo en versión Business de pago",
-        dokploy: "Solo login básico",
-        kubernetes: "Requiere configurar Dex/Keycloak",
-        highlight: true,
+        "id": "operate",
+        "title": "Operations & UpGal",
+        "items": [
+          {
+            "name": "Agentless SSH Provisioning",
+            "desc": "Connect any Linux server via SSH keys without installing third-party daemon agents."
+          },
+          {
+            "name": "UpGal Operations Assistant",
+            "desc": "Bounded Model Context Protocol (MCP) agent for diagnosing logs and service health."
+          },
+          {
+            "name": "Centralized Live Logs",
+            "desc": "Stream real-time stdout and stderr logs across all cluster nodes and containers."
+          },
+          {
+            "name": "CLI & REST API",
+            "desc": "Automate cluster management and deployments through scriptable CLI commands and API tokens."
+          }
+        ]
       },
       {
-        feature: "Consumo de memoria RAM",
-        upstand: "Muy ligero (~400 MB)",
-        coolify: "Moderado (~1 GB)",
-        portainer: "Ligero (~250 MB)",
-        dokploy: "Moderado (~800 MB)",
-        kubernetes: "Muy pesado (2+ GB por nodo)",
-      },
-    ],
+        "id": "security",
+        "title": "Security & Governance",
+        "items": [
+          {
+            "name": "Corporate SSO & SCIM 2.0",
+            "desc": "Authenticate with Google, GitHub, Okta, or generic SAML/OIDC identity providers."
+          },
+          {
+            "name": "Role-Based Access Control",
+            "desc": "Manage owner, admin, and member permissions with scoped resource boundaries."
+          },
+          {
+            "name": "Scoped API Tokens",
+            "desc": "Generate granular deployment tokens with specific project read and write permissions."
+          },
+          {
+            "name": "Immutable Audit Logs",
+            "desc": "Track every deployment, rollback, node join, and configuration change."
+          }
+        ]
+      }
+    ]
   },
-  calculator: {
-    badge: "Ahorro de Costes",
-    title: "Calcule su ahorro anual migrando a infraestructura propia",
-    description:
-      "Los proveedores cloud aplican enormes márgenes en computación, tráfico y bases de datos. Descubra cuánto ahorra con Upstand.",
-    nodesLabel: "Nodos de servidor",
-    appsLabel: "Aplicaciones activas",
-    dbsLabel: "Instancias de base de datos",
-    estimatedCloudCost: "Coste mensual estimado en AWS / Cloud PaaS",
-    upstandCost: "Coste mensual con Upstand en servidores propios",
-    savingsPerYear: "Ahorro anual estimado",
-    savingsNote:
-      "Cálculos basados en instancias equivalentes de AWS ECS / RDS frente a servidores dedicados en Hetzner / OVH.",
+  "architecture": {
+    "badge": "05 — Architecture",
+    "title": "Engineered for operational durability.",
+    "description": "A layered topology ensuring control plane isolation, encrypted mesh communication, and zero-downtime edge routing.",
+    "details": {
+      "step1Title": "Client & Ingress Layer",
+      "step1Desc": "Requests arrive via HTTPS to the edge proxy, while developers connect via the web console, CLI, or UpGal MCP interface.",
+      "step2Title": "Control Plane & Database",
+      "step2Desc": "The Hono and tRPC API coordinates state in PostgreSQL 18, utilizing BullMQ queues for asynchronous worker execution.",
+      "step3Title": "Docker Swarm Service Mesh",
+      "step3Desc": "Manager nodes maintain Raft consensus and schedule container tasks across isolated overlay networks with health monitors.",
+      "step4Title": "Atomic Caddy Reverse Proxy",
+      "step4Desc": "Caddy validates routing configurations via dry-run before applying hot updates, guaranteeing zero dropped connections."
+    }
   },
-  testimonials: {
-    badge: "Opiniones de la Comunidad",
-    title: "Recomendado por ingenieros de plataformas y DevOps",
-    description:
-      "Conozca la experiencia de equipos que ejecutan contenedores en producción con Upstand.",
-    items: [
-      {
-        quote:
-          "Upstand nos brindó la resiliencia del cluster Swarm sin tener que contratar a un ingeniero dedicado a Kubernetes. Las recargas atómicas de Caddy eliminaron por completo los errores 502 durante los despliegues.",
-        author: "Alexandre Moreau",
-        role: "Arquitecto Jefe de DevOps",
-        company: "Vektor Labs",
-      },
-      {
-        quote:
-          "UpGal AI es el primer asistente que respeta de verdad los límites de seguridad. La tarjeta de confirmación en pantalla impide cualquier borrado accidental de bases de datos en producción.",
-        author: "Sarah Chen",
-        role: "Directora de Infraestructura",
-        company: "Nexus Fintech",
-      },
-      {
-        quote:
-          "Migramos 45 microservicios de la nube a tres servidores dedicados con Upstand. Nuestra factura mensual se redujo de 3.400 $ a 220 $ sin un solo segundo de inactividad.",
-        author: "Dmitry Vasiliev",
-        role: "Ingeniero de Plataforma",
-        company: "HyperScale Media",
-      },
-    ],
+  "composeTranslator": {
+    "badge": "06 — Compose to Swarm",
+    "title": "Standard Docker Compose in. Production Swarm Stack out.",
+    "description": "Upstand translates standard Compose files into resilient multi-node Swarm definitions with health checks and rolling update policies.",
+    "composeTab": "docker-compose.yml (Dev)",
+    "swarmTab": "swarm-stack.yml (Production)",
+    "featuresList": [
+      "Automatic replica scaling and placement constraints",
+      "Rolling update configurations with configurable parallelism",
+      "Automatic restart policies on worker node failure",
+      "Zero manual Kubernetes YAML manifests required"
+    ]
   },
-  faq: {
-    badge: "Preguntas Frecuentes",
-    title: "Todo lo que necesita saber sobre Upstand",
-    description:
-      "Respuestas técnicas y concisas sobre instalación, arquitectura, clusters y seguridad.",
-    items: [
+  "partners": {
+    "badge": "07 — In good company",
+    "title": "Partners, collaborators, and friends of the studio.",
+    "description": "We build with teams who hold the same conviction for craft, performance, and independent software.",
+    "quote": "Good tools are built with good people. We're proud to collaborate with organizations pushing the web forward.",
+    "visitPartner": "Visit Website",
+    "items": [
       {
-        question: "¿Qué es Upstand y en qué se diferencia de Coolify o Portainer?",
-        answer:
-          "Upstand es un panel de control PaaS nativo para clusters multinodo de Docker Swarm. A diferencia de las herramientas diseñadas para un único servidor, Upstand gestiona nodos manager y worker con consenso Raft, utiliza Caddy con validación sintáctica previa, incluye un copiloto de IA con aprobación humana obligatoria y soporta bases de datos modernas como libSQL además de PostgreSQL 18.",
-        category: "General",
+        "number": "01",
+        "name": "Apex Team",
+        "role": "Strategic Engineering & Infrastructure Partner",
+        "description": "High-performance systems engineering team collaborating on distributed systems reliability, edge networking, and container runtimes.",
+        "url": "https://apexteam.io"
       },
       {
-        question: "¿Qué otros proyectos desarrolla el estudio Upstand?",
-        answer:
-          "Además de nuestro PaaS principal para Docker Swarm, el estudio Upstand crea OpenRive (editor de animaciones Rive), AdsParty (plataforma publicitaria en Telegram y web), Tongo, dgrunner (gestión de runners privados de GitHub Actions) y lettersbox (espacio sereno para comunicación privada).",
-        category: "Estudio y Ecosistema",
-      },
-      {
-        question: "¿Cuáles son los requisitos mínimos de sistema?",
-        answer:
-          "Para entornos de producción se recomiendan como mínimo 2 núcleos vCPU, 4 GB de RAM y 30 GB de almacenamiento en disco. Para pruebas y evaluación es posible ejecutarlo con 1 vCPU y 2 GB de RAM activando UPSTAND_ALLOW_UNDERSIZED_HOST=true.",
-        category: "Instalación",
-      },
-      {
-        question: "¿Cómo evita Caddy la caída de conexiones al recargar rutas?",
-        answer:
-          "Antes de hacer efectivo cualquier cambio, Upstand prueba el archivo Caddyfile en un contenedor aislado. Si la prueba es satisfactoria, Caddy recarga la tabla de enrutamiento en memoria sin cerrar sockets TCP abiertos ni sesiones TLS activas.",
-        category: "Enrutamiento",
-      },
-      {
-        question: "¿Puedo conectar servidores externos mediante SSH?",
-        answer:
-          "Sí, perfectamente. Upstand ofrece aprovisionamiento remoto sin instalar agentes pesados. Solo necesita indicar la IP y una clave privada SSH. Upstand configura el servidor, instala Docker si falta y lo conecta al Swarm mediante túneles seguros.",
-        category: "Clustering",
-      },
-      {
-        question: "¿Cómo protege UpGal AI las acciones de infraestructura crítica?",
-        answer:
-          "UpGal opera en un ciclo cerrado de 12 pasos. Siempre que una acción implique modificar o eliminar recursos (detener contenedores, borrar volúmenes o restaurar bases de datos), la IA pausa su ejecución y muestra una tarjeta interactiva para que un administrador la apruebe de forma explícita.",
-        category: "IA y Seguridad",
-      },
-      {
-        question: "¿Upstand es completamente gratuito y de código abierto?",
-        answer:
-          "Sí, Upstand es software libre bajo licencia Apache 2.0. Puede alojarlo libremente en su propia infraestructura con control absoluto sobre sus datos y servidores.",
-        category: "Licencia",
-      },
-    ],
+        "number": "02",
+        "name": "Mansora",
+        "role": "Design, Product Strategy & Digital Architecture",
+        "description": "Product design consultancy focused on digital craft, human-centered developer interfaces, and typography-first web architecture.",
+        "url": "https://mansora.com"
+      }
+    ]
   },
-  contact: {
-    badge: "04 — Háblenos de su idea",
-    title: "¿Tiene una idea genial? Comencemos a conversar.",
-    description:
-      "Cuéntenos aquello en lo que no puede dejar de pensar. Un borrador básico es más que suficiente; nosotros nos encargamos del resto.",
-    emailLabel: "Correo Directo",
-    namePlaceholder: "Su nombre",
-    emailPlaceholder: "Su correo electrónico",
-    ideaPlaceholder: "Describa su idea o desafío tecnológico...",
-    submitButton: "Enviar propuesta",
-    successMessage: "¡Muchas gracias! Hemos recibido su mensaje y nos pondremos en contacto pronto.",
+  "comparison": {
+    "badge": "08 — Technical comparison",
+    "title": "Where Upstand is genuinely different.",
+    "description": "A factual comparison of architecture, orchestration models, and resource footprints.",
+    "colFeature": "Capability",
+    "colUpstand": "Upstand",
+    "colCoolify": "Coolify",
+    "colPortainer": "Portainer",
+    "colDokploy": "Dokploy",
+    "colKubernetes": "Kubernetes",
+    "rows": [
+      {
+        "feature": "Orchestration Engine",
+        "upstand": "Docker Swarm (Native)",
+        "coolify": "Single Docker / Swarm partial",
+        "portainer": "Docker / K8s agent",
+        "dokploy": "Single Docker / Traefik",
+        "kubernetes": "Kubelet / control plane",
+        "highlight": true
+      },
+      {
+        "feature": "Multi-Node Clustering",
+        "upstand": "Built-in (Raft consensus)",
+        "coolify": "Experimental / Single host",
+        "portainer": "Requires agent per node",
+        "dokploy": "Single node primarily",
+        "kubernetes": "Built-in (High complexity)",
+        "highlight": true
+      },
+      {
+        "feature": "Reverse Proxy Architecture",
+        "upstand": "Atomic Caddy (0ms hot reload)",
+        "coolify": "Traefik",
+        "portainer": "Edge agent / manual",
+        "dokploy": "Traefik",
+        "kubernetes": "Ingress-NGINX / Envoy"
+      },
+      {
+        "feature": "Server Overhead Footprint",
+        "upstand": "~180MB RAM",
+        "coolify": "~500MB RAM",
+        "portainer": "~150MB RAM",
+        "dokploy": "~350MB RAM",
+        "kubernetes": ">2GB RAM control plane",
+        "highlight": true
+      },
+      {
+        "feature": "Remote Node Management",
+        "upstand": "Agentless over SSH",
+        "coolify": "SSH execution",
+        "portainer": "Proprietary agent daemon",
+        "dokploy": "SSH execution",
+        "kubernetes": "Kubelet agent per node"
+      },
+      {
+        "feature": "AI Operational Assistant",
+        "upstand": "UpGal (MCP Bounded ToolLoop)",
+        "coolify": "None",
+        "portainer": "None",
+        "dokploy": "None",
+        "kubernetes": "Third-party add-ons"
+      },
+      {
+        "feature": "Open Source License",
+        "upstand": "Apache 2.0 (100% Free)",
+        "coolify": "Apache 2.0",
+        "portainer": "Open Source / Business tiers",
+        "dokploy": "Apache 2.0",
+        "kubernetes": "Apache 2.0"
+      }
+    ]
   },
-  cta: {
-    badge: "Listo en 2 minutos",
-    title: "Tome el control total de su infraestructura de contenedores",
-    description:
-      "Ejecute el instalador de una sola línea en cualquier servidor limpio con Ubuntu o Debian y disfrute de un PaaS completo de inmediato.",
-    installNow: "Ejecutar comando de instalación",
-    readDocs: "Ver documentación",
-    prerequisites: "Requisitos: Ubuntu 22.04+ o Debian 12+ con privilegios de root.",
+  "faq": {
+    "badge": "09 — FAQ",
+    "title": "Frequently asked questions.",
+    "description": "Clear answers to technical and operational questions about Upstand.",
+    "items": [
+      {
+        "question": "Why Docker Swarm instead of Kubernetes?",
+        "answer": "Docker Swarm is built directly into Docker Engine. It provides native multi-node clustering, Raft consensus, and encrypted overlay networks with less than 200MB of overhead, eliminating the 2GB+ footprint and complex manifest sprawl of Kubernetes."
+      },
+      {
+        "question": "How does Upstand achieve zero-downtime Caddy reloads?",
+        "answer": "Upstand compiles Caddyfile configurations and dry-run validates them in-process before issuing an administrative JSON API reload. If validation fails, the existing configuration remains active, ensuring zero dropped client connections."
+      },
+      {
+        "question": "Can I connect servers from different cloud providers?",
+        "answer": "Yes. Upstand uses agentless SSH to initialize nodes into an encrypted WireGuard or Swarm overlay mesh. You can combine bare-metal Hetzner servers with DigitalOcean VPS and AWS EC2 instances into a single unified cluster."
+      },
+      {
+        "question": "Is Upstand free for commercial use?",
+        "answer": "Yes. Upstand is 100% open source under the Apache 2.0 license. You can self-host it in production on unlimited servers with unlimited containers without paying license fees."
+      },
+      {
+        "question": "How does database persistence work across nodes?",
+        "answer": "Databases use Docker volume bindings pegged to specific nodes via Swarm placement constraints, combined with automated S3 snapshot backups to ensure data integrity."
+      },
+      {
+        "question": "Can I migrate from Coolify, Dokploy, or manual Docker Compose?",
+        "answer": "Yes. Upstand natively accepts standard Docker Compose syntax and translates it into production Swarm stacks. You can import existing compose files in one click."
+      }
+    ]
   },
-  footer: {
-    tagline: "Creamos cosas que realmente vale la pena usar.",
-    description:
-      "Estudio de productos independiente y panel de control PaaS para Docker Swarm, utilidades abiertas y plataformas sólidas.",
-    headings: {
-      product: "Obras y Productos",
-      resources: "Recursos",
-      community: "Aliados y Comunidad",
-      compliance: "Empresa",
+  "contact": {
+    "badge": "10 — Bring us an idea",
+    "title": "Start a conversation with our engineering team.",
+    "description": "Whether you are planning a cluster migration, building an ecosystem integration, or looking to collaborate on software, we'd like to hear from you.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "name@company.com",
+    "ideaPlaceholder": "Tell us about your infrastructure or project...",
+    "budgetLabel": "Estimated scope",
+    "submitButton": "Send Inquiry",
+    "submitting": "Sending...",
+    "successMessage": "Thank you. We have received your inquiry and will be in touch shortly.",
+    "directEmailNotice": "You can also reach us directly at"
+  },
+  "cta": {
+    "tag": "Open Source Pledge",
+    "title": "Yours to run, fork, and ship.",
+    "description": "Deploy Upstand on your own infrastructure today. Free, open source, and self-reliant forever under Apache 2.0.",
+    "installNow": "Run Installer",
+    "readDocs": "Read Documentation",
+    "licenseNotice": "Apache License 2.0 · No telemetry tracking · 100% self-hostable"
+  },
+  "footer": {
+    "description": "An independent product studio and container orchestration platform. We make things worth using.",
+    "headings": {
+      "platform": "Platform",
+      "studio": "Studio",
+      "resources": "Resources",
+      "legal": "Legal"
     },
-    links: {
-      docs: "Documentación",
-      releases: "Notas de lanzamiento",
-      swarmGuide: "Guía de Swarm Clusters",
-      mcpProtocol: "Protocolo UpGal MCP",
-      github: "Repositorio en GitHub",
-      discord: "Comunidad en Discord",
-      securityPolicy: "Seguridad y 2FA",
-      architecture: "Arquitectura del Sistema",
+    "links": {
+      "models": "Deployment Models",
+      "capabilities": "Capabilities",
+      "architecture": "Architecture",
+      "manifesto": "Studio Manifesto",
+      "ecosystem": "Ecosystem Works",
+      "partners": "Partners",
+      "docs": "Documentation",
+      "github": "GitHub Repository",
+      "license": "Apache 2.0 License",
+      "privacy": "Privacy Policy"
     },
-    rights: "© 2026 Upstand, Inc. Creado para los curiosos. Todos los derechos reservados.",
-    openSourceNotice: "Software de código abierto bajo licencia Apache 2.0.",
-  },
+    "rights": "Upstand Platform. All rights reserved."
+  }
 };

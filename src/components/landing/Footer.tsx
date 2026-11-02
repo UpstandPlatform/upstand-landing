@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Dictionary } from "@/i18n/types";
 import { Locale, locales, localeDetails } from "@/i18n/config";
-import { FileText, Bot, Shield, CheckCircle } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 
 interface FooterProps {
@@ -11,193 +10,162 @@ interface FooterProps {
 }
 
 export function Footer({ dict, currentLocale }: FooterProps) {
+  const { footer, nav } = dict;
+
   return (
-    <footer className="border-t border-slate-800 bg-[#04060b] py-14 text-xs sm:text-sm text-slate-400">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
+    <footer className="border-t border-zinc-800/80 bg-[#090a0f] py-16 text-xs text-zinc-400">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
           {/* Brand Info */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="col-span-2 space-y-3">
             <Link
               href={`/${currentLocale}`}
-              className="flex items-center gap-2.5 transition-opacity hover:opacity-90"
+              className="flex items-center gap-2 text-zinc-100 hover:text-white transition-colors"
             >
-              <div className="relative flex size-8 items-center justify-center rounded-xl bg-gradient-to-tr from-[#0068ff] to-[#38bdf8] p-0.5">
-                <div className="flex size-full items-center justify-center rounded-[10px] bg-[#070a12]">
-                  <Image
-                    src="/brand/icon.svg"
-                    alt="Upstand"
-                    width={18}
-                    height={18}
-                    className="size-4.5"
-                  />
-                </div>
+              <div className="flex size-7 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900">
+                <Image
+                  src="/brand/icon.svg"
+                  alt="Upstand"
+                  width={16}
+                  height={16}
+                  className="size-4"
+                />
               </div>
-              <span className="font-bold text-lg text-white">
-                Upstand<span className="text-[#38bdf8]">.dev</span>
+              <span className="font-semibold text-sm tracking-tight">
+                Upstand
               </span>
             </Link>
 
-            <p className="max-w-sm text-xs leading-relaxed text-slate-400">
-              {dict.footer.description}
+            <p className="max-w-sm text-xs leading-relaxed text-zinc-400">
+              {footer.description}
             </p>
 
-            <div className="flex items-center gap-2 pt-2">
-              <span className="flex size-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-xs font-medium text-slate-300">
-                All Systems Operational · v0.14.0
-              </span>
+            <div className="pt-2 font-mono text-[11px] text-zinc-400 flex items-center gap-2">
+              <span className="size-1.5 rounded-full bg-emerald-500" />
+              <span>v0.14.0 · Apache 2.0 License</span>
             </div>
           </div>
 
-          {/* Links Column 1: Product */}
-          <div>
-            <h4 className="font-semibold text-white tracking-wider uppercase text-xs">
-              {dict.footer.headings.product}
+          {/* Platform Links */}
+          <div className="space-y-2.5">
+            <h4 className="font-medium text-zinc-200">
+              {footer.headings.platform}
             </h4>
-            <ul className="mt-4 space-y-2.5 text-xs">
+            <ul className="space-y-2">
               <li>
-                <a href="#features" className="hover:text-[#38bdf8] transition-colors">
-                  {dict.nav.features}
+                <a href="#models" className="hover:text-zinc-200 transition-colors">
+                  {footer.links.models}
                 </a>
               </li>
               <li>
-                <a href="#architecture" className="hover:text-[#38bdf8] transition-colors">
-                  {dict.nav.architecture}
+                <a href="#capabilities" className="hover:text-zinc-200 transition-colors">
+                  {footer.links.capabilities}
                 </a>
               </li>
               <li>
-                <a href="#translator" className="hover:text-[#38bdf8] transition-colors">
-                  {dict.composeTranslator.badge}
+                <a href="#architecture" className="hover:text-zinc-200 transition-colors">
+                  {footer.links.architecture}
                 </a>
               </li>
               <li>
-                <a href="#compare" className="hover:text-[#38bdf8] transition-colors">
-                  {dict.nav.compare}
-                </a>
-              </li>
-              <li>
-                <a href="#calculator" className="hover:text-[#38bdf8] transition-colors">
-                  {dict.nav.calculator}
+                <a href="#compare" className="hover:text-zinc-200 transition-colors">
+                  {nav.compare}
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Links Column 2: Resources & GEO */}
-          <div>
-            <h4 className="font-semibold text-white tracking-wider uppercase text-xs">
-              {dict.footer.headings.resources}
+          {/* Studio Links */}
+          <div className="space-y-2.5">
+            <h4 className="font-medium text-zinc-200">
+              {footer.headings.studio}
             </h4>
-            <ul className="mt-4 space-y-2.5 text-xs">
+            <ul className="space-y-2">
+              <li>
+                <a href="#manifesto" className="hover:text-zinc-200 transition-colors">
+                  {footer.links.manifesto}
+                </a>
+              </li>
+              <li>
+                <a href="#ecosystem" className="hover:text-zinc-200 transition-colors">
+                  {footer.links.ecosystem}
+                </a>
+              </li>
+              <li>
+                <a href="#partners" className="hover:text-zinc-200 transition-colors">
+                  {footer.links.partners}
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-zinc-200 transition-colors">
+                  {nav.contact}
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources & Open Standards Links */}
+          <div className="space-y-2.5">
+            <h4 className="font-medium text-zinc-200">
+              {footer.headings.resources}
+            </h4>
+            <ul className="space-y-2">
               <li>
                 <a
                   href="https://upstand.dev/docs"
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:text-[#38bdf8] transition-colors"
+                  className="hover:text-zinc-200 transition-colors"
                 >
-                  {dict.footer.links.docs}
+                  {footer.links.docs}
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://github.com/UpstandPlatform/upstand/releases"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-[#38bdf8] transition-colors"
-                >
-                  {dict.footer.links.releases}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/llms.txt"
-                  target="_blank"
-                  className="hover:text-[#38bdf8] transition-colors font-mono text-[11px] text-[#38bdf8]"
-                >
-                  /llms.txt (AI GEO Standard)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/llms-full.txt"
-                  target="_blank"
-                  className="hover:text-[#38bdf8] transition-colors font-mono text-[11px] text-slate-400"
-                >
-                  /llms-full.txt
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Links Column 3: Community & Compliance */}
-          <div>
-            <h4 className="font-semibold text-white tracking-wider uppercase text-xs">
-              {dict.footer.headings.community}
-            </h4>
-            <ul className="mt-4 space-y-2.5 text-xs">
               <li>
                 <a
                   href="https://github.com/UpstandPlatform/upstand"
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:text-[#38bdf8] transition-colors flex items-center gap-1.5"
+                  className="hover:text-zinc-200 transition-colors"
                 >
-                  <GithubIcon className="size-3.5" />
-                  <span>{dict.footer.links.github}</span>
+                  {footer.links.github}
                 </a>
               </li>
               <li>
-                <a
-                  href="https://discord.gg/upstand"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-[#38bdf8] transition-colors"
-                >
-                  {dict.footer.links.discord}
+                <a href="/llms.txt" className="hover:text-zinc-200 transition-colors font-mono">
+                  llms.txt
                 </a>
               </li>
               <li>
-                <a
-                  href="https://github.com/UpstandPlatform/upstand/blob/master/SECURITY.md"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-[#38bdf8] transition-colors flex items-center gap-1.5"
-                >
-                  <Shield className="size-3.5" />
-                  <span>{dict.footer.links.securityPolicy}</span>
+                <a href="/sitemap.xml" className="hover:text-zinc-200 transition-colors font-mono">
+                  sitemap.xml
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar: Language Selector & Copyright */}
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-between border-t border-slate-800/80 pt-8 gap-4">
-          <div className="flex flex-wrap items-center justify-center gap-2 text-xs">
-            <span className="text-slate-500">{dict.nav.language}:</span>
+        {/* Bottom Bar: Copyright & Language Switcher */}
+        <div className="mt-12 flex flex-col gap-4 border-t border-zinc-800/80 pt-6 sm:flex-row sm:items-center sm:justify-between text-[11px] text-zinc-400">
+          <div>
+            &copy; 2026 {footer.rights}
+          </div>
+
+          {/* Inline Language switcher */}
+          <div className="flex flex-wrap gap-2.5 font-mono">
             {locales.map((loc) => {
-              const details = localeDetails[loc];
               const isActive = loc === currentLocale;
               return (
                 <Link
                   key={loc}
                   href={`/${loc}`}
-                  className={`rounded px-1.5 py-0.5 text-[11px] transition-colors ${
-                    isActive
-                      ? "bg-[#0068ff]/20 font-bold text-[#38bdf8]"
-                      : "text-slate-400 hover:text-slate-200"
+                  className={`hover:text-zinc-200 transition-colors ${
+                    isActive ? "text-zinc-100 font-medium underline" : "text-zinc-400"
                   }`}
                 >
-                  {details.flag} {details.nativeName}
+                  {localeDetails[loc]?.nativeName || loc}
                 </Link>
               );
             })}
-          </div>
-
-          <div className="text-center sm:text-right text-[11px] text-slate-500">
-            <p>{dict.footer.rights}</p>
-            <p className="mt-0.5">{dict.footer.openSourceNotice}</p>
           </div>
         </div>
       </div>

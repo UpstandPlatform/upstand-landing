@@ -1,68 +1,60 @@
 import { Dictionary } from "@/i18n/types";
-import { Compass, Sparkles, Feather, ShieldCheck } from "lucide-react";
 
 interface StudioManifestoProps {
   dict: Dictionary;
 }
 
 export function StudioManifesto({ dict }: StudioManifestoProps) {
+  const { manifesto } = dict;
+
   return (
-    <section id="about" className="py-20 md:py-28 relative bg-[#04070e] border-t border-slate-800/80">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-slate-700/80 bg-slate-900/80 px-3 py-1 text-xs font-semibold text-slate-300">
-            <Compass className="size-3.5 text-[#38bdf8]" />
-            <span>{dict.manifesto.badge}</span>
-          </div>
-
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
-            {dict.manifesto.title}
-          </h2>
-
-          <p className="mt-5 text-base sm:text-lg text-slate-300 leading-relaxed">
-            {dict.manifesto.description}
+    <section id="manifesto" className="border-t border-zinc-800/80 bg-[#090a0f] py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="font-mono text-xs uppercase tracking-widest text-zinc-400">
+            {manifesto.badge}
           </p>
-
-          <p className="mt-3 text-sm text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            {dict.manifesto.subDescription}
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl md:text-5xl">
+            {manifesto.title}
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-zinc-400 sm:text-lg">
+            {manifesto.description}
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+            {manifesto.subDescription}
           </p>
         </div>
 
-        {/* 3 Core Philosophical Pillars */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-3">
-          <div className="glow-card rounded-2xl border border-slate-800 bg-[#090d18] p-6 sm:p-7 shadow-xl">
-            <div className="flex size-10 items-center justify-center rounded-xl bg-[#0068ff]/10 text-[#38bdf8] border border-[#0068ff]/20">
-              <Sparkles className="size-5" />
-            </div>
-            <h3 className="mt-5 text-lg font-bold text-white">
-              {dict.manifesto.point1.title}
+        {/* 3 Pillars */}
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-950/60 p-8 transition-colors hover:border-zinc-700/80">
+            <span className="font-mono text-xs text-zinc-400">[01]</span>
+            <h3 className="mt-4 text-lg font-semibold text-zinc-100">
+              {manifesto.point1.title}
             </h3>
-            <p className="mt-2 text-xs sm:text-sm text-slate-400 leading-relaxed">
-              {dict.manifesto.point1.desc}
+            <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+              {manifesto.point1.desc}
             </p>
           </div>
 
-          <div className="glow-card rounded-2xl border border-slate-800 bg-[#090d18] p-6 sm:p-7 shadow-xl">
-            <div className="flex size-10 items-center justify-center rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
-              <Feather className="size-5" />
-            </div>
-            <h3 className="mt-5 text-lg font-bold text-white">
-              {dict.manifesto.point2.title}
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-950/60 p-8 transition-colors hover:border-zinc-700/80">
+            <span className="font-mono text-xs text-zinc-400">[02]</span>
+            <h3 className="mt-4 text-lg font-semibold text-zinc-100">
+              {manifesto.point2.title}
             </h3>
-            <p className="mt-2 text-xs sm:text-sm text-slate-400 leading-relaxed">
-              {dict.manifesto.point2.desc}
+            <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+              {manifesto.point2.desc}
             </p>
           </div>
 
-          <div className="glow-card rounded-2xl border border-slate-800 bg-[#090d18] p-6 sm:p-7 shadow-xl">
-            <div className="flex size-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-              <ShieldCheck className="size-5" />
-            </div>
-            <h3 className="mt-5 text-lg font-bold text-white">
-              {dict.manifesto.point3.title}
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-950/60 p-8 transition-colors hover:border-zinc-700/80">
+            <span className="font-mono text-xs text-zinc-400">[03]</span>
+            <h3 className="mt-4 text-lg font-semibold text-zinc-100">
+              {manifesto.point3.title}
             </h3>
-            <p className="mt-2 text-xs sm:text-sm text-slate-400 leading-relaxed">
-              {dict.manifesto.point3.desc}
+            <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+              {manifesto.point3.desc}
             </p>
           </div>
         </div>

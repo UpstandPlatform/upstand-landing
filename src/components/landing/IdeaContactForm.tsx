@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Dictionary } from "@/i18n/types";
-import { Mail, Send, CheckCircle2, MessageSquare, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 interface IdeaContactFormProps {
   dict: Dictionary;
@@ -13,6 +13,7 @@ export function IdeaContactForm({ dict }: IdeaContactFormProps) {
   const [email, setEmail] = useState("");
   const [idea, setIdea] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const { contact } = dict;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,65 +22,60 @@ export function IdeaContactForm({ dict }: IdeaContactFormProps) {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 relative bg-[#070a12] border-t border-slate-800/80">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-semibold text-[#38bdf8]">
-            <MessageSquare className="size-3.5" />
-            <span>{dict.contact.badge}</span>
-          </div>
-
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
-            {dict.contact.title}
-          </h2>
-
-          <p className="mt-4 text-base text-slate-300 sm:text-lg">
-            {dict.contact.description}
+    <section id="contact" className="border-t border-zinc-800/80 bg-[#090a0f] py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="font-mono text-xs uppercase tracking-widest text-zinc-400">
+            {contact.badge}
           </p>
-
-          <div className="mt-4 inline-flex items-center gap-2">
-            <span className="text-xs text-slate-400">{dict.contact.emailLabel}:</span>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl md:text-5xl">
+            {contact.title}
+          </h2>
+          <p className="mt-4 text-base text-zinc-400 sm:text-lg">
+            {contact.description}
+          </p>
+          <div className="mt-3 text-xs text-zinc-400">
+            {contact.directEmailNotice}{" "}
             <a
               href="mailto:hello@upstand.dev"
-              className="inline-flex items-center gap-1 font-mono text-sm font-semibold text-[#38bdf8] hover:underline"
+              className="font-mono text-zinc-200 underline hover:text-white"
             >
               hello@upstand.dev
-              <ArrowUpRight className="size-3.5" />
+              <ArrowUpRight className="inline size-3.5 ml-0.5" />
             </a>
           </div>
         </div>
 
-        {/* Contact Form Container */}
-        <div className="mt-12 mx-auto max-w-2xl">
-          <div className="glow-card rounded-3xl border border-slate-800 bg-[#0b101d] p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+        {/* Contact Form Card */}
+        <div className="mt-16 mx-auto max-w-xl">
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-950/60 p-8 sm:p-10">
             {submitted ? (
-              <div className="py-10 text-center space-y-4">
-                <div className="mx-auto flex size-14 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                  <CheckCircle2 className="size-7" />
+              <div className="py-8 text-center space-y-3">
+                <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  <CheckCircle2 className="size-6" />
                 </div>
-                <h3 className="text-xl font-bold text-white">
-                  {dict.contact.successMessage}
+                <h3 className="text-lg font-semibold text-zinc-100">
+                  {contact.successMessage}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 max-w-md mx-auto">
-                  We look forward to reviewing your thoughts and exploring the possibilities together.
-                </p>
                 <button
+                  type="button"
                   onClick={() => {
                     setSubmitted(false);
                     setName("");
                     setEmail("");
                     setIdea("");
                   }}
-                  className="mt-4 inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800 px-4 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700"
+                  className="mt-4 inline-flex items-center rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-2 text-xs font-medium text-zinc-300 hover:bg-zinc-800"
                 >
-                  Submit another idea
+                  Send another message
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid gap-5 sm:grid-cols-2">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1.5">
+                    <label className="block text-xs font-medium text-zinc-400 mb-1.5">
                       Name
                     </label>
                     <input
@@ -87,12 +83,12 @@ export function IdeaContactForm({ dict }: IdeaContactFormProps) {
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      placeholder={dict.contact.namePlaceholder}
-                      className="w-full rounded-xl border border-slate-700/80 bg-slate-900/90 px-4 py-2.5 text-sm text-white placeholder-slate-500 shadow-inner focus:border-[#0068ff] focus:outline-none focus:ring-1 focus:ring-[#0068ff]"
+                      placeholder={contact.namePlaceholder}
+                      className="w-full rounded-xl border border-zinc-800 bg-zinc-900 px-3.5 py-2.5 text-xs text-zinc-100 placeholder-zinc-500 focus:border-blue-500 focus:outline-none"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1.5">
+                    <label className="block text-xs font-medium text-zinc-400 mb-1.5">
                       Email
                     </label>
                     <input
@@ -100,35 +96,32 @@ export function IdeaContactForm({ dict }: IdeaContactFormProps) {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder={dict.contact.emailPlaceholder}
-                      className="w-full rounded-xl border border-slate-700/80 bg-slate-900/90 px-4 py-2.5 text-sm text-white placeholder-slate-500 shadow-inner focus:border-[#0068ff] focus:outline-none focus:ring-1 focus:ring-[#0068ff]"
+                      placeholder={contact.emailPlaceholder}
+                      className="w-full rounded-xl border border-zinc-800 bg-zinc-900 px-3.5 py-2.5 text-xs text-zinc-100 placeholder-zinc-500 focus:border-blue-500 focus:outline-none"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                    The Idea
+                  <label className="block text-xs font-medium text-zinc-400 mb-1.5">
+                    Message
                   </label>
                   <textarea
                     rows={4}
                     required
                     value={idea}
                     onChange={(e) => setIdea(e.target.value)}
-                    placeholder={dict.contact.ideaPlaceholder}
-                    className="w-full rounded-xl border border-slate-700/80 bg-slate-900/90 p-4 text-sm text-white placeholder-slate-500 shadow-inner focus:border-[#0068ff] focus:outline-none focus:ring-1 focus:ring-[#0068ff]"
+                    placeholder={contact.ideaPlaceholder}
+                    className="w-full rounded-xl border border-zinc-800 bg-zinc-900 px-3.5 py-2.5 text-xs text-zinc-100 placeholder-zinc-500 focus:border-blue-500 focus:outline-none"
                   />
                 </div>
 
-                <div className="flex justify-end pt-2">
-                  <button
-                    type="submit"
-                    className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#0068ff] to-[#0051cc] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#0068ff]/25 transition-all hover:brightness-110 active:scale-95"
-                  >
-                    <span>{dict.contact.submitButton}</span>
-                    <Send className="size-4" />
-                  </button>
-                </div>
+                <button
+                  type="submit"
+                  className="w-full rounded-xl bg-blue-600 py-3 text-xs font-medium text-white transition-colors hover:bg-blue-500"
+                >
+                  {contact.submitButton}
+                </button>
               </form>
             )}
           </div>

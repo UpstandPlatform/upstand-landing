@@ -7,40 +7,57 @@ export interface Dictionary {
     ogDescription: string;
   };
   nav: {
-    features: string;
-    architecture: string;
-    databases: string;
-    upgal: string;
+    models: string;
+    manifesto: string;
     ecosystem: string;
-    partners: string;
+    capabilities: string;
+    architecture: string;
+    compose: string;
     compare: string;
-    calculator: string;
+    partners: string;
     faq: string;
     contact: string;
     docs: string;
     github: string;
     getStarted: string;
     language: string;
-    theme: string;
   };
   hero: {
-    badge: string;
-    titleStart: string;
-    titleHighlight: string;
-    titleEnd: string;
-    description: string;
+    tag: string;
+    title: string;
+    subtitle: string;
     quickInstall: string;
     copied: string;
-    copyCommand: string;
     exploreDocs: string;
     viewGithub: string;
-    starsBadge: string;
-    tabInstall: string;
-    tabCompose: string;
-    tabSwarm: string;
-    tabUpGal: string;
-    statusHealthy: string;
-    statusReady: string;
+    installCommand: string;
+    clusterPreview: {
+      title: string;
+      status: string;
+      managers: string;
+      workers: string;
+      services: string;
+      routes: string;
+    };
+  };
+  deploymentModels: {
+    tag: string;
+    title: string;
+    description: string;
+    models: Array<{
+      id: string;
+      number: string;
+      tag: string;
+      title: string;
+      lead: string;
+      points: string[];
+      price: string;
+      pricenote: string;
+      isFeatured?: boolean;
+    }>;
+    migrateTag: string;
+    migrateTitle: string;
+    migrateBody: string;
   };
   manifesto: {
     badge: string;
@@ -68,75 +85,23 @@ export interface Dictionary {
       isFlagship?: boolean;
     }>;
   };
-  partners: {
+  capabilities: {
     badge: string;
     title: string;
     description: string;
-    quote: string;
-    visitPartner: string;
-    items: Array<{
-      number: string;
-      name: string;
-      role: string;
-      description: string;
-      url: string;
+    categories: Array<{
+      id: string;
+      title: string;
+      items: Array<{
+        name: string;
+        desc: string;
+      }>;
     }>;
-  };
-  stats: {
-    uptimeValue: string;
-    uptimeLabel: string;
-    speedValue: string;
-    speedLabel: string;
-    caddyValue: string;
-    caddyLabel: string;
-    sovereigntyValue: string;
-    sovereigntyLabel: string;
-  };
-  features: {
-    badge: string;
-    title: string;
-    description: string;
-    items: {
-      swarm: {
-        title: string;
-        desc: string;
-        tag: string;
-      };
-      databases: {
-        title: string;
-        desc: string;
-        tag: string;
-      };
-      caddy: {
-        title: string;
-        desc: string;
-        tag: string;
-      };
-      upgal: {
-        title: string;
-        desc: string;
-        tag: string;
-      };
-      remoteServers: {
-        title: string;
-        desc: string;
-        tag: string;
-      };
-      security: {
-        title: string;
-        desc: string;
-        tag: string;
-      };
-    };
   };
   architecture: {
     badge: string;
     title: string;
     description: string;
-    clientLayer: string;
-    controlPlaneLayer: string;
-    workerNodesLayer: string;
-    caddyEdgeLayer: string;
     details: {
       step1Title: string;
       step1Desc: string;
@@ -155,6 +120,20 @@ export interface Dictionary {
     composeTab: string;
     swarmTab: string;
     featuresList: string[];
+  };
+  partners: {
+    badge: string;
+    title: string;
+    description: string;
+    quote: string;
+    visitPartner: string;
+    items: Array<{
+      number: string;
+      name: string;
+      role: string;
+      description: string;
+      url: string;
+    }>;
   };
   comparison: {
     badge: string;
@@ -176,29 +155,6 @@ export interface Dictionary {
       highlight?: boolean;
     }>;
   };
-  calculator: {
-    badge: string;
-    title: string;
-    description: string;
-    nodesLabel: string;
-    appsLabel: string;
-    dbsLabel: string;
-    estimatedCloudCost: string;
-    upstandCost: string;
-    savingsPerYear: string;
-    savingsNote: string;
-  };
-  testimonials: {
-    badge: string;
-    title: string;
-    description: string;
-    items: Array<{
-      quote: string;
-      author: string;
-      role: string;
-      company: string;
-    }>;
-  };
   faq: {
     badge: string;
     title: string;
@@ -206,48 +162,49 @@ export interface Dictionary {
     items: Array<{
       question: string;
       answer: string;
-      category: string;
     }>;
   };
   contact: {
     badge: string;
     title: string;
     description: string;
-    emailLabel: string;
     namePlaceholder: string;
     emailPlaceholder: string;
     ideaPlaceholder: string;
+    budgetLabel: string;
     submitButton: string;
+    submitting: string;
     successMessage: string;
+    directEmailNotice: string;
   };
   cta: {
-    badge: string;
+    tag: string;
     title: string;
     description: string;
     installNow: string;
     readDocs: string;
-    prerequisites: string;
+    licenseNotice: string;
   };
   footer: {
-    tagline: string;
     description: string;
     headings: {
-      product: string;
+      platform: string;
+      studio: string;
       resources: string;
-      community: string;
-      compliance: string;
+      legal: string;
     };
     links: {
-      docs: string;
-      releases: string;
-      swarmGuide: string;
-      mcpProtocol: string;
-      github: string;
-      discord: string;
-      securityPolicy: string;
+      models: string;
+      capabilities: string;
       architecture: string;
+      manifesto: string;
+      ecosystem: string;
+      partners: string;
+      docs: string;
+      github: string;
+      license: string;
+      privacy: string;
     };
     rights: string;
-    openSourceNotice: string;
   };
 }

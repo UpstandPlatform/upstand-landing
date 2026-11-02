@@ -18,13 +18,6 @@ export function StructuredData({ dict, locale }: StructuredDataProps) {
       price: "0",
       priceCurrency: "USD",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      ratingCount: "240",
-      bestRating: "5",
-      worstRating: "1",
-    },
     description: dict.seo.description,
     softwareVersion: "0.14.0",
     license: "https://www.apache.org/licenses/LICENSE-2.0",

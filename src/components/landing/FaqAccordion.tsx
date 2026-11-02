@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Dictionary } from "@/i18n/types";
-import { HelpCircle, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 interface FaqAccordionProps {
   dict: Dictionary;
@@ -10,57 +10,55 @@ interface FaqAccordionProps {
 
 export function FaqAccordion({ dict }: FaqAccordionProps) {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
+  const { faq } = dict;
 
   const toggle = (idx: number) => {
     setOpenIdx(openIdx === idx ? null : idx);
   };
 
   return (
-    <section id="faq" className="py-20 md:py-28 relative">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-semibold text-[#38bdf8]">
-            <HelpCircle className="size-3.5" />
-            <span>{dict.faq.badge}</span>
-          </div>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
-            {dict.faq.title}
+    <section id="faq" className="border-t border-zinc-800/80 bg-[#090a0f] py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="font-mono text-xs uppercase tracking-widest text-zinc-400">
+            {faq.badge}
+          </p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl md:text-5xl">
+            {faq.title}
           </h2>
-          <p className="mt-4 text-base text-slate-300 sm:text-lg">
-            {dict.faq.description}
+          <p className="mt-4 text-base text-zinc-400 sm:text-lg">
+            {faq.description}
           </p>
         </div>
 
-        <div className="mt-14 mx-auto max-w-3xl space-y-3">
-          {dict.faq.items.map((item, idx) => {
+        {/* FAQ Accordion List */}
+        <div className="mt-16 mx-auto max-w-3xl space-y-3">
+          {faq.items.map((item, idx) => {
             const isOpen = openIdx === idx;
             return (
               <div
                 key={idx}
-                className="overflow-hidden rounded-xl border border-slate-800 bg-[#0b101d] transition-colors hover:border-slate-700"
+                className="overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950/60 transition-colors hover:border-zinc-700/80"
               >
                 <button
+                  type="button"
                   onClick={() => toggle(idx)}
                   className="flex w-full items-center justify-between p-5 text-left transition-colors"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-semibold text-sm sm:text-base text-white pr-4">
+                  <span className="font-medium text-sm text-zinc-100 pr-4">
                     {item.question}
                   </span>
-                  <div className="flex items-center gap-2 shrink-0">
-                    <span className="hidden sm:inline rounded-full bg-slate-800 px-2.5 py-0.5 text-[11px] font-medium text-slate-400">
-                      {item.category}
-                    </span>
-                    <ChevronDown
-                      className={`size-4.5 text-slate-400 transition-transform duration-200 ${
-                        isOpen ? "rotate-180 text-[#38bdf8]" : ""
-                      }`}
-                    />
-                  </div>
+                  <ChevronDown
+                    className={`size-4 text-zinc-400 shrink-0 transition-transform duration-200 ${
+                      isOpen ? "rotate-180 text-zinc-200" : ""
+                    }`}
+                  />
                 </button>
 
                 {isOpen && (
-                  <div className="border-t border-slate-800/80 bg-[#070a12]/60 px-5 py-4 text-xs sm:text-sm leading-relaxed text-slate-300">
+                  <div className="border-t border-zinc-800/80 bg-zinc-950 px-5 py-4 text-xs leading-relaxed text-zinc-400">
                     {item.answer}
                   </div>
                 )}

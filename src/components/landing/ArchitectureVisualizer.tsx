@@ -4,13 +4,11 @@ import { useState } from "react";
 import { Dictionary } from "@/i18n/types";
 import {
   Layers,
-  Server,
-  Cpu,
   Globe,
   Database,
+  Cpu,
   ArrowRight,
-  ShieldAlert,
-  GitBranch,
+  ShieldCheck,
 } from "lucide-react";
 
 interface ArchitectureVisualizerProps {
@@ -19,59 +17,55 @@ interface ArchitectureVisualizerProps {
 
 export function ArchitectureVisualizer({ dict }: ArchitectureVisualizerProps) {
   const [selectedStep, setSelectedStep] = useState<number>(1);
+  const { architecture } = dict;
 
   const steps = [
     {
       id: 1,
-      title: dict.architecture.details.step1Title,
-      desc: dict.architecture.details.step1Desc,
-      icon: GitBranch,
-      highlightLayer: "client",
+      title: architecture.details.step1Title,
+      desc: architecture.details.step1Desc,
+      icon: Globe,
     },
     {
       id: 2,
-      title: dict.architecture.details.step2Title,
-      desc: dict.architecture.details.step2Desc,
-      icon: Layers,
-      highlightLayer: "control",
+      title: architecture.details.step2Title,
+      desc: architecture.details.step2Desc,
+      icon: Database,
     },
     {
       id: 3,
-      title: dict.architecture.details.step3Title,
-      desc: dict.architecture.details.step3Desc,
+      title: architecture.details.step3Title,
+      desc: architecture.details.step3Desc,
       icon: Cpu,
-      highlightLayer: "swarm",
     },
     {
       id: 4,
-      title: dict.architecture.details.step4Title,
-      desc: dict.architecture.details.step4Desc,
-      icon: Globe,
-      highlightLayer: "caddy",
+      title: architecture.details.step4Title,
+      desc: architecture.details.step4Desc,
+      icon: Layers,
     },
   ];
 
   return (
-    <section id="architecture" className="py-20 md:py-28 bg-[#05080f] relative border-t border-slate-800/80">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="architecture" className="border-t border-zinc-800/80 bg-[#090a0f] py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs font-semibold text-indigo-400">
-            <Layers className="size-3.5" />
-            <span>{dict.architecture.badge}</span>
-          </div>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
-            {dict.architecture.title}
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="font-mono text-xs uppercase tracking-widest text-zinc-400">
+            {architecture.badge}
+          </p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl md:text-5xl">
+            {architecture.title}
           </h2>
-          <p className="mt-4 text-base text-slate-300 sm:text-lg">
-            {dict.architecture.description}
+          <p className="mt-4 text-base text-zinc-400 sm:text-lg">
+            {architecture.description}
           </p>
         </div>
 
-        {/* Interactive Architecture Flow Diagram */}
-        <div className="mt-14 grid gap-8 lg:grid-cols-12 items-center">
-          {/* Step Selector List */}
-          <div className="lg:col-span-5 space-y-3">
+        {/* 2-Column Interactive Topology */}
+        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-12 items-start">
+          {/* Steps List */}
+          <div className="space-y-3 lg:col-span-5">
             {steps.map((step) => {
               const Icon = step.icon;
               const isActive = selectedStep === step.id;
@@ -79,31 +73,27 @@ export function ArchitectureVisualizer({ dict }: ArchitectureVisualizerProps) {
                 <div
                   key={step.id}
                   onClick={() => setSelectedStep(step.id)}
-                  className={`cursor-pointer rounded-xl border p-4.5 transition-all duration-200 ${
+                  className={`cursor-pointer rounded-2xl border p-5 transition-colors ${
                     isActive
-                      ? "border-[#0068ff] bg-[#0068ff]/10 shadow-lg shadow-[#0068ff]/10 translate-x-1"
-                      : "border-slate-800 bg-[#0b101d]/60 hover:border-slate-700 hover:bg-[#0b101d]"
+                      ? "border-blue-500/50 bg-zinc-900/90"
+                      : "border-zinc-800/80 bg-zinc-950/60 hover:border-zinc-700/80"
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <div
-                      className={`flex size-8 shrink-0 items-center justify-center rounded-lg ${
+                      className={`flex size-8 shrink-0 items-center justify-center rounded-lg border ${
                         isActive
-                          ? "bg-[#0068ff] text-white"
-                          : "bg-slate-800 text-slate-400"
+                          ? "border-blue-500/40 bg-blue-600/10 text-blue-400"
+                          : "border-zinc-800 bg-zinc-900 text-zinc-400"
                       }`}
                     >
-                      <Icon className="size-4.5" />
+                      <Icon className="size-4" />
                     </div>
-                    <h3
-                      className={`text-sm sm:text-base font-bold ${
-                        isActive ? "text-white" : "text-slate-200"
-                      }`}
-                    >
+                    <div className="text-sm font-semibold text-zinc-100">
                       {step.title}
-                    </h3>
+                    </div>
                   </div>
-                  <p className="mt-2 pl-11 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  <p className="mt-2 text-xs leading-relaxed text-zinc-400 pl-11">
                     {step.desc}
                   </p>
                 </div>
@@ -111,141 +101,100 @@ export function ArchitectureVisualizer({ dict }: ArchitectureVisualizerProps) {
             })}
           </div>
 
-          {/* Visual Architecture Topology Display */}
-          <div className="lg:col-span-7">
-            <div className="glow-card rounded-2xl border border-slate-800 bg-[#090d18] p-6 sm:p-8 backdrop-blur-xl space-y-5">
-              <div className="flex items-center justify-between border-b border-slate-800/80 pb-3 text-xs font-mono text-slate-400">
-                <span className="flex items-center gap-2">
-                  <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
-                  UPSTAND CLUSTER TOPOLOGY ENGINE
-                </span>
-                <span className="text-slate-500">Raft Quorum: 3/3 Managers</span>
-              </div>
+          {/* Interactive Topology Diagram */}
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-950 p-6 sm:p-8 lg:col-span-7 space-y-4">
+            <div className="flex items-center justify-between border-b border-zinc-800/80 pb-3 text-xs font-mono text-zinc-400">
+              <span className="flex items-center gap-2">
+                <span className="size-1.5 rounded-full bg-emerald-500" />
+                SWARM TOPOLOGY SCHEMATIC
+              </span>
+              <span>Raft Consensus: Active</span>
+            </div>
 
-              {/* Layer 1: Client & Ingress */}
-              <div
-                className={`rounded-xl border p-4 transition-all duration-300 ${
-                  selectedStep === 1
-                    ? "border-[#38bdf8] bg-sky-500/10 shadow-md shadow-sky-500/10"
-                    : "border-slate-800/80 bg-slate-900/40"
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                    Ingress Layer
-                  </span>
-                  <span className="text-[11px] text-slate-400 font-mono">
-                    HTTPS / tRPC / WebSocket
-                  </span>
-                </div>
-                <div className="mt-2 flex flex-wrap gap-2 text-xs">
-                  <span className="rounded-lg border border-slate-700 bg-slate-800/80 px-2.5 py-1 text-slate-200">
-                    Next.js Web Console
-                  </span>
-                  <span className="rounded-lg border border-slate-700 bg-slate-800/80 px-2.5 py-1 text-slate-200">
-                    UpGal MCP Client
-                  </span>
-                  <span className="rounded-lg border border-slate-700 bg-slate-800/80 px-2.5 py-1 text-slate-200">
-                    CLI (`upk_...`)
-                  </span>
-                </div>
+            {/* Layer 1: Ingress */}
+            <div
+              className={`rounded-xl border p-4 transition-colors ${
+                selectedStep === 1
+                  ? "border-blue-500/50 bg-blue-950/10"
+                  : "border-zinc-800 bg-zinc-900/40"
+              }`}
+            >
+              <div className="flex items-center justify-between font-mono text-xs">
+                <span className="font-semibold text-zinc-200">01. INGRESS &amp; CLIENTS</span>
+                <span className="text-zinc-400">TLS 1.3 / Port 443</span>
               </div>
-
-              {/* Arrow */}
-              <div className="flex justify-center -my-2 text-slate-600">
-                <ArrowRight className="size-4 rotate-90" />
+              <div className="mt-3 flex flex-wrap gap-2 font-mono text-xs text-zinc-300">
+                <span className="rounded border border-zinc-800 bg-zinc-900 px-2.5 py-1">Web Console</span>
+                <span className="rounded border border-zinc-800 bg-zinc-900 px-2.5 py-1">CLI (`upk_...`)</span>
+                <span className="rounded border border-zinc-800 bg-zinc-900 px-2.5 py-1">UpGal MCP Agent</span>
               </div>
+            </div>
 
-              {/* Layer 2: Control Plane */}
-              <div
-                className={`rounded-xl border p-4 transition-all duration-300 ${
-                  selectedStep === 2
-                    ? "border-[#0068ff] bg-[#0068ff]/15 shadow-md shadow-[#0068ff]/20"
-                    : "border-slate-800/80 bg-slate-900/40"
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#38bdf8]">
-                    {dict.architecture.controlPlaneLayer}
-                  </span>
-                  <span className="rounded bg-sky-500/20 px-1.5 py-0.5 text-[10px] font-mono text-sky-300">
-                    Isolated
-                  </span>
-                </div>
-                <div className="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-mono">
-                  <div className="rounded border border-slate-700/80 bg-slate-900/80 p-2 text-slate-200">
-                    Hono API Server
-                  </div>
-                  <div className="rounded border border-slate-700/80 bg-slate-900/80 p-2 text-slate-200">
-                    PostgreSQL 18
-                  </div>
-                  <div className="rounded border border-slate-700/80 bg-slate-900/80 p-2 text-slate-200">
-                    Redis 8 / BullMQ
-                  </div>
-                  <div className="rounded border border-slate-700/80 bg-slate-900/80 p-2 text-slate-200">
-                    Better Auth (SSO)
-                  </div>
-                </div>
+            <div className="flex justify-center text-zinc-600">
+              <ArrowRight className="size-3.5 rotate-90" />
+            </div>
+
+            {/* Layer 2: Control Plane */}
+            <div
+              className={`rounded-xl border p-4 transition-colors ${
+                selectedStep === 2
+                  ? "border-blue-500/50 bg-blue-950/10"
+                  : "border-zinc-800 bg-zinc-900/40"
+              }`}
+            >
+              <div className="flex items-center justify-between font-mono text-xs">
+                <span className="font-semibold text-zinc-200">02. CONTROL PLANE CORE</span>
+                <span className="text-zinc-400">Isolated Network</span>
               </div>
-
-              {/* Arrow */}
-              <div className="flex justify-center -my-2 text-slate-600">
-                <ArrowRight className="size-4 rotate-90" />
+              <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2 font-mono text-xs text-zinc-300">
+                <div className="rounded border border-zinc-800 bg-zinc-900 p-2">Hono API</div>
+                <div className="rounded border border-zinc-800 bg-zinc-900 p-2">PostgreSQL 18</div>
+                <div className="rounded border border-zinc-800 bg-zinc-900 p-2">Redis / BullMQ</div>
+                <div className="rounded border border-zinc-800 bg-zinc-900 p-2">Better Auth</div>
               </div>
+            </div>
 
-              {/* Layer 3: Swarm Worker Mesh */}
-              <div
-                className={`rounded-xl border p-4 transition-all duration-300 ${
-                  selectedStep === 3
-                    ? "border-emerald-500 bg-emerald-500/10 shadow-md shadow-emerald-500/10"
-                    : "border-slate-800/80 bg-slate-900/40"
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400">
-                    {dict.architecture.workerNodesLayer}
-                  </span>
-                  <span className="text-[11px] font-mono text-emerald-400/80">
-                    Encrypted Overlay Mesh
-                  </span>
-                </div>
-                <div className="mt-2 grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
-                  <div className="rounded border border-slate-700/70 bg-slate-900/80 p-2 text-slate-300">
-                    Node 01 (Swarm Leader)
-                  </div>
-                  <div className="rounded border border-slate-700/70 bg-slate-900/80 p-2 text-slate-300">
-                    Node 02 (Worker + DB)
-                  </div>
-                  <div className="rounded border border-slate-700/70 bg-slate-900/80 p-2 text-slate-300">
-                    Node 03 (Worker + Apps)
-                  </div>
-                </div>
+            <div className="flex justify-center text-zinc-600">
+              <ArrowRight className="size-3.5 rotate-90" />
+            </div>
+
+            {/* Layer 3: Swarm Overlay */}
+            <div
+              className={`rounded-xl border p-4 transition-colors ${
+                selectedStep === 3
+                  ? "border-blue-500/50 bg-blue-950/10"
+                  : "border-zinc-800 bg-zinc-900/40"
+              }`}
+            >
+              <div className="flex items-center justify-between font-mono text-xs">
+                <span className="font-semibold text-zinc-200">03. DOCKER SWARM SERVICE MESH</span>
+                <span className="text-zinc-400">VXLAN 10.0.0.0/8</span>
               </div>
-
-              {/* Arrow */}
-              <div className="flex justify-center -my-2 text-slate-600">
-                <ArrowRight className="size-4 rotate-90" />
+              <div className="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-2 font-mono text-xs text-zinc-300">
+                <div className="rounded border border-zinc-800 bg-zinc-900 p-2">manager-01 (Leader)</div>
+                <div className="rounded border border-zinc-800 bg-zinc-900 p-2">worker-01 (Active)</div>
+                <div className="rounded border border-zinc-800 bg-zinc-900 p-2">worker-02 (Active)</div>
               </div>
+            </div>
 
-              {/* Layer 4: Edge Routing */}
-              <div
-                className={`rounded-xl border p-4 transition-all duration-300 ${
-                  selectedStep === 4
-                    ? "border-purple-500 bg-purple-500/10 shadow-md shadow-purple-500/10"
-                    : "border-slate-800/80 bg-slate-900/40"
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-purple-400">
-                    {dict.architecture.caddyEdgeLayer}
-                  </span>
-                  <span className="text-[11px] font-mono text-purple-300">
-                    Let's Encrypt TLS / Auto HSTS
-                  </span>
-                </div>
-                <p className="mt-2 text-xs text-slate-300">
-                  Atomic Caddy reloads verified in-container before memory swap. 0 ms dropped TCP connections.
-                </p>
+            <div className="flex justify-center text-zinc-600">
+              <ArrowRight className="size-3.5 rotate-90" />
+            </div>
+
+            {/* Layer 4: Caddy Hot Reload */}
+            <div
+              className={`rounded-xl border p-4 transition-colors ${
+                selectedStep === 4
+                  ? "border-blue-500/50 bg-blue-950/10"
+                  : "border-zinc-800 bg-zinc-900/40"
+              }`}
+            >
+              <div className="flex items-center justify-between font-mono text-xs">
+                <span className="font-semibold text-zinc-200">04. CADDY ATOMIC REVERSE PROXY</span>
+                <span className="text-emerald-400 text-[11px]">0ms Downtime Hot-Reload</span>
+              </div>
+              <div className="mt-3 rounded border border-zinc-800 bg-zinc-900 p-2.5 font-mono text-xs text-zinc-400">
+                In-process dry run test → Administrative JSON API reload → Rollback on syntax error
               </div>
             </div>
           </div>
