@@ -2,7 +2,8 @@ import { Dictionary } from "../types";
 
 export const en: Dictionary = {
   seo: {
-    title: "Upstand — Open-Source Container Platform & Independent Product Studio",
+    title:
+      "Upstand — Open-Source Container Platform & Independent Product Studio",
     description:
       "Self-hostable container orchestration on Docker Swarm with automatic Caddy TLS, multi-server clustering, and zero vendor lock-in. 100% open source under Apache 2.0.",
     keywords: [
@@ -60,7 +61,8 @@ export const en: Dictionary = {
   deploymentModels: {
     tag: "01 — Three deployment shapes",
     title: "Cloud, self-hosted, or both.",
-    description: "Same platform, three deployment shapes — and you can switch any day.",
+    description:
+      "Same platform, three deployment shapes — and you can switch any day.",
     models: [
       {
         id: "cloud",
@@ -161,7 +163,7 @@ export const en: Dictionary = {
         description:
           "High-performance vector animation engine and format converter. Run dynamic interactive motion across web and native targets.",
         category: "Creative Tools",
-        url: "https://openrive.com",
+        url: "https://openrive.upstand.dev",
         status: "Public Beta",
       },
       {
@@ -172,7 +174,7 @@ export const en: Dictionary = {
         description:
           "Direct, contextual advertising exchange without behavioral tracking, third-party cookies, or invasive user profiling.",
         category: "Web Protocol",
-        url: "https://adsparty.com",
+        url: "https://ads.upstand.dev",
         status: "Active",
       },
       {
@@ -183,7 +185,7 @@ export const en: Dictionary = {
         description:
           "Infinite multiplayer canvas for visual planning, system diagrams, and architectural brainstorming with local-first sync.",
         category: "Productivity",
-        url: "https://tongo.app",
+        url: "https://tongo.run",
         status: "Early Access",
       },
       {
@@ -194,7 +196,7 @@ export const en: Dictionary = {
         description:
           "Secure, self-hosted build runners that spin up isolated microVM sandboxes in under 200ms and tear down cleanly.",
         category: "Developer Tooling",
-        url: "https://dgrunner.dev",
+        url: "https://https://www.npmjs.com/package/@upstand/dgrunner",
         status: "Open Source",
       },
       {
@@ -205,7 +207,7 @@ export const en: Dictionary = {
         description:
           "Publishing and subscriber platform with cryptographic proof of delivery, plain markdown authoring, and no spy pixels.",
         category: "Publishing",
-        url: "https://lettersbox.io",
+        url: "https://lettersbox.ir",
         status: "Active",
       },
     ],
@@ -389,7 +391,8 @@ export const en: Dictionary = {
     title: "Partners, collaborators, and friends of the studio.",
     description:
       "We build with teams who hold the same conviction for craft, performance, and independent software.",
-    quote: "Good tools are built with good people. We're proud to collaborate with organizations pushing the web forward.",
+    quote:
+      "Good tools are built with good people. We're proud to collaborate with organizations pushing the web forward.",
     visitPartner: "Visit Website",
     items: [
       {
@@ -398,7 +401,7 @@ export const en: Dictionary = {
         role: "Strategic Engineering & Infrastructure Partner",
         description:
           "High-performance systems engineering team collaborating on distributed systems reliability, edge networking, and container runtimes.",
-        url: "https://apexteam.io",
+        url: "https://apexteam.net",
       },
       {
         number: "02",
@@ -406,7 +409,7 @@ export const en: Dictionary = {
         role: "Design, Product Strategy & Digital Architecture",
         description:
           "Product design consultancy focused on digital craft, human-centered developer interfaces, and typography-first web architecture.",
-        url: "https://mansora.com",
+        url: "https://mansora.dev",
       },
     ],
   },
@@ -486,7 +489,8 @@ export const en: Dictionary = {
   faq: {
     badge: "09 — FAQ",
     title: "Frequently asked questions.",
-    description: "Clear answers to technical and operational questions about Upstand.",
+    description:
+      "Clear answers to technical and operational questions about Upstand.",
     items: [
       {
         question: "Why Docker Swarm instead of Kubernetes?",
@@ -514,7 +518,8 @@ export const en: Dictionary = {
           "Databases use Docker volume bindings pegged to specific nodes via Swarm placement constraints, combined with automated S3 snapshot backups to ensure data integrity.",
       },
       {
-        question: "Can I migrate from Coolify, Dokploy, or manual Docker Compose?",
+        question:
+          "Can I migrate from Coolify, Dokploy, or manual Docker Compose?",
         answer:
           "Yes. Upstand natively accepts standard Docker Compose syntax and translates it into production Swarm stacks. You can import existing compose files in one click.",
       },
@@ -531,7 +536,8 @@ export const en: Dictionary = {
     budgetLabel: "Estimated scope",
     submitButton: "Send Inquiry",
     submitting: "Sending...",
-    successMessage: "Thank you. We have received your inquiry and will be in touch shortly.",
+    successMessage:
+      "Thank you. We have received your inquiry and will be in touch shortly.",
     directEmailNotice: "You can also reach us directly at",
   },
   cta: {
@@ -541,7 +547,8 @@ export const en: Dictionary = {
       "Deploy Upstand on your own infrastructure today. Free, open source, and self-reliant forever under Apache 2.0.",
     installNow: "Run Installer",
     readDocs: "Read Documentation",
-    licenseNotice: "Apache License 2.0 · No telemetry tracking · 100% self-hostable",
+    licenseNotice:
+      "Apache License 2.0 · No telemetry tracking · 100% self-hostable",
   },
   footer: {
     description:
