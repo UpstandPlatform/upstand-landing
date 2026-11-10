@@ -1,5 +1,14 @@
 import { Dictionary } from "@/i18n/types";
-import { ArrowUpRight, Terminal, Layers, Radio, Layout, Shield, Mail } from "lucide-react";
+import {
+  ArrowUpRight,
+  Terminal,
+  Layers,
+  Radio,
+  Layout,
+  Shield,
+  Mail,
+  Presentation,
+} from "lucide-react";
 
 interface EcosystemProjectsProps {
   dict: Dictionary;
@@ -22,6 +31,8 @@ export function EcosystemProjects({ dict }: EcosystemProjectsProps) {
         return Shield;
       case "lettersbox":
         return Mail;
+      case "kavero":
+        return Presentation;
       default:
         return Terminal;
     }
@@ -43,7 +54,7 @@ export function EcosystemProjects({ dict }: EcosystemProjectsProps) {
           </p>
         </div>
 
-        {/* 6 Projects Grid */}
+        {/* Project Grid */}
         <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {ecosystem.projects.map((proj) => {
             const Icon = getIconForProject(proj.id);
