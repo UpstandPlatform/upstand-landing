@@ -4,7 +4,7 @@ import {
   Terminal,
   Layers,
   Radio,
-  Layout,
+  Globe,
   Shield,
   Mail,
   Presentation,
@@ -26,8 +26,8 @@ export function EcosystemProjects({ dict }: EcosystemProjectsProps) {
         return Layers;
       case "adsparty":
         return Radio;
-      case "tongo":
-        return Layout;
+      case "dotton":
+        return Globe;
       case "dgrunner":
         return Shield;
       case "lettersbox":
