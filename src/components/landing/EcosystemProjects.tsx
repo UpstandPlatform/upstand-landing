@@ -8,6 +8,7 @@ import {
   Shield,
   Mail,
   Presentation,
+  MessageCircle,
 } from "lucide-react";
 
 interface EcosystemProjectsProps {
@@ -33,6 +34,8 @@ export function EcosystemProjects({ dict }: EcosystemProjectsProps) {
         return Mail;
       case "kavero":
         return Presentation;
+      case "mindclone":
+        return MessageCircle;
       default:
         return Terminal;
     }
