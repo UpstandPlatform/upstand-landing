@@ -2,9 +2,9 @@ import { Dictionary } from "../types";
 
 export const ja: Dictionary = {
   seo: {
-    title: "Upstand — オープンソースコンテナ基盤＆独立系プロダクトスタジオ",
+    title: "Upstand — 独立系ソフトウェアスタジオとプロダクトチーム",
     description:
-      "Docker Swarm と Caddy をベースにしたセルフホスト型コンテナオーケストレーション。自動TLS、マルチノードクラスタリングに対応し、ベンダーロックインを排除。Apache 2.0で完全オープンソース。",
+      "Upstandは独立したチームとして自社のソフトウェア製品を開発し、形にする価値のあるアイデアを持つ方のプロジェクトを選んで取り組みます。",
     keywords: [
       "Docker Swarm PaaS",
       "セルフホスト PaaS",
@@ -15,9 +15,9 @@ export const ja: Dictionary = {
       "MindClone",
       "Apache 2.0",
     ],
-    ogTitle: "Upstand — すべてをデプロイし、すべてを所有する。",
+    ogTitle: "Upstand — 独立系ソフトウェアスタジオ",
     ogDescription:
-      "セルフホスト型コンテナオーケストレーション基盤と独立系スタジオ。ベンダーロックインなしで自社サーバー上で稼働。",
+      "オープンソースとプロプライエタリの自社製品をつくり、実現する価値のあるプロジェクトに取り組みます。",
   },
   nav: {
     models: "導入モデル",
@@ -36,10 +36,10 @@ export const ja: Dictionary = {
     language: "言語",
   },
   hero: {
-    tag: "オープンソース PaaS ＆ 独立系スタジオ",
-    title: "独自のインフラ上ですべてをデプロイする。",
+    tag: "独立系ソフトウェアスタジオ",
+    title: "長く使い続けたいソフトウェアをつくる。",
     subtitle:
-      "Docker Swarm と Caddy をベースに構築されたセルフホスト型コンテナプラットフォーム。Kubernetesの煩雑さを排除し、マルチノードクラスタ、自動TLS、永続データベースを実現。Apache 2.0の完全オープンソース。",
+      "Upstandは、プロダクトづくりの専門家とソフトウェアエンジニアによる独立チームです。オープンソースとプロプライエタリの自社製品を開発し、実現する価値のあるアイデアを持つ方から、選んだプロジェクトを引き受けています。私たちに合うアイデアなら、ご連絡します。",
     quickInstall: "インストールコマンドをコピー",
     copied: "クリップボードにコピーしました",
     exploreDocs: "ドキュメントを見る",
@@ -133,10 +133,10 @@ export const ja: Dictionary = {
     },
   },
   ecosystem: {
-    badge: "03 — 我们的作品",
-    title: "精心打造的实用工具集。一致的 Upstand 视角。",
-    description: "以工匠精神打磨的开源工具、创意平台与开发者基础设施。",
-    visitSite: "访问项目",
+    badge: "03 — 私たちのプロダクト",
+    title: "個性の異なる製品を、一つの姿勢でつくる。",
+    description: "丁寧につくるオープンソースツール、クリエイティブな製品、開発者向けの基盤。",
+    visitSite: "プロダクトを見る",
     projects: [
       {
         id: "upstand-paas",
@@ -540,19 +540,19 @@ export const ja: Dictionary = {
     ],
   },
   contact: {
-    badge: "10 — 提出构想",
-    title: "与我们的工程团队展开对话。",
+    badge: "04 — アイデアを聞かせてください",
+    title: "形にする価値のあるアイデアはありますか？",
     description:
-      "无论您是在规划基础设施迁移、构建生态扩展，还是探讨开源协作，我们都非常期待与您交流。",
-    namePlaceholder: "您的姓名",
+      "実現したいもの、それが誰の役に立つのか、なぜ今なのかを教えてください。すべてのアイデアに目を通します。スタジオの方針に合い、責任を持って取り組める場合はご連絡します。",
+    namePlaceholder: "お名前",
     emailPlaceholder: "name@company.com",
-    ideaPlaceholder: "请简述您的基础设施现状或合作想法...",
-    budgetLabel: "预计项目规模",
-    submitButton: "发送咨询",
-    submitting: "正在发送...",
+    ideaPlaceholder: "作りたいものと、それが解決する課題を教えてください。",
+    budgetLabel: "想定する範囲",
+    submitButton: "メールの下書きを開く",
+    submitting: "開いています...",
     successMessage:
-      "感谢您的来信！我们已收到您的咨询，团队将尽快与您取得联系。",
-    directEmailNotice: "您也可以直接通过邮件与我们取得联系：",
+      "メールアプリが入力内容を含む下書きとともに開きます。内容を確認して送信してください。",
+    directEmailNotice: "こちらのアドレスにも直接ご連絡いただけます",
   },
   cta: {
     tag: "开源承诺",

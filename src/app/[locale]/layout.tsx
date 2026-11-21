@@ -28,7 +28,6 @@ export async function generateMetadata({
   const { locale } = await params;
   const currentLocale: Locale = isValidLocale(locale) ? locale : defaultLocale;
   const dict = getDictionary(currentLocale);
-  const details = localeDetails[currentLocale];
   const baseUrl = "https://upstand.dev";
 
   return {
@@ -39,9 +38,9 @@ export async function generateMetadata({
     },
     description: dict.seo.description,
     keywords: dict.seo.keywords,
-    authors: [{ name: "Upstand Platform Team", url: baseUrl }],
-    creator: "Upstand Platform",
-    publisher: "Upstand Platform",
+    authors: [{ name: "Upstand Studio", url: baseUrl }],
+    creator: "Upstand",
+    publisher: "Upstand",
     applicationName: "Upstand",
     alternates: {
       canonical: `${baseUrl}/${currentLocale}`,
@@ -58,13 +57,13 @@ export async function generateMetadata({
       url: `${baseUrl}/${currentLocale}`,
       title: dict.seo.ogTitle,
       description: dict.seo.ogDescription,
-      siteName: "Upstand Platform",
+      siteName: "Upstand",
       images: [
         {
           url: `${baseUrl}/images/dashboard_hero.png`,
           width: 1200,
           height: 630,
-          alt: "Upstand Container PaaS Console",
+          alt: "Upstand PaaS dashboard, part of the studio portfolio",
         },
       ],
     },

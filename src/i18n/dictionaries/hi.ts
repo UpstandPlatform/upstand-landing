@@ -2,10 +2,9 @@ import { Dictionary } from "../types";
 
 export const hi: Dictionary = {
   seo: {
-    title:
-      "अपस्टैंड — ओपन-सोर्स कंटेनर प्लेटफॉर्म और स्वतंत्र प्रोडक्ट स्टूडियो",
+    title: "अपस्टैंड — स्वतंत्र सॉफ़्टवेयर स्टूडियो और उत्पाद टीम",
     description:
-      "डॉकर स्वार्म और कैडी पर आधारित सेल्फ-होस्टेड कंटेनर ऑर्केस्ट्रेशन। स्वचालित टीएलएस और मल्टी-नोड क्लस्टरिंग बिना वेंडर लॉक-इन के। अपाचे 2.0 लाइसेंस के तहत 100% ओपन सोर्स।",
+      "Upstand एक स्वतंत्र टीम है जो अपने सॉफ़्टवेयर उत्पाद बनाती है और बनाने लायक विचारों वाले चुनिंदा प्रोजेक्ट पर काम करती है।",
     keywords: [
       "Docker Swarm PaaS",
       "self-hosted PaaS",
@@ -16,9 +15,9 @@ export const hi: Dictionary = {
       "MindClone",
       "Apache 2.0",
     ],
-    ogTitle: "Upstand — कुछ भी डिप्लॉय करें। सब कुछ अपना रखें।",
+    ogTitle: "Upstand — स्वतंत्र सॉफ़्टवेयर स्टूडियो",
     ogDescription:
-      "सेल्फ-होस्टेड कंटेनर ऑर्केस्ट्रेशन प्लेटफॉर्म और स्वतंत्र प्रोडक्ट स्टूडियो। अपने स्वयं के सर्वर पर चलाएं।",
+      "ओपन-सोर्स और निजी सॉफ़्टवेयर उत्पाद, साथ ही अच्छे विचारों वाले लोगों के साथ चुने हुए प्रोजेक्ट।",
   },
   nav: {
     models: "डिप्लॉयमेंट",
@@ -37,10 +36,10 @@ export const hi: Dictionary = {
     language: "भाषा",
   },
   hero: {
-    tag: "ओपन सोर्स PaaS और स्वतंत्र प्रोडक्ट स्टूडियो",
-    title: "अपने स्वयं के बुनियादी ढांचे पर सब कुछ डिप्लॉय करें।",
+    tag: "स्वतंत्र सॉफ़्टवेयर स्टूडियो",
+    title: "हम ऐसा सॉफ़्टवेयर बनाते हैं जिसे संभालकर रखा जाए।",
     subtitle:
-      "डॉकर स्वार्म और कैडी पर निर्मित सेल्फ-होस्टेड कंटेनर प्लेटफॉर्म। कुबेरनेट्स की जटिलता के बिना मल्टी-नोड क्लस्टरिंग, स्वचालित टीएलएस और परसिस्टेंट डेटाबेस। अपाचे 2.0 के तहत 100% ओपन सोर्स।",
+      "Upstand उत्पाद विशेषज्ञों और सॉफ़्टवेयर इंजीनियरों की एक स्वतंत्र टीम है। हम अपने ओपन सोर्स और निजी उत्पाद बनाते हैं, और उन लोगों के चुनिंदा प्रोजेक्ट लेते हैं जिनके पास बनाने लायक विचार हैं। अगर कोई विचार हमारे काम से मेल खाता है, तो हम आपसे संपर्क करेंगे।",
     quickInstall: "कमांड कॉपी करें",
     copied: "क्लिपबोर्ड में कॉपी किया गया",
     exploreDocs: "दस्तावेज़ पढ़ें",
@@ -133,11 +132,11 @@ export const hi: Dictionary = {
     },
   },
   ecosystem: {
-    badge: "03 — What we're making",
-    title: "A collection of focused things. One Upstand point of view.",
+    badge: "03 — हमारे प्रोजेक्ट",
+    title: "अलग-अलग उत्पाद। बनाने का एक साझा तरीका।",
     description:
-      "Open source tools, creative platforms, and developer infrastructure built with care.",
-    visitSite: "Visit Project",
+      "ध्यान से बनाए गए ओपन-सोर्स टूल, रचनात्मक प्लेटफ़ॉर्म और डेवलपर इंफ्रास्ट्रक्चर।",
+    visitSite: "प्रोजेक्ट देखें",
     projects: [
       {
         id: "upstand-paas",
@@ -544,19 +543,19 @@ export const hi: Dictionary = {
     ],
   },
   contact: {
-    badge: "10 — Bring us an idea",
-    title: "Start a conversation with our engineering team.",
+    badge: "04 — अपना विचार साझा करें",
+    title: "क्या आपके पास बनाने लायक कोई विचार है?",
     description:
-      "Whether you are planning a cluster migration, building an ecosystem integration, or looking to collaborate on software, we'd like to hear from you.",
-    namePlaceholder: "Your name",
+      "बताइए कि क्या बनाया जाना चाहिए, इससे किसे मदद मिलेगी और अभी क्यों। हम हर विचार पढ़ते हैं। अगर वह हमारे स्टूडियो के काम से मेल खाता है और हम उसे पूरा समय दे सकते हैं, तो हम आपसे संपर्क करेंगे।",
+    namePlaceholder: "आपका नाम",
     emailPlaceholder: "name@company.com",
-    ideaPlaceholder: "Tell us about your infrastructure or project...",
-    budgetLabel: "Estimated scope",
-    submitButton: "Send Inquiry",
-    submitting: "Sending...",
+    ideaPlaceholder: "बताइए कि आप क्या बनवाना चाहते हैं और वह कौन-सी समस्या हल करेगा।",
+    budgetLabel: "अनुमानित दायरा",
+    submitButton: "ईमेल ड्राफ़्ट खोलें",
+    submitting: "खोल रहे हैं...",
     successMessage:
-      "Thank you. We have received your inquiry and will be in touch shortly.",
-    directEmailNotice: "You can also reach us directly at",
+      "आपका ईमेल ऐप जानकारी के साथ खुलना चाहिए। ड्राफ़्ट जाँचें और हमें भेजें।",
+    directEmailNotice: "आप हमें सीधे इस पते पर भी लिख सकते हैं",
   },
   cta: {
     tag: "Open Source Pledge",

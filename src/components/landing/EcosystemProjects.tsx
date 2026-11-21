@@ -1,121 +1,215 @@
-import { Dictionary } from "@/i18n/types";
+import Image from "next/image";
 import {
   ArrowUpRight,
-  Terminal,
-  Layers,
-  Radio,
-  Globe,
-  Shield,
+  AudioLines,
+  Globe2,
   Mail,
-  Presentation,
   MessageCircle,
+  PanelsTopLeft,
+  Radio,
+  ShieldCheck,
+  Terminal,
 } from "lucide-react";
+import type { ReactNode } from "react";
+import type { Dictionary } from "@/i18n/types";
+import { ScrollReveal } from "@/components/landing/ScrollReveal";
 
 interface EcosystemProjectsProps {
   dict: Dictionary;
 }
 
+function ProjectArtwork({ id }: { id: string }) {
+  let artwork: ReactNode;
+
+  switch (id) {
+    case "upstand-paas":
+      artwork = (
+        <div className="work-art__screenshot">
+          <Image
+            src="/images/dashboard_hero.png"
+            alt=""
+            width={1280}
+            height={800}
+            sizes="(max-width: 768px) 100vw, 54vw"
+          />
+        </div>
+      );
+      break;
+    case "openrive":
+      artwork = (
+        <div className="art-editor">
+          <div className="art-editor__stage">
+            <svg viewBox="0 0 320 180" fill="none" role="presentation">
+              <path d="M44 123C46 80 73 52 111 58C149 64 154 128 192 127C228 126 235 74 278 62" stroke="currentColor" strokeWidth="3" />
+              <circle cx="44" cy="123" r="6" fill="currentColor" />
+              <circle cx="111" cy="58" r="6" fill="currentColor" />
+              <circle cx="192" cy="127" r="6" fill="currentColor" />
+              <circle cx="278" cy="62" r="6" fill="currentColor" />
+            </svg>
+          </div>
+          <div className="art-editor__timeline"><i /><i /><i /><i /></div>
+        </div>
+      );
+      break;
+    case "adsparty":
+      artwork = (
+        <div className="art-campaign">
+          <div className="art-campaign__poster"><span /><i /><b /></div>
+          <div className="art-campaign__details"><i /><i /><i /><span /></div>
+          <div className="art-campaign__orbit"><span /><i /></div>
+        </div>
+      );
+      break;
+    case "dotton":
+      artwork = (
+        <div className="art-domain">
+          <div className="art-domain__root">.ton</div>
+          <div className="art-domain__branch"><i /><span /><i /></div>
+          <div className="art-domain__nodes"><b>name</b><b>studio</b><b>store</b></div>
+        </div>
+      );
+      break;
+    case "dgrunner":
+      artwork = (
+        <div className="art-runner">
+          <div className="art-runner__top"><span /><span /><span /> workflow.yml</div>
+          <div><i>$</i> runner start</div>
+          <div><i>✓</i> connected to GitHub</div>
+          <div><i>›</i> waiting for next job</div>
+        </div>
+      );
+      break;
+    case "lettersbox":
+      artwork = (
+        <div className="art-letter">
+          <span>Dear world,</span>
+          <i /><i /><i /><i />
+          <b>keep a little room for words.</b>
+        </div>
+      );
+      break;
+    case "kavero":
+      artwork = (
+        <div className="art-deck">
+          <div><span /><i /><i /><b /></div>
+          <div><span /><i /><b /><i /></div>
+          <div><span /><b /><i /><i /></div>
+        </div>
+      );
+      break;
+    case "mindclone":
+      artwork = (
+        <div className="art-dialogue">
+          <span className="art-dialogue__avatar">M</span>
+          <div><i /><i /><b /></div>
+          <span className="art-dialogue__reply">A thought, in your own voice.</span>
+        </div>
+      );
+      break;
+    default:
+      artwork = <PanelsTopLeft aria-hidden="true" />;
+  }
+
+  return <div className={`work-art work-art--${id}`} aria-hidden="true">{artwork}</div>;
+}
+
+function ProjectMark({ id }: { id: string }) {
+  const icons = {
+    "upstand-paas": Terminal,
+    openrive: AudioLines,
+    adsparty: Radio,
+    dotton: Globe2,
+    dgrunner: ShieldCheck,
+    lettersbox: Mail,
+    kavero: PanelsTopLeft,
+    mindclone: MessageCircle,
+  };
+  const Icon = icons[id as keyof typeof icons] ?? PanelsTopLeft;
+
+  return <Icon className="work-card__mark" aria-hidden="true" strokeWidth={1.6} />;
+}
+
 export function EcosystemProjects({ dict }: EcosystemProjectsProps) {
   const { ecosystem } = dict;
-
-  const getIconForProject = (id: string) => {
-    switch (id) {
-      case "upstand-paas":
-        return Terminal;
-      case "openrive":
-        return Layers;
-      case "adsparty":
-        return Radio;
-      case "dotton":
-        return Globe;
-      case "dgrunner":
-        return Shield;
-      case "lettersbox":
-        return Mail;
-      case "kavero":
-        return Presentation;
-      case "mindclone":
-        return MessageCircle;
-      default:
-        return Terminal;
-    }
-  };
+  const featuredProject = ecosystem.projects.find((project) => project.isFlagship) ?? ecosystem.projects[0];
+  const otherProjects = ecosystem.projects.filter((project) => project.id !== featuredProject?.id);
 
   return (
-    <section id="ecosystem" className="border-t border-zinc-800/80 bg-[#090a0f] py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="font-mono text-xs uppercase tracking-widest text-zinc-400">
-            {ecosystem.badge}
-          </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl md:text-5xl">
-            {ecosystem.title}
-          </h2>
-          <p className="mt-4 text-base text-zinc-400 sm:text-lg">
-            {ecosystem.description}
-          </p>
-        </div>
+    <section id="work" className="studio-work" aria-labelledby="studio-work-title">
+      <div className="studio-shell">
+        <ScrollReveal className="studio-work__intro">
+          <div>
+            <p className="studio-eyebrow">{ecosystem.badge}</p>
+            <h2 id="studio-work-title" className="studio-section-title">
+              {ecosystem.title}
+            </h2>
+          </div>
+          <p className="studio-work__description">{ecosystem.description}</p>
+        </ScrollReveal>
 
-        {/* Project Grid */}
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {ecosystem.projects.map((proj) => {
-            const Icon = getIconForProject(proj.id);
-            return (
-              <a
-                key={proj.id}
-                href={proj.url}
-                target={proj.url.startsWith("http") ? "_blank" : undefined}
-                rel="noreferrer"
-                className="group flex flex-col justify-between rounded-2xl border border-zinc-800/80 bg-zinc-950/60 p-7 transition-colors hover:border-zinc-700/80"
-              >
-                <div>
-                  {/* Top Bar: Number & Category & Status */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono text-xs text-zinc-400">
-                        [{proj.number}]
-                      </span>
-                      <span className="rounded-full bg-zinc-900 border border-zinc-800 px-2 py-0.5 text-[10px] text-zinc-400">
-                        {proj.category}
-                      </span>
-                    </div>
-
-                    <div className="flex items-center gap-1.5 text-[11px] font-mono text-zinc-400">
-                      <span className="size-1.5 rounded-full bg-emerald-500" />
-                      <span>{proj.status}</span>
-                    </div>
-                  </div>
-
-                  {/* Project Name & Icon */}
-                  <div className="mt-6 flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
-                      <div className="flex size-8 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">
-                        <Icon className="size-4" />
-                      </div>
-                      <h3 className="text-lg font-semibold text-zinc-100 group-hover:text-white transition-colors">
-                        {proj.name}
-                      </h3>
-                    </div>
-                    <ArrowUpRight className="size-4 text-zinc-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-zinc-200" />
-                  </div>
-
-                  {/* Tagline & Description */}
-                  <div className="mt-2 text-xs font-medium text-zinc-400">
-                    {proj.tagline}
-                  </div>
-                  <p className="mt-3 text-xs leading-relaxed text-zinc-400">
-                    {proj.description}
-                  </p>
+        {featuredProject && (
+          <ScrollReveal className="work-feature">
+            <a
+              className="work-feature__link"
+              href={featuredProject.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ProjectArtwork id={featuredProject.id} />
+              <div className="work-feature__copy">
+                <div className="work-card__meta">
+                  <span>{featuredProject.number} / {featuredProject.category}</span>
+                  <span className="work-card__status"><i />{featuredProject.status}</span>
                 </div>
+                <div className="work-feature__title-row">
+                  <div>
+                    <h3>{featuredProject.name}</h3>
+                    <p className="work-card__tagline">{featuredProject.tagline}</p>
+                  </div>
+                  <ArrowUpRight className="work-card__arrow icon-directional" aria-hidden="true" />
+                </div>
+                <p className="work-card__description">{featuredProject.description}</p>
+                <span className="work-card__visit">
+                  {ecosystem.visitSite}
+                  <ArrowUpRight className="icon-directional" aria-hidden="true" />
+                </span>
+              </div>
+            </a>
+          </ScrollReveal>
+        )}
 
-                {/* Footer Domain Link */}
-                <div className="mt-6 border-t border-zinc-800/80 pt-4 font-mono text-xs text-zinc-400 group-hover:text-zinc-300 transition-colors">
-                  {proj.url.replace(/^https?:\/\//, "")}
+        <div className="work-grid">
+          {otherProjects.map((project, index) => (
+            <ScrollReveal key={project.id} delay={(index % 3) * 45}>
+              <a
+                className="work-card"
+                href={project.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ProjectArtwork id={project.id} />
+                <div className="work-card__content">
+                  <div className="work-card__meta">
+                    <span>{project.number} / {project.category}</span>
+                    <span className="work-card__status"><i />{project.status}</span>
+                  </div>
+                  <div className="work-card__title-row">
+                    <span className="work-card__identity">
+                      <ProjectMark id={project.id} />
+                      <h3>{project.name}</h3>
+                    </span>
+                    <ArrowUpRight className="work-card__arrow icon-directional" aria-hidden="true" />
+                  </div>
+                  <p className="work-card__tagline">{project.tagline}</p>
+                  <p className="work-card__description">{project.description}</p>
+                  <span className="work-card__visit">
+                    {ecosystem.visitSite}
+                    <ArrowUpRight className="icon-directional" aria-hidden="true" />
+                  </span>
                 </div>
               </a>
-            );
-          })}
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>

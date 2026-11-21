@@ -3,10 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Dictionary } from "@/i18n/types";
+import { ArrowUpRight, Globe, Menu, X } from "lucide-react";
+import type { Dictionary } from "@/i18n/types";
 import { Locale, locales, localeDetails } from "@/i18n/config";
-import { Globe, Menu, X, ArrowUpRight } from "lucide-react";
-import { GithubIcon } from "@/components/ui/icons";
 
 interface NavbarProps {
   dict: Dictionary;
@@ -17,100 +16,65 @@ export function Navbar({ dict, currentLocale }: NavbarProps) {
   const [langMenuOpen, setLangMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { nav } = dict;
+  const links = [
+    { href: "#studio", label: nav.manifesto },
+    { href: "#work", label: nav.ecosystem },
+    { href: "#contact", label: nav.contact },
+  ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-zinc-800/80 bg-[#090a0f]/90 backdrop-blur-md">
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Brand logo & name */}
-        <Link
-          href={`/${currentLocale}`}
-          className="flex items-center gap-2.5 text-zinc-100 hover:text-white transition-colors"
-        >
-          <div className="flex size-7 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900">
-            <Image
-              src="/brand/icon.svg"
-              alt="Upstand"
-              width={16}
-              height={16}
-              className="size-4"
-              priority
-            />
-          </div>
-          <span className="font-semibold text-sm tracking-tight">
-            Upstand
-          </span>
+    <header className="studio-header">
+      <div className="studio-shell studio-header__inner">
+        <Link href={`/${currentLocale}`} className="studio-brand" aria-label="Upstand home">
+          <Image src="/brand/icon.svg" alt="" width={28} height={28} priority />
+          <span>Upstand</span>
+          <span className="studio-brand__descriptor">Independent studio</span>
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden items-center gap-5 text-xs text-zinc-400 md:flex">
-          <a href="#models" className="transition-colors hover:text-zinc-100">
-            {nav.models}
-          </a>
-          <a href="#manifesto" className="transition-colors hover:text-zinc-100">
-            {nav.manifesto}
-          </a>
-          <a href="#ecosystem" className="transition-colors hover:text-zinc-100">
-            {nav.ecosystem}
-          </a>
-          <a href="#capabilities" className="transition-colors hover:text-zinc-100">
-            {nav.capabilities}
-          </a>
-          <a href="#architecture" className="transition-colors hover:text-zinc-100">
-            {nav.architecture}
-          </a>
-          <a href="#compare" className="transition-colors hover:text-zinc-100">
-            {nav.compare}
-          </a>
-          <a href="#faq" className="transition-colors hover:text-zinc-100">
-            {nav.faq}
-          </a>
-          <a href="#contact" className="transition-colors hover:text-zinc-100">
-            {nav.contact}
-          </a>
+        <nav className="studio-nav" aria-label="Main navigation">
+          {links.map((link) => (
+            <a key={link.href} href={link.href}>{link.label}</a>
+          ))}
         </nav>
 
-        {/* Right Actions */}
-        <div className="flex items-center gap-2.5">
-          {/* Language Selector Dropdown */}
-          <div className="relative">
+        <div className="studio-header__actions">
+          <div className="studio-language">
             <button
               type="button"
-              onClick={() => setLangMenuOpen(!langMenuOpen)}
-              className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-2.5 py-1.5 text-xs text-zinc-300 transition-colors hover:border-zinc-700"
+              className="studio-language__trigger"
+              onClick={() => setLangMenuOpen((open) => !open)}
               aria-label={nav.language}
+              aria-expanded={langMenuOpen}
+              aria-haspopup="menu"
             >
-              <Globe className="size-3.5 text-zinc-400" />
+              <Globe aria-hidden="true" />
               <span>{localeDetails[currentLocale]?.nativeName || currentLocale}</span>
             </button>
 
             {langMenuOpen && (
               <>
-                <div
-                  className="fixed inset-0 z-40"
+                <button
+                  type="button"
+                  className="studio-language__scrim"
                   onClick={() => setLangMenuOpen(false)}
+                  aria-label="Close language menu"
                 />
-                <div className="absolute right-0 top-full mt-1.5 z-50 w-44 rounded-xl border border-zinc-800 bg-zinc-950 p-1.5 shadow-xl">
-                  {locales.map((loc) => {
-                    const info = localeDetails[loc];
-                    const isActive = loc === currentLocale;
+                <div className="studio-language__menu" role="menu">
+                  {locales.map((locale) => {
+                    const info = localeDetails[locale];
+                    const isActive = locale === currentLocale;
+
                     return (
                       <Link
-                        key={loc}
-                        href={`/${loc}`}
+                        key={locale}
+                        href={`/${locale}`}
+                        role="menuitem"
                         onClick={() => setLangMenuOpen(false)}
-                        className={`flex items-center justify-between rounded-lg px-2.5 py-1.5 text-xs transition-colors ${
-                          isActive
-                            ? "bg-zinc-800 text-zinc-100 font-medium"
-                            : "text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200"
-                        }`}
+                        aria-current={isActive ? "page" : undefined}
+                        className={isActive ? "is-active" : undefined}
                       >
-                        <span className="flex items-center gap-2">
-                          <span>{info.flag}</span>
-                          <span>{info.nativeName}</span>
-                        </span>
-                        <span className="font-mono text-[10px] text-zinc-400 uppercase">
-                          {loc}
-                        </span>
+                        <span><span aria-hidden="true">{info.flag}</span>{info.nativeName}</span>
+                        <span className="studio-language__code" dir="ltr">{locale}</span>
                       </Link>
                     );
                   })}
@@ -119,97 +83,31 @@ export function Navbar({ dict, currentLocale }: NavbarProps) {
             )}
           </div>
 
-          {/* GitHub Icon Link */}
-          <a
-            href="https://github.com/UpstandPlatform/upstand"
-            target="_blank"
-            rel="noreferrer"
-            className="flex size-8 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-400 transition-colors hover:text-zinc-100"
-            aria-label="GitHub"
-          >
-            <GithubIcon className="size-4" />
-          </a>
-
-          {/* Get Started Button */}
-          <a
-            href="https://upstand.dev/docs"
-            className="hidden sm:inline-flex items-center rounded-lg bg-blue-600 px-3.5 py-1.5 text-xs font-medium text-white transition-colors hover:bg-blue-500"
-          >
+          <a href="#contact" className="studio-header__cta">
             {nav.getStarted}
+            <ArrowUpRight className="icon-directional" aria-hidden="true" />
           </a>
 
-          {/* Mobile Hamburger Button */}
           <button
             type="button"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex size-8 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-400 md:hidden"
-            aria-label="Toggle menu"
+            className="studio-menu-toggle"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X className="size-4" /> : <Menu className="size-4" />}
+            {mobileMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="border-b border-zinc-800 bg-zinc-950 px-4 py-4 md:hidden space-y-2 text-xs">
-          <a
-            href="#models"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-zinc-300 hover:text-white"
-          >
-            {nav.models}
-          </a>
-          <a
-            href="#manifesto"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-zinc-300 hover:text-white"
-          >
-            {nav.manifesto}
-          </a>
-          <a
-            href="#ecosystem"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-zinc-300 hover:text-white"
-          >
-            {nav.ecosystem}
-          </a>
-          <a
-            href="#capabilities"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-zinc-300 hover:text-white"
-          >
-            {nav.capabilities}
-          </a>
-          <a
-            href="#architecture"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-zinc-300 hover:text-white"
-          >
-            {nav.architecture}
-          </a>
-          <a
-            href="#compare"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-zinc-300 hover:text-white"
-          >
-            {nav.compare}
-          </a>
-          <a
-            href="#faq"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-zinc-300 hover:text-white"
-          >
-            {nav.faq}
-          </a>
-          <a
-            href="#contact"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-zinc-300 hover:text-white"
-          >
-            {nav.contact}
-          </a>
-        </div>
+        <nav className="studio-mobile-nav" aria-label="Mobile navigation">
+          {links.map((link) => (
+            <a key={link.href} href={link.href} onClick={() => setMobileMenuOpen(false)}>
+              {link.label}<ArrowUpRight className="icon-directional" aria-hidden="true" />
+            </a>
+          ))}
+        </nav>
       )}
     </header>
   );

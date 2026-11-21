@@ -2,10 +2,9 @@ import { Dictionary } from "../types";
 
 export const en: Dictionary = {
   seo: {
-    title:
-      "Upstand — Open-Source Container Platform & Independent Product Studio",
+    title: "Upstand — Independent Software Studio & Product Company",
     description:
-      "Self-hostable container orchestration on Docker Swarm with automatic Caddy TLS, multi-server clustering, and zero vendor lock-in. 100% open source under Apache 2.0.",
+      "Upstand is an independent product studio building software of our own and selected projects with people who bring ideas worth making.",
     keywords: [
       "Docker Swarm PaaS",
       "self-hosted deployment platform",
@@ -21,14 +20,14 @@ export const en: Dictionary = {
       "MindClone",
       "Apache 2.0 PaaS",
     ],
-    ogTitle: "Upstand — Deploy anything. Own everything.",
+    ogTitle: "Upstand — Independent software, made with care",
     ogDescription:
-      "Self-hostable container orchestration platform and independent product studio. Run on your own servers with zero lock-in.",
+      "An independent software studio building open-source and proprietary products, plus selected projects with people who bring us good ideas.",
   },
   nav: {
     models: "Deployment",
-    manifesto: "Manifesto",
-    ecosystem: "Studio Works",
+    manifesto: "Studio",
+    ecosystem: "Selected work",
     capabilities: "Capabilities",
     architecture: "Architecture",
     compose: "Compose Translator",
@@ -38,14 +37,14 @@ export const en: Dictionary = {
     contact: "Contact",
     docs: "Docs",
     github: "GitHub",
-    getStarted: "Get Started",
+    getStarted: "Bring us an idea",
     language: "Language",
   },
   hero: {
-    tag: "Open Source PaaS & Independent Studio",
-    title: "Deploy anything on your own infrastructure.",
+    tag: "Independent software studio",
+    title: "We build software worth keeping.",
     subtitle:
-      "Self-hostable container platform built on Docker Swarm and Caddy. Multi-node clustering, automatic TLS, and persistent databases without Kubernetes complexity. 100% open source under Apache 2.0.",
+      "Upstand is an independent team of product builders and software engineers. We make our own products, open source and proprietary, and take on select projects from people with ideas worth building. If we see a strong fit, we’ll get in touch.",
     quickInstall: "Copy Install Command",
     copied: "Copied to clipboard",
     exploreDocs: "Documentation",
@@ -119,7 +118,7 @@ export const en: Dictionary = {
       "Your applications are standard OCI containers and your services are plain Docker images. Move workloads between Upstand Cloud and your bare-metal servers without rebuilding, rewriting, or paying an exit tax.",
   },
   manifesto: {
-    badge: "02 — The point of it",
+    badge: "02 — How we think",
     title: "We believe the internet can still feel human.",
     description:
       "Upstand is an independent product studio and holding company for focused tools, useful infrastructure, and ideas that deserve care.",
@@ -550,15 +549,15 @@ export const en: Dictionary = {
     ],
   },
   contact: {
-    badge: "10 — Bring us an idea",
-    title: "Start a conversation with our engineering team.",
+    badge: "04 — Bring us an idea",
+    title: "Have something worth building?",
     description:
-      "Whether you are planning a cluster migration, building an ecosystem integration, or looking to collaborate on software, we'd like to hear from you.",
+      "Tell us what should exist, who it would help, and why now. We review every idea. If it fits the studio and we can commit to it, we’ll reach out.",
     namePlaceholder: "Your name",
     emailPlaceholder: "name@company.com",
-    ideaPlaceholder: "Tell us about your infrastructure or project...",
+    ideaPlaceholder: "Describe what you want built and the problem it solves.",
     budgetLabel: "Estimated scope",
-    submitButton: "Send Inquiry",
+    submitButton: "Open email draft",
     submitting: "Sending...",
     successMessage:
       "Thank you. We have received your inquiry and will be in touch shortly.",
@@ -576,7 +575,7 @@ export const en: Dictionary = {
   },
   footer: {
     description:
-      "An independent product studio and container orchestration platform. We make things worth using.",
+      "An independent software studio making focused products and partnering on ideas worth building.",
     headings: {
       platform: "Platform",
       studio: "Studio",
@@ -587,8 +586,8 @@ export const en: Dictionary = {
       models: "Deployment Models",
       capabilities: "Capabilities",
       architecture: "Architecture",
-      manifesto: "Studio Manifesto",
-      ecosystem: "Ecosystem Works",
+      manifesto: "How we think",
+      ecosystem: "Selected work",
       partners: "Partners",
       docs: "Documentation",
       github: "GitHub Repository",

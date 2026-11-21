@@ -2,9 +2,9 @@ import { Dictionary } from "../types";
 
 export const zh: Dictionary = {
   seo: {
-    title: "Upstand — 开源容器平台与独立产品工作室",
+    title: "Upstand — 独立软件工作室与产品团队",
     description:
-      "基于 Docker Swarm 和 Caddy 的自托管容器编排平台。支持自动 TLS、多节点集群，无需受制于云厂商。基于 Apache 2.0 完全开源。",
+      "Upstand 是一支独立团队，打造自己的软件产品，并与带着值得实现的想法而来的人合作，承接经过挑选的项目。",
     keywords: [
       "Docker Swarm PaaS",
       "自托管平台",
@@ -20,9 +20,9 @@ export const zh: Dictionary = {
       "MindClone",
       "Apache 2.0",
     ],
-    ogTitle: "Upstand — 部署一切，掌控一切。",
+    ogTitle: "Upstand — 独立软件工作室",
     ogDescription:
-      "自托管容器编排平台与独立产品工作室。在您自己的服务器上运行，零厂商锁定。",
+      "打造开源与专有软件产品，并与拥有好点子的人合作推进值得实现的项目。",
   },
   nav: {
     models: "部署模式",
@@ -41,10 +41,10 @@ export const zh: Dictionary = {
     language: "语言",
   },
   hero: {
-    tag: "开源 PaaS 与独立产品工作室",
-    title: "在您自己的基础设施上部署一切。",
+    tag: "独立软件工作室",
+    title: "我们打造值得长期使用的软件。",
     subtitle:
-      "基于 Docker Swarm 和 Caddy 构建的自托管容器平台。拥有原生多节点集群、自动 TLS 证书和持久化数据库，摆脱 Kubernetes 的冗余复杂度。基于 Apache 2.0 永久开源。",
+      "Upstand 是一支独立的产品与软件工程团队。我们打造自己的开源与闭源产品，也会与带着好点子而来的人合作，承接经过挑选的软件项目。如果我们认为想法契合，会主动联系你。",
     quickInstall: "复制安装命令",
     copied: "已复制到剪贴板",
     exploreDocs: "阅读文档",
@@ -544,15 +544,15 @@ export const zh: Dictionary = {
     ],
   },
   contact: {
-    badge: "10 — 提出构想",
-    title: "与我们的工程团队展开对话。",
+    badge: "04 — 把你的想法告诉我们",
+    title: "有什么值得一起实现的想法吗？",
     description:
-      "无论您是在规划基础设施迁移、构建生态扩展，还是探讨开源协作，我们都非常期待与您交流。",
+      "告诉我们你希望出现什么产品、它能帮助谁，以及为什么是现在。我们会认真审阅每个想法；如果方向契合且团队有能力投入，我们会主动联系你。",
     namePlaceholder: "您的姓名",
     emailPlaceholder: "name@company.com",
-    ideaPlaceholder: "请简述您的基础设施现状或合作想法...",
+    ideaPlaceholder: "请描述你希望打造的产品，以及它要解决的问题。",
     budgetLabel: "预计项目规模",
-    submitButton: "发送咨询",
+    submitButton: "打开邮件草稿",
     submitting: "正在发送...",
     successMessage:
       "感谢您的来信！我们已收到您的咨询，团队将尽快与您取得联系。",

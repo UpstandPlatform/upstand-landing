@@ -2,10 +2,9 @@ import { Dictionary } from "../types";
 
 export const es: Dictionary = {
   seo: {
-    title:
-      "Upstand — Plataforma de contenedores Open Source y Estudio Independiente",
+    title: "Upstand — Estudio de software independiente y equipo de producto",
     description:
-      "Orquestación autoalojada en Docker Swarm y Caddy con TLS automático y clustering multiserver sin dependencia de proveedores. 100% código abierto bajo Apache 2.0.",
+      "Upstand es un equipo independiente que crea sus propios productos de software y elige proyectos con ideas que merecen hacerse realidad.",
     keywords: [
       "Docker Swarm PaaS",
       "PaaS autoalojado",
@@ -16,9 +15,9 @@ export const es: Dictionary = {
       "MindClone",
       "Apache 2.0",
     ],
-    ogTitle: "Upstand — Despliega lo que sea. Sé dueño de todo.",
+    ogTitle: "Upstand — estudio de software independiente",
     ogDescription:
-      "Plataforma de orquestación de contenedores autoalojada y estudio independiente. Ejecuta en tus propios servidores sin bloqueos.",
+      "Productos de software abiertos y propietarios, junto con proyectos elegidos de personas con buenas ideas.",
   },
   nav: {
     models: "Despliegue",
@@ -37,10 +36,10 @@ export const es: Dictionary = {
     language: "Idioma",
   },
   hero: {
-    tag: "PaaS de Código Abierto y Estudio Independiente",
-    title: "Despliega cualquier servicio en tu propia infraestructura.",
+    tag: "Estudio de software independiente",
+    title: "Creamos software que merece perdurar.",
     subtitle:
-      "Plataforma autoalojada basada en Docker Swarm y Caddy. Clustering multinodo, certificados TLS automáticos y bases de datos persistentes sin la complejidad de Kubernetes. 100% código abierto con licencia Apache 2.0.",
+      "Upstand es un equipo independiente de especialistas de producto e ingeniería de software. Creamos nuestros propios productos, de código abierto y propietarios, y elegimos algunos proyectos de personas con ideas que merecen hacerse realidad. Si la idea encaja con nosotros, nos pondremos en contacto.",
     quickInstall: "Copiar comando",
     copied: "Copiado al portapapeles",
     exploreDocs: "Documentación",
@@ -134,11 +133,11 @@ export const es: Dictionary = {
     },
   },
   ecosystem: {
-    badge: "03 — What we're making",
-    title: "A collection of focused things. One Upstand point of view.",
+    badge: "03 — Lo que hacemos",
+    title: "Productos distintos. Una misma forma de pensar.",
     description:
-      "Open source tools, creative platforms, and developer infrastructure built with care.",
-    visitSite: "Visit Project",
+      "Herramientas de código abierto, plataformas creativas e infraestructura para desarrolladores, hechas con cuidado.",
+    visitSite: "Ver proyecto",
     projects: [
       {
         id: "upstand-paas",
@@ -545,19 +544,19 @@ export const es: Dictionary = {
     ],
   },
   contact: {
-    badge: "10 — Bring us an idea",
-    title: "Start a conversation with our engineering team.",
+    badge: "04 — Cuéntanos tu idea",
+    title: "¿Tienes una idea que merece hacerse realidad?",
     description:
-      "Whether you are planning a cluster migration, building an ecosystem integration, or looking to collaborate on software, we'd like to hear from you.",
-    namePlaceholder: "Your name",
+      "Cuéntanos qué debería existir, a quién ayudaría y por qué ahora. Revisamos todas las ideas; si encaja con el estudio y podemos comprometernos a desarrollarla, nos pondremos en contacto contigo.",
+    namePlaceholder: "Tu nombre",
     emailPlaceholder: "name@company.com",
-    ideaPlaceholder: "Tell us about your infrastructure or project...",
-    budgetLabel: "Estimated scope",
-    submitButton: "Send Inquiry",
-    submitting: "Sending...",
+    ideaPlaceholder: "Describe qué quieres construir y qué problema resolvería.",
+    budgetLabel: "Alcance estimado",
+    submitButton: "Abrir borrador de correo",
+    submitting: "Abriendo...",
     successMessage:
-      "Thank you. We have received your inquiry and will be in touch shortly.",
-    directEmailNotice: "You can also reach us directly at",
+      "Tu aplicación de correo debería abrirse con los datos. Revisa el borrador y envíalo para contactarnos.",
+    directEmailNotice: "También puedes escribirnos directamente a",
   },
   cta: {
     tag: "Open Source Pledge",

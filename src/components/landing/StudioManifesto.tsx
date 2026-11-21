@@ -1,4 +1,5 @@
-import { Dictionary } from "@/i18n/types";
+import type { Dictionary } from "@/i18n/types";
+import { ScrollReveal } from "@/components/landing/ScrollReveal";
 
 interface StudioManifestoProps {
   dict: Dictionary;
@@ -6,57 +7,39 @@ interface StudioManifestoProps {
 
 export function StudioManifesto({ dict }: StudioManifestoProps) {
   const { manifesto } = dict;
+  const principles = [manifesto.point1, manifesto.point2, manifesto.point3];
 
   return (
-    <section id="manifesto" className="border-t border-zinc-800/80 bg-[#090a0f] py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="font-mono text-xs uppercase tracking-widest text-zinc-400">
-            {manifesto.badge}
-          </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl md:text-5xl">
-            {manifesto.title}
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-zinc-400 sm:text-lg">
-            {manifesto.description}
-          </p>
-          <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-            {manifesto.subDescription}
-          </p>
-        </div>
-
-        {/* 3 Pillars */}
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
-          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-950/60 p-8 transition-colors hover:border-zinc-700/80">
-            <span className="font-mono text-xs text-zinc-400">[01]</span>
-            <h3 className="mt-4 text-lg font-semibold text-zinc-100">
-              {manifesto.point1.title}
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-              {manifesto.point1.desc}
-            </p>
+    <section id="studio" className="studio-story" aria-labelledby="studio-story-title">
+      <div className="studio-shell">
+        <ScrollReveal className="studio-story__intro">
+          <div className="studio-story__heading">
+            <p className="studio-eyebrow">{manifesto.badge}</p>
+            <h2 id="studio-story-title" className="studio-section-title">
+              {manifesto.title}
+            </h2>
           </div>
 
-          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-950/60 p-8 transition-colors hover:border-zinc-700/80">
-            <span className="font-mono text-xs text-zinc-400">[02]</span>
-            <h3 className="mt-4 text-lg font-semibold text-zinc-100">
-              {manifesto.point2.title}
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-              {manifesto.point2.desc}
-            </p>
+          <div className="studio-story__copy">
+            <p className="studio-story__lead">{manifesto.description}</p>
+            <p>{manifesto.subDescription}</p>
           </div>
+        </ScrollReveal>
 
-          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-950/60 p-8 transition-colors hover:border-zinc-700/80">
-            <span className="font-mono text-xs text-zinc-400">[03]</span>
-            <h3 className="mt-4 text-lg font-semibold text-zinc-100">
-              {manifesto.point3.title}
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-              {manifesto.point3.desc}
-            </p>
-          </div>
+        <div className="studio-principles">
+          {principles.map((principle, index) => (
+            <ScrollReveal key={principle.title} delay={index * 55}>
+              <article className="studio-principle">
+                <span className="studio-principle__number" aria-hidden="true">
+                  0{index + 1}
+                </span>
+                <div>
+                  <h3>{principle.title}</h3>
+                  <p>{principle.desc}</p>
+                </div>
+              </article>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>

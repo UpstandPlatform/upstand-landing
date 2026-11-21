@@ -2,10 +2,9 @@ import { Dictionary } from "../types";
 
 export const fr: Dictionary = {
   seo: {
-    title:
-      "Upstand — Plateforme de conteneurs Open Source et Studio Indépendant",
+    title: "Upstand — Studio logiciel indépendant et équipe produit",
     description:
-      "Orchestration de conteneurs auto-hébergée sur Docker Swarm et Caddy avec TLS automatique et multi-nœuds sans dépendance propriétaire. 100% open source sous Apache 2.0.",
+      "Upstand est une équipe indépendante qui crée ses propres logiciels et choisit des projets portés par des idées qui méritent d’exister.",
     keywords: [
       "Docker Swarm PaaS",
       "PaaS auto-hébergé",
@@ -16,9 +15,9 @@ export const fr: Dictionary = {
       "MindClone",
       "Apache 2.0",
     ],
-    ogTitle: "Upstand — Déployez tout. Maîtrisez tout.",
+    ogTitle: "Upstand — studio logiciel indépendant",
     ogDescription:
-      "Plateforme d'orchestration de conteneurs auto-hébergée et studio indépendant. Exécutez sur vos propres serveurs sans verrouillage.",
+      "Des produits logiciels open source et propriétaires, et des projets choisis avec des personnes qui ont de bonnes idées.",
   },
   nav: {
     models: "Déploiement",
@@ -37,10 +36,10 @@ export const fr: Dictionary = {
     language: "Langue",
   },
   hero: {
-    tag: "PaaS Open Source & Studio Indépendant",
-    title: "Déployez tout sur votre propre infrastructure.",
+    tag: "Studio logiciel indépendant",
+    title: "Nous créons des logiciels faits pour durer.",
     subtitle:
-      "Plateforme de conteneurs auto-hébergée propulsée par Docker Swarm et Caddy. Clustering multi-serveurs, TLS automatique et bases de données persistantes sans la complexité de Kubernetes. 100% open source sous Apache 2.0.",
+      "Upstand est une équipe indépendante de spécialistes produit et d’ingénieurs logiciels. Nous créons nos propres produits, open source ou propriétaires, et choisissons quelques projets portés par des idées qui méritent d’exister. Si une idée nous correspond, nous vous contacterons.",
     quickInstall: "Copier la commande",
     copied: "Copié dans le presse-papiers",
     exploreDocs: "Documentation",
@@ -134,11 +133,11 @@ export const fr: Dictionary = {
     },
   },
   ecosystem: {
-    badge: "03 — Наши проекты",
-    title: "Коллекция полезных вещей с единым подходом Upstand.",
+    badge: "03 — Nos projets",
+    title: "Des produits différents, une même exigence.",
     description:
-      "Инструменты с открытым кодом, творческие платформы и инфраструктура, созданные с заботой.",
-    visitSite: "Открыть проект",
+      "Des outils open source, des plateformes créatives et des infrastructures pour les développeurs, conçus avec soin.",
+    visitSite: "Voir le projet",
     projects: [
       {
         id: "upstand-paas",
@@ -547,19 +546,19 @@ export const fr: Dictionary = {
     ],
   },
   contact: {
-    badge: "10 — Обсудить идею",
-    title: "Начните диалог с нашей инженерной командой.",
+    badge: "04 — Parlons de votre idée",
+    title: "Une idée qui mérite de prendre forme ?",
     description:
-      "Планируете ли вы миграцию инфраструктуры, разработку интеграций или открытое сотрудничество — мы будем рады обсудить это с вами.",
-    namePlaceholder: "Ваше имя",
+      "Dites-nous ce qui devrait exister, à qui cela serait utile et pourquoi maintenant. Nous lisons chaque idée. Si elle correspond au studio et que nous pouvons nous y engager, nous vous recontacterons.",
+    namePlaceholder: "Votre nom",
     emailPlaceholder: "name@company.com",
-    ideaPlaceholder: "Расскажите о вашей инфраструктуре или идее проекта...",
-    budgetLabel: "Масштаб проекта",
-    submitButton: "Отправить запрос",
-    submitting: "Отправка...",
+    ideaPlaceholder: "Décrivez ce que vous aimeriez créer et le problème à résoudre.",
+    budgetLabel: "Périmètre estimé",
+    submitButton: "Ouvrir un brouillon d’e-mail",
+    submitting: "Ouverture...",
     successMessage:
-      "Спасибо! Мы получили ваш запрос и свяжемся с вами в ближайшее время.",
-    directEmailNotice: "Вы также можете написать нам напрямую на почту:",
+      "Votre application e-mail devrait s’ouvrir avec les détails. Vérifiez le brouillon et envoyez-le pour nous contacter.",
+    directEmailNotice: "Vous pouvez aussi nous écrire directement à",
   },
   cta: {
     tag: "Открытый манифест",

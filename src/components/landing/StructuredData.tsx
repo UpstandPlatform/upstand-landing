@@ -1,5 +1,5 @@
-import { Dictionary } from "@/i18n/types";
-import { Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/types";
+import type { Locale } from "@/i18n/config";
 
 interface StructuredDataProps {
   dict: Dictionary;
@@ -7,106 +7,64 @@ interface StructuredDataProps {
 }
 
 export function StructuredData({ dict, locale }: StructuredDataProps) {
-  const softwareAppSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Upstand",
-    operatingSystem: "Linux, macOS, Windows",
-    applicationCategory: "DevOpsApplication",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
-    description: dict.seo.description,
-    softwareVersion: "0.14.0",
-    license: "https://www.apache.org/licenses/LICENSE-2.0",
-    url: `https://upstand.dev/${locale}`,
-    author: {
-      "@type": "Organization",
-      name: "Upstand Platform",
-      url: "https://upstand.dev",
-    },
-    featureList: [
-      "Docker Swarm Multi-Node Orchestration",
-      "Atomic Caddy Reverse Proxy with 0ms downtime",
-      "Native Managed PostgreSQL 18, Redis, and libSQL",
-      "UpGal AI Autonomous Copilot with Human Approval Flow",
-      "Zero-Agent SSH Remote Host Provisioning",
-      "Enterprise SAML 2.0, OIDC, and SCIM 2.0",
-    ],
-  };
-
-  const organizationSchema = {
-    "@context": "https://schema.org",
+  const url = "https://upstand.dev/" + locale;
+  const organization = {
     "@type": "Organization",
-    name: "Upstand Platform",
+    name: "Upstand",
     url: "https://upstand.dev",
     logo: "https://upstand.dev/brand/logo.svg",
+    description: dict.seo.description,
     sameAs: [
       "https://github.com/UpstandPlatform/upstand",
       "https://twitter.com/UpstandPlatform",
       "https://discord.gg/upstand",
     ],
-    description:
-      "Modern container-first PaaS control plane for Docker Swarm and high-availability workloads.",
   };
 
-  const faqSchema = {
+  const website = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: dict.faq.items.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
+    "@type": "WebSite",
+    name: "Upstand",
+    url: "https://upstand.dev",
+    inLanguage: locale,
+    publisher: organization,
   };
 
-  const howToSchema = {
+  const portfolio = {
     "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: "How to deploy Upstand Docker Swarm PaaS",
-    description:
-      "Step-by-step guide to installing the Upstand PaaS control plane on Ubuntu or Debian Linux.",
-    step: [
-      {
-        "@type": "HowToStep",
-        name: "Connect to Linux host",
-        text: "Log into your clean Ubuntu 22.04+ or Debian 12+ server via SSH as root.",
-      },
-      {
-        "@type": "HowToStep",
-        name: "Run the Upstand installer",
-        text: "Execute the single-line installer: curl -fsSL https://upstand.dev/install.sh | sudo bash",
-      },
-      {
-        "@type": "HowToStep",
-        name: "Access the web console",
-        text: "Open your browser to http://<server-ip>:3001 and create the Global Owner account.",
-      },
-    ],
+    "@type": "CollectionPage",
+    name: dict.ecosystem.title,
+    description: dict.ecosystem.description,
+    url,
+    about: organization,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: dict.ecosystem.projects.map((project, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "SoftwareApplication",
+          name: project.name,
+          description: project.description,
+          url: project.url,
+        },
+      })),
+    },
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", ...organization }) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolio) }}
       />
     </>
   );
