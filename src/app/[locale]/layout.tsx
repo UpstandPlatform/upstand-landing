@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { locales, localeDetails, defaultLocale, Locale, isValidLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -111,6 +112,11 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-full flex flex-col bg-[#070a12] text-slate-100 selection:bg-[#0068ff]/30 selection:text-[#38bdf8]">
         {children}
+        <Script
+          src="https://clone-api.upstand.dev/widget.js"
+          data-key="wgt_8XKadkcjs_SXZytr"
+          async
+        />
       </body>
     </html>
   );
