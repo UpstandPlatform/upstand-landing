@@ -8,6 +8,7 @@ import {
   PanelsTopLeft,
   Radio,
   ShieldCheck,
+  Smartphone,
   Terminal,
 } from "lucide-react";
 import type { ReactNode } from "react";
@@ -106,6 +107,27 @@ function ProjectArtwork({ id }: { id: string }) {
         </div>
       );
       break;
+    case "mobile-use":
+      artwork = (
+        <div className="art-mobile-use">
+          <div className="art-mobile-use__phone">
+            <div className="art-mobile-use__screen">
+              <span className="art-mobile-use__device-header"><i /> LOCAL</span>
+              <div className="art-mobile-use__screen-mark"><Smartphone aria-hidden="true" /></div>
+              <div className="art-mobile-use__screen-lines"><i /><i /><i /></div>
+              <span className="art-mobile-use__home" />
+            </div>
+          </div>
+          <span className="art-mobile-use__connector"><i /><i /></span>
+          <div className="art-mobile-use__session">
+            <span className="art-mobile-use__session-header"><i /> SESSION / 01</span>
+            <strong>Agent access</strong>
+            <span className="art-mobile-use__capabilities"><i>SCREEN</i><i>TOUCH</i></span>
+            <span className="art-mobile-use__approval"><i /> Owner approved</span>
+          </div>
+        </div>
+      );
+      break;
     default:
       artwork = <PanelsTopLeft aria-hidden="true" />;
   }
@@ -123,6 +145,7 @@ function ProjectMark({ id }: { id: string }) {
     lettersbox: Mail,
     kavero: PanelsTopLeft,
     mindclone: MessageCircle,
+    "mobile-use": Smartphone,
   };
   const Icon = icons[id as keyof typeof icons] ?? PanelsTopLeft;
 
