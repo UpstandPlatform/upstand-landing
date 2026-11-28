@@ -420,29 +420,29 @@ export const zh: Dictionary = {
     ],
   },
   partners: {
-    badge: "07 — 合作伙伴",
-    title: "与我们同行的团队、伙伴与益友。",
+    badge: "04 — 紧密伙伴与挚友团队",
+    title: "与我们并肩同行的合作伙伴与挚友团队。",
     description:
-      "我们与同样秉持工匠精神、重视系统性能和独立软件开发的优秀团队紧密协作。",
+      "独立软件很少闭门造车。这些是我们高度信赖、彼此切磋技艺，并在日常研发中紧密协作的伙伴团队与良师益友。",
     quote:
-      "优秀的工具出自专注的人。我们很荣幸能与推动 Web 前进的先锋团队并肩合作。",
-    visitPartner: "访问官网",
+      "优秀的软件诞生于高度互信的圈子——由专注细节、深耕一线的小而精团队共同打磨。",
+    visitPartner: "访问网站",
     items: [
       {
         number: "01",
-        name: "Apex Team",
-        role: "战略工程与基础设施合作伙伴",
+        name: "Mansora",
+        role: "技术咨询、AI 与云基础设施",
         description:
-          "专注于高并发分布式系统稳定性、边缘网络优化和容器运行时的资深工程团队。",
-        url: "https://apexteam.net",
+          "总部位于德国的创始人主导型技术咨询团队，在软件工程、AI 工作流、云基础设施与安全领域与我们深度协作。",
+        url: "https://mansora.dev",
       },
       {
         number: "02",
-        name: "Mansora",
-        role: "产品设计、数字化战略与架构",
+        name: "Apex Team",
+        role: "软件工程、AI 与数字产品研发",
         description:
-          "专注于数字化工艺、人性化开发者界面与排版美学的知名设计咨询机构。",
-        url: "https://mansora.dev",
+          "工作室多年的挚友与紧密协作的工程团队，与我们共同打造定制软件、Web 与移动应用以及可扩展的 AI 系统。",
+        url: "https://apexteam.net",
       },
     ],
   },
@@ -556,7 +556,7 @@ export const zh: Dictionary = {
     ],
   },
   contact: {
-    badge: "04 — 把你的想法告诉我们",
+    badge: "05 — 把你的想法告诉我们",
     title: "有什么值得一起实现的想法吗？",
     description:
       "告诉我们你希望出现什么产品、它能帮助谁，以及为什么是现在。我们会认真审阅每个想法；如果方向契合且团队有能力投入，我们会主动联系你。",

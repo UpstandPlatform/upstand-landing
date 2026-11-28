@@ -417,29 +417,29 @@ export const es: Dictionary = {
     ],
   },
   partners: {
-    badge: "07 — In good company",
-    title: "Partners, collaborators, and friends of the studio.",
+    badge: "04 — Socios y equipos amigos",
+    title: "Socios y amigos con quienes construimos codo a codo.",
     description:
-      "We build with teams who hold the same conviction for craft, performance, and independent software.",
+      "El software independiente rara vez se construye en solitario. Estos son los equipos aliados y amigos cercanos en quienes confiamos y con quienes trabajamos día a día.",
     quote:
-      "Good tools are built with good people. We're proud to collaborate with organizations pushing the web forward.",
-    visitPartner: "Visit Website",
+      "El buen software crece en círculos de alta confianza: equipos pequeños y comprometidos que cuidan los detalles y se mantienen cerca del oficio.",
+    visitPartner: "Visitar sitio web",
     items: [
       {
         number: "01",
-        name: "Apex Team",
-        role: "Strategic Engineering & Infrastructure Partner",
+        name: "Mansora",
+        role: "Consultoría tecnológica, IA y Cloud",
         description:
-          "High-performance systems engineering team collaborating on distributed systems reliability, edge networking, and container runtimes.",
-        url: "https://apexteam.net",
+          "Consultora tecnológica dirigida por su fundador en Alemania que colabora estrechamente con nosotros en ingeniería de software, flujos de IA, infraestructura cloud y seguridad.",
+        url: "https://mansora.dev",
       },
       {
         number: "02",
-        name: "Mansora",
-        role: "Design, Product Strategy & Digital Architecture",
+        name: "Apex Team",
+        role: "Ingeniería de software, IA y productos digitales",
         description:
-          "Product design consultancy focused on digital craft, human-centered developer interfaces, and typography-first web architecture.",
-        url: "https://mansora.dev",
+          "Colectivo de ingeniería y grandes amigos del estudio con quienes desarrollamos software a medida, aplicaciones web y móviles y sistemas de IA escalables.",
+        url: "https://apexteam.net",
       },
     ],
   },
@@ -556,7 +556,7 @@ export const es: Dictionary = {
     ],
   },
   contact: {
-    badge: "04 — Cuéntanos tu idea",
+    badge: "05 — Cuéntanos tu idea",
     title: "¿Tienes una idea que merece hacerse realidad?",
     description:
       "Cuéntanos qué debería existir, a quién ayudaría y por qué ahora. Revisamos todas las ideas; si encaja con el estudio y podemos comprometernos a desarrollarla, nos pondremos en contacto contigo.",
@@ -595,7 +595,7 @@ export const es: Dictionary = {
       architecture: "Architecture",
       manifesto: "Studio Manifesto",
       ecosystem: "Ecosystem Works",
-      partners: "Partners",
+      partners: "Socios",
       docs: "Documentation",
       github: "GitHub Repository",
       license: "Apache 2.0 License",

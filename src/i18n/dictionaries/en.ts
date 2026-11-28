@@ -422,29 +422,29 @@ export const en: Dictionary = {
     ],
   },
   partners: {
-    badge: "07 — In good company",
-    title: "Partners, collaborators, and friends of the studio.",
+    badge: "04 — Close partners & friends",
+    title: "Partners and friends we build closely with.",
     description:
-      "We build with teams who hold the same conviction for craft, performance, and independent software.",
+      "Independent software is rarely made alone. These are the allied teams and close friends we trust, trade craft with, and work alongside day to day.",
     quote:
-      "Good tools are built with good people. We're proud to collaborate with organizations pushing the web forward.",
+      "Good software grows in high-trust circles — small, dedicated teams who care about the details and stay close to the work.",
     visitPartner: "Visit Website",
     items: [
       {
         number: "01",
-        name: "Apex Team",
-        role: "Strategic Engineering & Infrastructure Partner",
+        name: "Mansora",
+        role: "Technology Consulting, AI & Cloud",
         description:
-          "High-performance systems engineering team collaborating on distributed systems reliability, edge networking, and container runtimes.",
-        url: "https://apexteam.net",
+          "Founder-led technology practice in Germany working closely with us across software engineering, AI workflows, cloud infrastructure, and security.",
+        url: "https://mansora.dev",
       },
       {
         number: "02",
-        name: "Mansora",
-        role: "Design, Product Strategy & Digital Architecture",
+        name: "Apex Team",
+        role: "Software Engineering, AI & Product Systems",
         description:
-          "Product design consultancy focused on digital craft, human-centered developer interfaces, and typography-first web architecture.",
-        url: "https://mansora.dev",
+          "Close engineering collective and longtime friends of the studio building custom software, web and mobile applications, and scalable AI systems alongside our team.",
+        url: "https://apexteam.net",
       },
     ],
   },
@@ -561,7 +561,7 @@ export const en: Dictionary = {
     ],
   },
   contact: {
-    badge: "04 — Bring us an idea",
+    badge: "05 — Bring us an idea",
     title: "Have something worth building?",
     description:
       "Tell us what should exist, who it would help, and why now. We review every idea. If it fits the studio and we can commit to it, we’ll reach out.",

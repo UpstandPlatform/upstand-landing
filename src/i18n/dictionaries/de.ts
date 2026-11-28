@@ -417,29 +417,29 @@ export const de: Dictionary = {
     ],
   },
   partners: {
-    badge: "07 — In good company",
-    title: "Partners, collaborators, and friends of the studio.",
+    badge: "04 — Enge Partner & Freunde",
+    title: "Partner und befreundete Teams, mit denen wir eng zusammenarbeiten.",
     description:
-      "We build with teams who hold the same conviction for craft, performance, and independent software.",
+      "Unabhängige Software entsteht selten allein. Das sind die Partnerteams und engen Wegbegleiter, denen wir vertrauen und mit denen wir im Alltag Seite an Seite bauen.",
     quote:
-      "Good tools are built with good people. We're proud to collaborate with organizations pushing the web forward.",
-    visitPartner: "Visit Website",
+      "Gute Software entsteht in verlässlichen Kreisen — kleine, engagierte Teams, die auf Details achten und nah an der Arbeit bleiben.",
+    visitPartner: "Website besuchen",
     items: [
       {
         number: "01",
-        name: "Apex Team",
-        role: "Strategic Engineering & Infrastructure Partner",
+        name: "Mansora",
+        role: "Technologieberatung, KI & Cloud",
         description:
-          "High-performance systems engineering team collaborating on distributed systems reliability, edge networking, and container runtimes.",
-        url: "https://apexteam.net",
+          "Gründergeführte Technologieberatung aus Deutschland, mit der wir bei Softwareentwicklung, KI-Workflows, Cloud-Infrastruktur und Security eng zusammenarbeiten.",
+        url: "https://mansora.dev",
       },
       {
         number: "02",
-        name: "Mansora",
-        role: "Design, Product Strategy & Digital Architecture",
+        name: "Apex Team",
+        role: "Software-Engineering, KI & digitale Produkte",
         description:
-          "Product design consultancy focused on digital craft, human-centered developer interfaces, and typography-first web architecture.",
-        url: "https://mansora.dev",
+          "Eng verbundenes Engineering-Kollektiv und langjährige Freunde des Studios für individuelle Software, Web- und Mobile-Anwendungen sowie skalierbare KI-Systeme.",
+        url: "https://apexteam.net",
       },
     ],
   },
@@ -556,7 +556,7 @@ export const de: Dictionary = {
     ],
   },
   contact: {
-    badge: "04 — Bring uns deine Idee",
+    badge: "05 — Bring uns deine Idee",
     title: "Eine Idee, die es wert ist, gebaut zu werden?",
     description:
       "Erzähl uns, was es geben sollte, wem es helfen würde und warum gerade jetzt. Wir prüfen jede Idee. Wenn sie zum Studio passt und wir uns darauf einlassen können, melden wir uns.",
@@ -595,7 +595,7 @@ export const de: Dictionary = {
       architecture: "Architecture",
       manifesto: "Studio Manifesto",
       ecosystem: "Ecosystem Works",
-      partners: "Partners",
+      partners: "Partner",
       docs: "Documentation",
       github: "GitHub Repository",
       license: "Apache 2.0 License",

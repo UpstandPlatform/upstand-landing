@@ -419,29 +419,29 @@ export const fr: Dictionary = {
     ],
   },
   partners: {
-    badge: "07 — В хорошей компании",
-    title: "Партнеры, единомышленники и друзья студии.",
+    badge: "04 — Partenaires & équipes amies",
+    title: "Les partenaires et amis avec qui nous bâtissons au quotidien.",
     description:
-      "Мы работаем с командами, которые разделяют наши ценности ремесла, производительности и независимости ПО.",
+      "Un logiciel indépendant se construit rarement seul. Voici les équipes partenaires et amis proches en qui nous avons pleine confiance et avec qui nous travaillons étroitement.",
     quote:
-      "Хорошие инструменты создаются хорошими людьми. Мы гордимся сотрудничеством с теми, кто двигает веб вперед.",
-    visitPartner: "Открыть сайт",
+      "Les bons logiciels naissent dans des cercles de confiance — de petites équipes exigeantes, attentives aux détails et proches du terrain.",
+    visitPartner: "Visiter le site",
     items: [
       {
         number: "01",
-        name: "Apex Team",
-        role: "Стратегический партнер по инфраструктуре",
+        name: "Mansora",
+        role: "Conseil technologique, IA & Cloud",
         description:
-          "Команда системных инженеров, специализирующаяся на распределенных системах и контейнерных средах.",
-        url: "https://apexteam.net",
+          "Cabinet de conseil technologique basé en Allemagne, travaillant en étroite collaboration avec nous sur le développement logiciel, les workflows IA, l’infrastructure cloud et la sécurité.",
+        url: "https://mansora.dev",
       },
       {
         number: "02",
-        name: "Mansora",
-        role: "Дизайн продукта, цифровая стратегия и архитектура",
+        name: "Apex Team",
+        role: "Ingénierie logicielle, IA & produits numériques",
         description:
-          "Консалтинговая студия, ориентированная на человечный дизайн, типографику и интерфейсы для разработчиков.",
-        url: "https://mansora.dev",
+          "Collectif d’ingénieurs et amis de longue date du studio, concevant à nos côtés des logiciels sur mesure, des applications web et mobiles et des systèmes d’IA évolutifs.",
+        url: "https://apexteam.net",
       },
     ],
   },
@@ -558,7 +558,7 @@ export const fr: Dictionary = {
     ],
   },
   contact: {
-    badge: "04 — Parlons de votre idée",
+    badge: "05 — Parlons de votre idée",
     title: "Une idée qui mérite de prendre forme ?",
     description:
       "Dites-nous ce qui devrait exister, à qui cela serait utile et pourquoi maintenant. Nous lisons chaque idée. Si elle correspond au studio et que nous pouvons nous y engager, nous vous recontacterons.",

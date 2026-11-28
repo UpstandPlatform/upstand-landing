@@ -416,29 +416,29 @@ export const hi: Dictionary = {
     ],
   },
   partners: {
-    badge: "07 — In good company",
-    title: "Partners, collaborators, and friends of the studio.",
+    badge: "04 — करीबी साझेदार और मित्र टीमें",
+    title: "वे साझेदार और मित्र टीमें जिनके साथ हम कंधे से कंधा मिलाकर बनाते हैं।",
     description:
-      "We build with teams who hold the same conviction for craft, performance, and independent software.",
+      "स्वतंत्र सॉफ़्टवेयर शायद ही कभी अकेले बनता है। ये वे सहयोगी टीमें और करीबी दोस्त हैं जिन पर हम भरोसा करते हैं और जिनके साथ रोज़मर्रा में मिलकर काम करते हैं।",
     quote:
-      "Good tools are built with good people. We're proud to collaborate with organizations pushing the web forward.",
-    visitPartner: "Visit Website",
+      "अच्छा सॉफ़्टवेयर गहरे भरोसे के दायरे में बनता है — छोटी, समर्पित टीमें जो बारीकियों की परवाह करती हैं और काम के करीब रहती हैं।",
+    visitPartner: "वेबसाइट देखें",
     items: [
       {
         number: "01",
-        name: "Apex Team",
-        role: "Strategic Engineering & Infrastructure Partner",
+        name: "Mansora",
+        role: "टेक्नोलॉजी कंसल्टिंग, AI और क्लाउड",
         description:
-          "High-performance systems engineering team collaborating on distributed systems reliability, edge networking, and container runtimes.",
-        url: "https://apexteam.net",
+          "जर्मनी स्थित संस्थापक-नेतृत्व वाली टेक्नोलॉजी कंसल्टिंग टीम, जो सॉफ़्टवेयर इंजीनियरिंग, AI वर्कफ़्लो, क्लाउड इन्फ्रास्ट्रक्चर और सुरक्षा में हमारे साथ नज़दीकी से काम करती है।",
+        url: "https://mansora.dev",
       },
       {
         number: "02",
-        name: "Mansora",
-        role: "Design, Product Strategy & Digital Architecture",
+        name: "Apex Team",
+        role: "सॉफ़्टवेयर इंजीनियरिंग, AI और डिजिटल उत्पाद",
         description:
-          "Product design consultancy focused on digital craft, human-centered developer interfaces, and typography-first web architecture.",
-        url: "https://mansora.dev",
+          "स्टूडियो के पुराने मित्र और करीबी इंजीनियरिंग समूह, जो हमारे साथ मिलकर कस्टम सॉफ़्टवेयर, वेब व मोबाइल ऐप्स और स्केलेबल AI सिस्टम तैयार करते हैं।",
+        url: "https://apexteam.net",
       },
     ],
   },
@@ -555,7 +555,7 @@ export const hi: Dictionary = {
     ],
   },
   contact: {
-    badge: "04 — अपना विचार साझा करें",
+    badge: "05 — अपना विचार साझा करें",
     title: "क्या आपके पास बनाने लायक कोई विचार है?",
     description:
       "बताइए कि क्या बनाया जाना चाहिए, इससे किसे मदद मिलेगी और अभी क्यों। हम हर विचार पढ़ते हैं। अगर वह हमारे स्टूडियो के काम से मेल खाता है और हम उसे पूरा समय दे सकते हैं, तो हम आपसे संपर्क करेंगे।",
@@ -594,7 +594,7 @@ export const hi: Dictionary = {
       architecture: "Architecture",
       manifesto: "Studio Manifesto",
       ecosystem: "Ecosystem Works",
-      partners: "Partners",
+      partners: "साझेदार",
       docs: "Documentation",
       github: "GitHub Repository",
       license: "Apache 2.0 License",

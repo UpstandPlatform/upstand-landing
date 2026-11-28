@@ -19,6 +19,7 @@ export function Navbar({ dict, currentLocale }: NavbarProps) {
   const links = [
     { href: "#studio", label: nav.manifesto },
     { href: "#work", label: nav.ecosystem },
+    { href: "#partners", label: nav.partners },
     { href: "#contact", label: nav.contact },
   ];
 

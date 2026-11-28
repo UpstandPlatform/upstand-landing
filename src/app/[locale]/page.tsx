@@ -4,6 +4,7 @@ import { Navbar } from "@/components/landing/Navbar";
 import { Hero } from "@/components/landing/Hero";
 import { StudioManifesto } from "@/components/landing/StudioManifesto";
 import { EcosystemProjects } from "@/components/landing/EcosystemProjects";
+import { PartnersSection } from "@/components/landing/PartnersSection";
 import { IdeaContactForm } from "@/components/landing/IdeaContactForm";
 import { Footer } from "@/components/landing/Footer";
 
@@ -23,6 +24,7 @@ export default async function LocalizedLandingPage({
         <Hero dict={dict} />
         <StudioManifesto dict={dict} />
         <EcosystemProjects dict={dict} />
+        <PartnersSection dict={dict} />
         <IdeaContactForm dict={dict} />
       </main>
       <Footer dict={dict} currentLocale={currentLocale} />

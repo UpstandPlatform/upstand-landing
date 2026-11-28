@@ -31,6 +31,7 @@ export function Footer({ dict, currentLocale }: FooterProps) {
             <h2>{footer.headings.studio}</h2>
             <a href="#studio">{footer.links.manifesto}</a>
             <a href="#work">{footer.links.ecosystem}</a>
+            <a href="#partners">{footer.links.partners}</a>
             <a href="#contact">{nav.contact}</a>
           </div>
 
